@@ -468,16 +468,25 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
     </div>
   </section>
 
+  <section class="sec-sm" style="padding-top:clamp(30px,4vw,46px);padding-bottom:0">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center">
+        <span class="vet on-light"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 5.6L20.5 8.5l-4.3 4 1.1 6L12 15.8 6.7 18.5l1.1-6L3.5 8.5l5.9-.9z"/></svg>Veteran-Owned &amp; Operated</span>
+        <span class="cred">Builder-Led Renovation</span>
+        <span class="vet on-light" id="svcArea"></span>
+        <span class="cred">1% Pledged Back</span>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="planBuilder" style="padding-top:clamp(48px,6vw,80px)">
     <div class="wrap">
       <div class="svc-layout">
         <div>
-          <div class="page-head" style="background:none;color:inherit;padding:0;margin-bottom:30px">
+          <div style="margin-bottom:30px">
             <span class="eyebrow">Modra Property Services</span>
             <h2 style="color:var(--green);font-size:clamp(1.8rem,3.6vw,2.7rem);margin:14px 0 12px">Care that keeps your property show-ready.</h2>
             <p class="lead">Cleaning, exterior upkeep, curb appeal, and seasonal work — on a simple monthly plan or à la carte. Built around your property, billed clearly, cancel anytime.</p>
-            <div class="badges" style="margin-top:18px"><span class="vet on-light"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 5.6L20.5 8.5l-4.3 4 1.1 6L12 15.8 6.7 18.5l1.1-6L3.5 8.5l5.9-.9z"/></svg>Veteran-Owned &amp; Operated</span>
-              <span class="vet on-light" id="svcArea"></span></div>
           </div>
 
           <div class="sec-head" style="margin-bottom:26px"><span class="eyebrow">Care plans</span><h3 style="font-size:1.5rem">Pick your plan.</h3></div>
@@ -485,7 +494,6 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
 
           <div class="sec-head" style="margin:54px 0 22px"><span class="eyebrow">À-la-carte services</span><h3 style="font-size:1.5rem">Add exactly what you need.</h3></div>
           <div class="addons" id="addonsGrid"></div>
-          <p class="note" style="margin-top:18px">EDIT all plans, services &amp; prices in the CONFIG block.</p>
         </div>
 
         <aside class="scope">
@@ -596,7 +604,6 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
         <button data-phase="future">Upcoming</button>
       </div>
       <div class="proj-grid" id="projGrid"></div>
-      <p class="note" style="margin-top:22px">EDIT projects, scope lists &amp; photos in CONFIG. Add <code>img</code> for a hero photo; each project lists its full scope of work.</p>
     </div>
   </section>
 
@@ -663,7 +670,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
       </ul>
     </div>
   </section>
-  <div class="wrap"><p class="note" style="margin-bottom:40px">Informational only. Modra develops its own projects; any financing is arranged through licensed third parties. EDIT figures in CONFIG.</p></div>
+  <div class="wrap"><p style="font-size:.82rem;color:var(--muted-2);margin-bottom:40px;max-width:74ch">Informational only. Modra develops its own projects; any financing is arranged through licensed third parties.</p></div>
 </div>
 
 <!-- ===================== WHY MODRA ===================== -->
@@ -718,7 +725,6 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
     <div class="wrap">
       <div class="sec-head center"><span class="eyebrow">In their words</span><h2>What clients say.</h2></div>
       <div class="quotes" id="quotesGrid"></div>
-      <p class="center" style="margin-top:18px"><span class="note">EDIT or remove these in CONFIG.testimonials — add real quotes when you have them.</span></p>
     </div>
   </section>
 
@@ -851,14 +857,10 @@ const CONFIG = {
       location:"West Michigan", beds:4, baths:3, sqft:"+1,200 added", timeline:"~9 months", img:"",
       desc:"A tired home taken to the studs and rebuilt into a standout on an unusually large lot.",
       scope:["New electrical, plumbing & HVAC throughout","Added ~1,200 sq ft of living space","New master suite addition","New basement bathroom (3 full baths total)","New kitchen & finishes","Large half-acre lot"] },
-    { name:"[Next flip]", phase:"future", type:"Single-family \u00b7 Value-add", status:"Sourcing",
-      location:"West Michigan", beds:3, baths:2, sqft:"1,800", timeline:"TBD", img:"",
-      desc:"Short description of the opportunity and the planned scope of work.",
-      scope:["Planned kitchen & bath renovation","Mechanical updates as needed","Cosmetic refresh & curb appeal"] },
-    { name:"[Past project]", phase:"past", type:"Single-family \u00b7 Renovation", status:"Sold",
-      location:"West Michigan", beds:3, baths:2, sqft:"1,600", timeline:"7 months", img:"",
-      desc:"A completed renovation -- add photos and the real scope here.",
-      scope:["Full interior renovation","Updated mechanicals","New kitchen & baths"] }
+    { name:"Next renovation", phase:"future", type:"Single-family \u00b7 Full renovation", status:"Now sourcing",
+      location:"Grand Rapids area", timeline:"2026", img:"",
+      desc:"We're actively sourcing our next project in the Grand Rapids urban core -- the same builder-led, start-to-finish transformation as Bristol Ave.",
+      scope:["Full builder-led renovation","Updated mechanicals & systems","Reimagined layout & living space","Quality finishes throughout"] }
   ],
 
   /* --- capital funding sources (weight = bar width %) --- */
@@ -877,10 +879,7 @@ const CONFIG = {
   },
 
   /* --- testimonials (section hides if empty). Replace bracketed placeholders with real quotes. --- */
-  testimonials:[
-    { quote:"[Add a real client quote here -- what Modra did and the result.]", name:"[Client name]", role:"[West Michigan homeowner]" },
-    { quote:"[A second short quote about working with Modra.]", name:"[Client name]", role:"[West Michigan homeowner]" }
-  ],
+  testimonials:[],
 
   /* --- team (each person's Contact button routes to the matching inbox) --- */
   team:{
@@ -931,7 +930,7 @@ function wireStatic(){
   $("#generalContact").href=mailto(g,"General inquiry -- Modra Group","How can we help?\nBest way to reach you:\n");
   $("#homeContact").href=mailto(g,"Inquiry via Modra Group website","How can we help?\nBest way to reach you:\n");
   $("#footEmail").textContent=g; $("#footEmail").href="mailto:"+g;
-  $("#footPhone").textContent=CONFIG.general.phone; $("#footPhone").href="tel:"+CONFIG.general.phone.replace(/[^\d+]/g,"");
+  const _ph=CONFIG.general.phone||""; const _fp=$("#footPhone"); if(_fp){ if(_ph && _ph.indexOf("000-0000")<0){ _fp.textContent=_ph; _fp.href="tel:"+_ph.replace(/[^\d+]/g,""); } else { _fp.style.display="none"; } }
   $("#svcArea").innerHTML="Serving "+CONFIG.brand.serviceArea.join(" \u00b7 ");
   $("#yr").textContent=new Date().getFullYear();
 }
@@ -1024,7 +1023,7 @@ function renderProjects(){
   const phaseLabel={past:"Completed",current:"In progress",future:"Upcoming"};
   $("#projGrid").innerHTML=list.length?list.map(p=>`
     <article class="proj">
-      <div class="ph">${p.img?`<img src="${p.img}" alt="${esc(p.name)}">`:'<span class="ph-label">Add photo</span>'}
+      <div class="ph">${p.img?`<img src="${p.img}" alt="${esc(p.name)}">`:`<div style="display:grid;place-items:center;gap:8px;text-align:center;padding:18px"><span style="font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--gold-2)">M</span><span style="font-family:var(--display);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#cfe0d2">${esc(p.name)}</span></div>`}
         <span class="tag">${esc(p.status)}</span><span class="phase">${esc(phaseLabel[p.phase]||p.phase)}</span></div>
       <div class="body">
         <div class="meta">${esc(p.type)}</div><h3>${esc(p.name)}</h3>
