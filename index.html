@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modra Group — Premium Property Services, Renovation & Capital | West Michigan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== MODRA GROUP — refined design system ===== */
+:root{
+  --green:#173324;--green-2:#21442F;--green-3:#2F5E49;--green-deep:#102619;
+  --gold:#C8943C;--gold-2:#DCAE57;--gold-3:#B07F2C;--gold-soft:rgba(200,148,60,.14);
+  --cream:#FBF8F1;--cream-2:#FFFFFF;--cream-3:#F4EFE3;--card:#FFFFFF;
+  --text:#1C2722;--muted:#566159;--muted-2:#74807A;
+  --line:rgba(23,51,36,.12);--line-2:rgba(23,51,36,.22);
+  --ok:#2E7D5B;--info:#2F6FB0;
+  --on-dark:#EDF2EC;--on-dark-2:#C6D2C6;--on-dark-3:#9FB1A2;
+  --display:'Poppins',system-ui,-apple-system,sans-serif;
+  --body:Calibri,"Segoe UI",Candara,"Trebuchet MS",system-ui,sans-serif;
+  --maxw:1200px;--radius:16px;--radius-lg:22px;
+  --gut:clamp(22px,4vw,44px);
+  --shadow-sm:0 3px 12px -6px rgba(23,51,36,.22);
+  --shadow:0 22px 48px -30px rgba(23,51,36,.42);
+  --shadow-lg:0 34px 70px -36px rgba(23,51,36,.5);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--text);background:var(--cream);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(1200px 700px at 100% -5%,rgba(200,148,60,.06),transparent 55%),radial-gradient(900px 600px at -10% 110%,rgba(47,94,73,.06),transparent 55%)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:var(--body)}
+::selection{background:rgba(200,148,60,.28)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:6px}
+.hero-inner>div,.arm-card,.proj,.member,.step,.flow .node,.plan,.addon,.stat-card,.svc-item,.sched-item,.notif,.contact-band>div,.impact-card,.src,.quote,.trust>div{min-width:0}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.1;letter-spacing:-.018em;margin:0;color:var(--green);text-wrap:balance}
+p{margin:0 0 1rem}
+.lead{font-size:clamp(1.04rem,1.4vw,1.16rem);color:var(--muted);line-height:1.68}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-3);display:inline-flex;align-items:center;gap:11px;flex-wrap:wrap;overflow-wrap:anywhere}
+.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2));display:inline-block;flex:none;border-radius:2px}
+.center{text-align:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:.94rem;border:1.5px solid transparent;transition:transform .2s var(--ease),box-shadow .2s,background .2s,border-color .2s;white-space:nowrap;max-width:100%}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold) 60%,var(--gold-3));color:#231702;box-shadow:0 12px 26px -14px rgba(176,127,44,.8)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(176,127,44,.9)}
+.btn-green{background:var(--green);color:var(--cream);box-shadow:0 12px 26px -16px rgba(23,51,36,.8)}
+.btn-green:hover{background:var(--green-3);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--green);border-color:var(--line-2)}.btn-ghost:hover{border-color:var(--green);background:rgba(23,51,36,.04);transform:translateY(-1px)}
+.btn-ghost-cream{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(251,248,241,.55);backdrop-filter:blur(4px)}.btn-ghost-cream:hover{background:rgba(251,248,241,.14);border-color:#fff;transform:translateY(-1px)}
+.btn-sm{padding:9px 16px;font-size:.85rem}
+.btn .arr{transition:transform .2s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+.note{font-size:.77rem;color:var(--muted);font-family:var(--display);font-weight:500;background:var(--gold-soft);border:1px dashed var(--gold);border-radius:8px;padding:3px 9px;display:inline-block}
+
+.vet{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-3);border:1.5px solid var(--gold);border-radius:999px;padding:8px 15px;background:rgba(200,148,60,.12)}
+.vet svg{width:15px;height:15px;flex:none}
+.vet.on-light{color:var(--green);border-color:var(--green);background:transparent}
+.cred{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-weight:700;font-size:.63rem;letter-spacing:.09em;text-transform:uppercase;color:#7a5414;background:var(--gold-soft);border:1px solid var(--gold);border-radius:999px;padding:7px 14px}
+
+/* progress + to-top */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:100;box-shadow:0 0 10px rgba(200,148,60,.55)}
+.to-top{position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);width:48px;height:48px;border-radius:50%;border:none;background:var(--green);color:var(--cream);font-size:1.2rem;z-index:90;opacity:0;transform:translateY(14px) scale(.85);pointer-events:none;transition:.28s var(--ease);box-shadow:var(--shadow)}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--green-3);transform:translateY(-2px)}
+.rv{opacity:0;transform:translateY(18px)}
+.rv-in{opacity:1;transform:none;transition:opacity .65s ease,transform .7s var(--ease)}
+
+/* ===== NAV ===== */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(251,248,241,.82);backdrop-filter:blur(14px) saturate(1.1);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s,background .3s}
+header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px -22px rgba(23,51,36,.55)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;flex:none;transition:transform .2s var(--ease)}
+.brand:hover{transform:translateY(-1px)}
+.brand img{height:38px;width:auto}
+.brand .wm{font-family:var(--display);font-weight:800;font-size:1.34rem;letter-spacing:.02em;color:var(--green);line-height:1}
+.brand .wm small{display:block;font-weight:600;font-size:.55rem;letter-spacing:.26em;color:var(--gold-3);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{position:relative;padding:9px 14px;border-radius:999px;font-family:var(--display);font-size:.9rem;font-weight:500;color:var(--green);transition:.18s;white-space:nowrap}
+.nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;background:var(--gold);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav-links a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav-links a.active{background:var(--green);color:var(--cream)}
+.nav-links a.active::after{display:none}
+.nav-cta{margin-left:8px}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line-2);border-radius:11px;padding:9px 11px;flex:none;transition:.2s}
+.menu-btn:hover{border-color:var(--green)}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--green);margin:4px 0;border-radius:2px}
+
+/* ===== PAGES ===== */
+.page{display:none;animation:fade .45s var(--ease)}.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sec{padding:clamp(54px,7vw,98px) 0}.sec-sm{padding:clamp(40px,5vw,66px) 0}
+.bg-cream2{background:linear-gradient(180deg,var(--cream-3),var(--cream))}
+
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;color:var(--cream);background:radial-gradient(1100px 640px at 80% -18%,rgba(200,148,60,.3),transparent 56%),radial-gradient(800px 520px at -12% 118%,rgba(47,94,73,.55),transparent 60%),linear-gradient(155deg,var(--green) 0%,var(--green-deep) 100%)}
+.hero .frame{position:absolute;inset:20px;border:1px solid rgba(200,148,60,.4);border-radius:var(--radius-lg);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,56px);align-items:center;padding:clamp(72px,9vw,108px) 0}
+.hero h1{font-size:clamp(2.1rem,5.6vw,4.3rem);font-weight:800;letter-spacing:-.028em;line-height:1.04;color:#fff;margin-bottom:20px}
+.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--on-dark);max-width:46ch;font-size:clamp(1.06rem,1.6vw,1.2rem)}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.emblem{display:grid;gap:13px}
+.arm-chip{display:flex;align-items:center;gap:16px;border:1px solid rgba(251,248,241,.16);background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border-radius:var(--radius);padding:20px 22px;text-decoration:none;transition:transform .25s var(--ease),border-color .25s,background .25s}
+.arm-chip:hover{transform:translateX(5px);border-color:rgba(200,148,60,.6);background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.05))}
+.arm-chip .no{font-family:var(--display);font-weight:800;font-size:1.5rem;background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;min-width:40px;flex:none}
+.arm-chip .tx h4{color:#fff;font-size:1.06rem;margin:0}
+.arm-chip .tx span{font-size:.85rem;color:var(--on-dark-2)}
+
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+.trust>div{padding:26px 24px;position:relative}
+.trust>div:not(:last-child)::after{content:"";position:absolute;right:0;top:18%;bottom:18%;width:1px;background:var(--line)}
+.trust .t{font-family:var(--display);font-weight:700;color:var(--green);font-size:1.04rem;margin-bottom:5px}
+.trust .d{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+.sec-head{max-width:62ch;margin-bottom:clamp(30px,4vw,46px)}
+.sec-head.center{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(1.75rem,3.8vw,2.7rem);margin:14px 0 12px;line-height:1.12}
+
+.arms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.arm-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,3vw,34px);transition:transform .28s var(--ease),box-shadow .28s,border-color .28s;display:flex;flex-direction:column;min-height:248px;position:relative;overflow:hidden}
+.arm-card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2));transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.arm-card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:var(--shadow-lg)}
+.arm-card:hover::before{transform:scaleX(1)}
+.arm-card .no{font-family:var(--display);font-weight:800;color:var(--gold-3);font-size:1.05rem}
+.arm-card h3{font-size:1.46rem;margin:13px 0 10px}
+.arm-card p{color:var(--muted);flex:1}
+.arm-card .go{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--green);display:inline-flex;gap:8px;align-items:center}
+
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:stretch}
+.flow .node{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,2.4vw,30px);text-align:center;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease),box-shadow .25s}
+.flow .node:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.flow .node .no{font-family:var(--display);font-weight:800;color:var(--gold-3);font-size:.88rem;letter-spacing:.05em;overflow-wrap:anywhere}
+.flow .node h4{font-size:1.16rem;margin:11px 0 8px}
+.flow .node p{color:var(--muted);font-size:.9rem;margin:0}
+.flow .arrow{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.5rem;font-weight:700}
+
+.page-head{background:radial-gradient(900px 500px at 100% -30%,rgba(200,148,60,.22),transparent 55%),linear-gradient(150deg,var(--green),var(--green-deep));color:var(--cream);padding:clamp(58px,8vw,86px) 0 clamp(52px,7vw,72px);position:relative;overflow:hidden}
+.page-head .inner{position:relative;z-index:1}
+.page-head h1{color:#fff;font-size:clamp(1.95rem,4.6vw,3.4rem);font-weight:800;margin:16px 0 16px;max-width:22ch;line-height:1.08}
+.page-head p{color:var(--on-dark);max-width:56ch;font-size:clamp(1.02rem,1.5vw,1.12rem);margin:0}
+.page-head .badges{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.page-head .vet{color:var(--gold-2);border-color:var(--gold-2)}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,4vw,54px);align-items:start}
+.feature-list{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.feature-list li{display:flex;gap:15px;align-items:flex-start}
+.feature-list .tick{flex:none;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,rgba(200,148,60,.22),rgba(200,148,60,.1));color:#7a5414;display:grid;place-items:center;font-weight:700;margin-top:1px}
+.feature-list strong{display:block;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--green);margin-bottom:2px}
+.feature-list span{color:var(--muted);font-size:.95rem}
+
+/* ===== SERVICES: plans ===== */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3vw,36px) clamp(24px,2.4vw,30px);display:flex;flex-direction:column;position:relative;transition:transform .28s var(--ease),box-shadow .28s}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.plan.featured{border-color:var(--gold);box-shadow:0 26px 54px -30px rgba(200,148,60,.55);background:linear-gradient(180deg,#fffdf8,#fff)}
+.plan .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#231702;font-family:var(--display);font-weight:700;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 15px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(176,127,44,.8)}
+.plan h3{font-size:1.42rem}
+.plan .tagline{color:var(--muted);font-size:.92rem;margin:7px 0 18px;min-height:42px;line-height:1.5}
+.plan .price{display:flex;align-items:baseline;gap:6px;margin-bottom:4px;flex-wrap:wrap}
+.plan .price .rate{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,3.2vw,2.6rem);color:var(--green);letter-spacing:-.02em}
+.plan .price .basis{color:var(--muted);font-size:.9rem}
+.plan .price-note{font-size:.77rem;color:var(--muted-2);margin-bottom:22px;font-family:var(--display);font-weight:500;letter-spacing:.02em}
+.plan ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:12px}
+.plan ul li{display:flex;gap:11px;font-size:.93rem;color:var(--text);line-height:1.45}
+.plan ul li::before{content:"✓";color:var(--gold);font-weight:800;flex:none}
+.plan .select{margin-top:auto}
+
+.addons{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.addon{display:flex;justify-content:space-between;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;transition:transform .2s var(--ease),border-color .2s,box-shadow .2s}
+.addon:hover{border-color:var(--line-2);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.addon.added{border-color:var(--gold);background:linear-gradient(180deg,rgba(200,148,60,.08),rgba(200,148,60,.03))}
+.addon .info h4{font-family:var(--display);font-weight:600;font-size:1.02rem;margin:0 0 4px;color:var(--green)}
+.addon .info .d{color:var(--muted);font-size:.86rem;line-height:1.5}
+.addon .right{display:flex;flex-direction:column;align-items:flex-end;gap:9px;flex:none;max-width:44%}
+.addon .pl{font-family:var(--display);font-weight:700;font-size:.96rem;color:var(--green);text-align:right;white-space:normal}
+.addon .pl small{display:block;font-weight:500;font-size:.62rem;color:var(--muted-2)}
+.addon .add-btn{border:1.5px solid var(--green);background:transparent;color:var(--green);border-radius:999px;padding:8px 16px;font-family:var(--display);font-weight:600;font-size:.82rem;white-space:nowrap;transition:.2s}
+.addon .add-btn:hover{background:var(--green);color:var(--cream)}
+.addon.added .add-btn{background:var(--green);color:var(--cream)}
+
+.svc-layout{display:grid;grid-template-columns:1fr 348px;gap:clamp(24px,3vw,36px);align-items:start}
+.scope{position:sticky;top:92px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.scope .sh{background:linear-gradient(135deg,var(--green-2),var(--green));color:var(--cream);padding:20px 24px}
+.scope .sh h3{color:#fff;font-size:1.12rem}
+.scope .sh p{margin:4px 0 0;color:var(--on-dark-2);font-size:.8rem}
+.scope .body{padding:18px 24px;max-height:340px;overflow:auto}
+.scope .empty{color:var(--muted);font-size:.9rem;text-align:center;padding:22px 0}
+.scope .line{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.scope .line:last-child{border-bottom:none}
+.scope .line .ln{font-size:.9rem;color:var(--green);font-weight:600;font-family:var(--display)}
+.scope .line .lp{font-family:var(--display);font-weight:600;font-size:.82rem;color:var(--muted);white-space:nowrap;text-align:right}
+.scope .line .x{background:none;border:none;color:var(--muted-2);font-size:1.05rem;line-height:1;padding:0 0 0 8px;transition:.2s}
+.scope .line .x:hover{color:#b23b3b}
+.scope .foot{padding:20px 24px;border-top:1px solid var(--line);background:var(--cream-3)}
+.scope .foot .btn{width:100%;margin-bottom:8px}
+.scope .totals{font-size:.86rem;color:var(--muted);margin-bottom:14px;line-height:1.8}
+.scope .totals b{color:var(--green);font-family:var(--display);font-weight:700}
+
+.vband{background:radial-gradient(700px 400px at 110% 120%,rgba(200,148,60,.2),transparent 60%),linear-gradient(150deg,var(--green-2),var(--green-deep));color:var(--cream);border-radius:var(--radius-lg);padding:clamp(32px,4.5vw,52px);display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,3.5vw,38px);align-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.vband .seal{width:118px;height:118px;border-radius:50%;border:2px solid var(--gold-2);display:grid;place-items:center;color:var(--gold-2);flex:none;position:relative;z-index:1;box-shadow:inset 0 0 30px rgba(200,148,60,.18)}
+.vband .seal svg{width:52px;height:52px}
+.vband .tx{position:relative;z-index:1}
+.vband h2{color:#fff;font-size:clamp(1.5rem,2.6vw,1.85rem);margin-bottom:11px}
+.vband p{color:var(--on-dark);margin:0;max-width:60ch}
+
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px}
+.impact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(26px,3vw,34px);text-align:center;transition:transform .25s var(--ease),box-shadow .25s}
+.impact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.impact-card .v{font-family:var(--display);font-weight:800;font-size:clamp(2.1rem,3vw,2.5rem);background:linear-gradient(120deg,var(--gold),var(--gold-3));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
+.impact-card .l{font-family:var(--display);font-weight:600;color:var(--green);margin-top:7px}
+.impact-card .d{color:var(--muted);font-size:.88rem;margin-top:6px;line-height:1.5}
+.orgs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.orgs span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-family:var(--display);font-weight:500;font-size:.86rem;color:var(--green);transition:.2s}
+.orgs span:hover{border-color:var(--gold);color:var(--gold-3)}
+
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,3vw,34px);box-shadow:var(--shadow-sm);transition:transform .25s var(--ease),box-shadow .25s}
+.quote:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.quote .qm{color:var(--gold);font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:.5;height:18px}
+.quote p{font-size:1.06rem;color:var(--text);margin:14px 0 20px;line-height:1.6}
+.quote .qa{display:flex;align-items:center;gap:13px}
+.quote .qav{width:44px;height:44px;border-radius:50%;background:linear-gradient(150deg,var(--gold),var(--green));color:var(--cream);display:grid;place-items:center;font-family:var(--display);font-weight:800;flex:none}
+.quote .qn{font-family:var(--display);font-weight:700;color:var(--green);font-size:.92rem}
+.quote .qr{font-size:.8rem;color:var(--muted)}
+
+.sources{display:grid;gap:15px}
+.src{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;transition:transform .2s var(--ease),box-shadow .2s}
+.src:hover{transform:translateX(4px);box-shadow:var(--shadow-sm)}
+.src .top{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin-bottom:11px}
+.src h4{font-size:1.08rem}
+.src .pct{font-family:var(--display);font-weight:800;color:var(--gold-3);font-size:1.08rem;white-space:nowrap}
+.src .bar{height:8px;background:var(--cream-3);border-radius:99px;overflow:hidden;margin-bottom:11px}
+.src .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold-2),var(--green-3));border-radius:99px}
+.src p{color:var(--muted);font-size:.9rem;margin:0;line-height:1.55}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,2.6vw,30px);position:relative;transition:transform .25s var(--ease),box-shadow .25s}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.step .num{font-family:var(--display);font-weight:800;color:var(--gold-3);font-size:.84rem;letter-spacing:.07em}
+.step h3{font-size:1.12rem;margin:12px 0 8px}
+.step p{color:var(--muted);font-size:.91rem;margin:0;line-height:1.55}
+
+.phase-tabs{display:inline-flex;gap:5px;background:var(--cream-3);padding:6px;border-radius:999px;margin-bottom:30px;flex-wrap:wrap;max-width:100%;border:1px solid var(--line)}
+.phase-tabs button{border:none;background:transparent;padding:10px 19px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:.89rem;color:var(--muted);white-space:nowrap;transition:.2s}
+.phase-tabs button:hover{color:var(--green)}
+.phase-tabs button.on{background:var(--green);color:var(--cream);box-shadow:0 8px 18px -10px rgba(23,51,36,.6)}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:transform .28s var(--ease),box-shadow .28s;display:flex;flex-direction:column}
+.proj:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.proj .ph{aspect-ratio:4/3;background:linear-gradient(135deg,var(--green-3),var(--green-deep));display:grid;place-items:center;color:#bccfbf;position:relative;overflow:hidden}
+.proj .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.proj:hover .ph img{transform:scale(1.05)}
+.proj .ph .tag{position:absolute;top:13px;left:13px;font-family:var(--display);font-weight:600;font-size:.6rem;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#231702;padding:6px 11px;border-radius:7px;text-transform:uppercase;max-width:calc(100% - 26px);box-shadow:0 6px 14px -8px rgba(176,127,44,.7)}
+.proj .ph .phase{position:absolute;top:13px;right:13px;font-family:var(--display);font-weight:600;font-size:.6rem;letter-spacing:.07em;background:rgba(16,38,25,.86);color:#fff;padding:6px 11px;border-radius:7px;text-transform:uppercase;backdrop-filter:blur(4px)}
+.proj .ph .ph-label{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.05em}
+.proj .body{padding:clamp(22px,2.4vw,26px);display:flex;flex-direction:column;flex:1}
+.proj h3{font-size:1.22rem;margin:0 0 6px}
+.proj .meta{font-family:var(--display);font-weight:600;font-size:.69rem;color:var(--gold-3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:13px}
+.proj .facts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:15px}
+.proj .facts span{background:var(--cream-3);border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:.74rem;color:var(--text);font-family:var(--display);font-weight:500}
+.proj .pdesc{color:var(--muted);font-size:.9rem;margin-bottom:15px;line-height:1.55}
+.proj .scope-h{font-family:var(--display);font-weight:700;font-size:.71rem;letter-spacing:.07em;text-transform:uppercase;color:var(--green);margin-bottom:9px}
+.proj .scope-list{list-style:none;padding:0;margin:0 0 4px;display:grid;gap:7px}
+.proj .scope-list li{display:flex;gap:9px;font-size:.86rem;color:var(--text);line-height:1.45}
+.proj .scope-list li::before{content:"›";color:var(--gold);font-weight:800;flex:none}
+
+.contact-band{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(30px,4vw,46px);display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;box-shadow:var(--shadow-sm)}
+.contact-band .who{font-family:var(--display);font-weight:600;font-size:.71rem;color:var(--gold-3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.contact-band h3{font-size:clamp(1.4rem,2.4vw,1.6rem);margin-bottom:9px}
+.contact-band p{color:var(--muted);margin:0;max-width:48ch}
+
+.about-intro{max-width:62ch;margin-bottom:clamp(36px,4vw,50px);font-size:clamp(1.06rem,1.5vw,1.18rem)}
+.team-group{margin-bottom:clamp(38px,4vw,52px)}
+.team-group .gh{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.team-group .gh .no{font-family:var(--display);font-weight:800;color:var(--gold-3);font-size:1rem;flex:none}
+.team-group .gh h3{font-size:clamp(1.3rem,2.2vw,1.5rem)}
+.team-group .gh .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);min-width:20px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.member{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,2.8vw,32px);text-align:center;transition:transform .28s var(--ease),box-shadow .28s}
+.member:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.member .avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 17px;background:linear-gradient(150deg,var(--gold-2),var(--green));display:grid;place-items:center;color:var(--cream);font-family:var(--display);font-weight:800;font-size:1.75rem;overflow:hidden;box-shadow:0 14px 30px -16px rgba(23,51,36,.6)}
+.member .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.member h4{font-size:1.22rem;margin:0 0 3px}
+.member .role{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-3);margin-bottom:12px}
+.member .badge-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:13px}
+.member .bio{color:var(--muted);font-size:.9rem;margin-bottom:19px;line-height:1.55}
+.member .contact{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-weight:600;font-size:.88rem;color:var(--green);border:1.5px solid var(--line-2);border-radius:999px;padding:9px 19px;transition:.2s;max-width:100%}
+.member .contact:hover{background:var(--green);color:var(--cream);border-color:var(--green);transform:translateY(-1px)}
+
+.faq{max-width:840px;margin:0 auto;display:grid;gap:13px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 24px;transition:border-color .2s,box-shadow .2s}
+.faq details[open]{border-color:var(--line-2);box-shadow:var(--shadow-sm)}
+.faq summary{font-family:var(--display);font-weight:600;color:var(--green);padding:17px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-weight:700;font-size:1.3rem;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);margin:0 0 17px;font-size:.95rem;line-height:1.6}
+
+/* ===== FORMS / PORTAL / ADMIN ===== */
+.field{display:grid;gap:6px;margin-bottom:15px}
+.field label{font-family:var(--display);font-weight:600;font-size:.78rem;color:var(--green)}
+.field input,.field select,.field textarea{padding:12px 15px;border:1.5px solid var(--line-2);border-radius:11px;font-size:1rem;background:#fff;color:var(--text);width:100%;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,148,60,.14)}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-err{color:#b23b3b;font-size:.86rem;margin:-4px 0 12px;min-height:1px}
+.muted-link{background:none;border:none;color:#8a6418;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;text-decoration:underline}
+
+.auth-wrap{max-width:470px;margin:0 auto}
+.auth-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.5vw,38px);box-shadow:var(--shadow)}
+.auth-tabs{display:flex;gap:5px;background:var(--cream-3);padding:5px;border-radius:999px;margin-bottom:24px;border:1px solid var(--line)}
+.auth-tabs button{flex:1;border:none;background:transparent;padding:11px;border-radius:999px;font-family:var(--display);font-weight:600;color:var(--muted);transition:.2s}
+.auth-tabs button.on{background:var(--green);color:var(--cream)}
+.scope-preview{background:var(--cream-3);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-bottom:18px}
+.scope-preview .h{font-family:var(--display);font-weight:700;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:#8a6418;margin-bottom:9px}
+.scope-preview .li{display:flex;justify-content:space-between;gap:10px;font-size:.88rem;padding:3px 0;color:var(--text)}
+
+.dash{display:grid;grid-template-columns:252px 1fr;gap:clamp(20px,2.5vw,28px);align-items:start}
+.dash-side{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;position:sticky;top:92px;box-shadow:var(--shadow-sm)}
+.dash-side .uhead{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.dash-side .uav{width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--gold),var(--green));color:var(--cream);display:grid;place-items:center;font-family:var(--display);font-weight:800;flex:none}
+.dash-side .un{font-family:var(--display);font-weight:700;color:var(--green);font-size:.96rem;line-height:1.2}
+.dash-side .ue{font-size:.78rem;color:var(--muted);word-break:break-word}
+.dash-nav{display:grid;gap:4px}
+.dash-nav button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:none;background:transparent;padding:12px 14px;border-radius:11px;font-family:var(--display);font-weight:500;font-size:.92rem;color:var(--green);transition:.18s}
+.dash-nav button:hover{background:rgba(23,51,36,.06)}
+.dash-nav button.on{background:var(--green);color:var(--cream)}
+.dash-nav .nb{background:var(--gold);color:#231702;font-size:.66rem;font-weight:700;border-radius:99px;padding:1px 8px;margin-left:auto}
+.dash-logout{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.dash-logout button{width:100%;border:1.5px solid var(--line-2);background:transparent;border-radius:11px;padding:11px;font-family:var(--display);font-weight:600;color:var(--muted);transition:.2s}
+.dash-logout button:hover{border-color:var(--green);color:var(--green)}
+
+.dash-main{min-width:0}
+.dash-h{font-size:clamp(1.4rem,2.4vw,1.6rem);margin-bottom:6px}
+.dash-sub{color:var(--muted);margin-bottom:24px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
+.stat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s var(--ease),box-shadow .2s}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.stat-card .v{font-family:var(--display);font-weight:800;font-size:1.7rem;color:var(--green);letter-spacing:-.02em}
+.stat-card .l{font-family:var(--display);font-weight:500;font-size:.74rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:5px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,2.4vw,26px);margin-bottom:18px;box-shadow:var(--shadow-sm)}
+.panel h3{font-size:1.15rem;margin-bottom:16px}
+.svc-item,.sched-item,.notif{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.svc-item:last-child,.sched-item:last-child,.notif:last-child{border-bottom:none}
+.svc-item .n,.sched-item .n{font-family:var(--display);font-weight:600;color:var(--green);font-size:.98rem}
+.svc-item .d,.sched-item .d{color:var(--muted);font-size:.84rem;margin-top:2px}
+.pill{font-family:var(--display);font-weight:600;font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap;flex:none}
+.pill.active{background:rgba(46,125,91,.16);color:#1f6e4a}
+.pill.sched{background:rgba(47,111,176,.16);color:#235d92}
+.pill.onb{background:rgba(200,148,60,.18);color:#8a6014}
+.pill.prog{background:rgba(200,148,60,.18);color:#8a6014}
+.pill.done{background:rgba(80,95,86,.16);color:#46544c}
+.notif.unread{background:linear-gradient(90deg,rgba(200,148,60,.09),transparent);margin:0 -26px;padding-left:23px;padding-right:26px;border-left:3px solid var(--gold)}
+.notif .nt{font-size:.92rem;color:var(--text);line-height:1.5}
+.notif .nd{font-size:.76rem;color:var(--muted-2);margin-top:4px}
+.switch{display:inline-flex;align-items:center;gap:10px;cursor:pointer}
+.switch .track{width:44px;height:25px;background:var(--line-2);border-radius:99px;position:relative;transition:.25s;flex:none}
+.switch .track::after{content:"";position:absolute;width:19px;height:19px;background:#fff;border-radius:50%;top:3px;left:3px;transition:.25s var(--ease);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.switch.on .track{background:var(--green)}
+.switch.on .track::after{left:22px}
+.empty-state{text-align:center;color:var(--muted);padding:28px 0;font-size:.94rem}
+
+.admin-gate{max-width:430px;margin:0 auto;text-align:center}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.admin-tabs{display:inline-flex;gap:5px;background:var(--cream-3);padding:5px;border-radius:999px;margin-bottom:24px;flex-wrap:wrap;max-width:100%;border:1px solid var(--line)}
+.admin-tabs button{border:none;background:transparent;padding:10px 17px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--muted);white-space:nowrap;transition:.2s}
+.admin-tabs button.on{background:var(--green);color:var(--cream)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow-sm)}
+table.adm{width:100%;border-collapse:collapse;min-width:620px}
+table.adm th{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:left;padding:15px 17px;border-bottom:1px solid var(--line);background:var(--cream-3)}
+table.adm td{padding:15px 17px;border-bottom:1px solid var(--line);font-size:.92rem;vertical-align:middle}
+table.adm tr:last-child td{border-bottom:none}
+table.adm tr:hover td{background:rgba(23,51,36,.025)}
+table.adm .nm{font-family:var(--display);font-weight:600;color:var(--green)}
+.adm-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mini{border:1.5px solid var(--line-2);background:transparent;border-radius:9px;padding:7px 13px;font-family:var(--display);font-weight:600;font-size:.8rem;color:var(--green);transition:.2s}
+.mini:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+.mini.danger{color:#b23b3b;border-color:rgba(178,59,59,.4)}.mini.danger:hover{background:#b23b3b;color:#fff;border-color:#b23b3b}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.12),transparent 55%),linear-gradient(160deg,var(--green),var(--green-deep));color:var(--cream);padding:clamp(48px,6vw,68px) 0 30px;margin-top:24px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:clamp(28px,4vw,40px);margin-bottom:42px}
+.foot-grid h4{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-2);margin:0 0 16px}
+.foot-grid a{display:block;color:var(--on-dark);font-size:.92rem;padding:5px 0;transition:.18s;background:none;border:none;text-align:left;font-family:var(--body);cursor:pointer}
+.foot-grid a:hover{color:#fff;transform:translateX(3px)}
+.foot-grid p{color:var(--on-dark-2);font-size:.92rem;line-height:1.6}
+.foot-brand{font-family:var(--display);font-weight:800;font-size:1.32rem;color:#fff;margin-bottom:14px;letter-spacing:.02em}
+.foot-brand small{display:block;font-weight:600;font-size:.55rem;letter-spacing:.24em;color:var(--gold-2);margin-top:4px}
+.foot-bottom{border-top:1px solid rgba(251,248,241,.18);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--on-dark-3);font-size:.82rem;font-family:var(--display);font-weight:500;letter-spacing:.03em}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:980px){
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .grid-2{grid-template-columns:1fr}
+  .svc-layout{grid-template-columns:1fr}.scope{position:static}
+  .plans{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .flow{grid-template-columns:1fr;gap:12px}.flow .arrow{transform:rotate(90deg)}
+  .vband{grid-template-columns:1fr;gap:22px;text-align:center}.vband .seal{margin:0 auto}
+  .dash{grid-template-columns:1fr}.dash-side{position:static}
+  .dash-nav{grid-template-columns:repeat(2,1fr);display:grid}
+  .admin-stats{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .trust>div:nth-child(2)::after{display:none}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--cream);border-bottom:1px solid var(--line);padding:12px 16px 18px;box-shadow:var(--shadow)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px;border-radius:11px;white-space:normal}
+  .nav-links a:not(.nav-cta)::after{display:none}
+  .nav-cta{margin:6px 0 0}
+  .menu-btn{display:block}
+}
+@media(max-width:760px){
+  .trust,.arms,.proj-grid,.team-grid,.impact-grid,.addons,.detail-grid,.row-2,.stat-grid,.quotes,.steps{grid-template-columns:1fr}
+  .plans{max-width:none}
+  .trust>div::after{display:none!important}
+  .hero .frame{display:none}
+  .dash-nav{grid-template-columns:1fr}
+  .addon .right{max-width:none}
+  .contact-band{padding:28px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1!important;transform:none!important}}
+
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="brand" data-target="home" id="brandLink"><span class="wm">MODRA<small>GROUP</small></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-target="home">Home</a>
+      <a href="#services" data-target="services">Services</a>
+      <a href="#properties" data-target="properties">Properties</a>
+      <a href="#capital" data-target="capital">Capital</a>
+      <a href="#about" data-target="about">About</a>
+      <a href="#portal" data-target="portal" class="btn btn-gold nav-cta" id="navAuth">Sign in / Join</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HOME ===================== -->
+<div class="page active" id="home">
+  <section class="hero">
+    <div class="frame"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Premium real estate · West Michigan</span>
+        <h1>Premium real estate, <em>handled end to end.</em></h1>
+        <p class="lead">Modra is a full-cycle group for West Michigan's higher-end homes — premium property care, builder-led renovation, and the capital to fund it, all under one roof. Built so everyone wins.</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-gold" data-target="services">View services &amp; pricing <span class="arr">&rarr;</span></a>
+          <a href="#portal" class="btn btn-ghost-cream" data-target="portal">Member sign in</a>
+        </div>
+      </div>
+      <div class="emblem">
+        <a class="arm-chip" href="#services" data-target="services"><span class="no">01</span><div class="tx"><h4>Modra Property Services</h4><span>Premium property care &mdash; our client services</span></div></a>
+        <a class="arm-chip" href="#properties" data-target="properties"><span class="no">02</span><div class="tx"><h4>Modra Properties</h4><span>Acquisitions &amp; builder-led renovation</span></div></a>
+        <a class="arm-chip" href="#capital" data-target="capital"><span class="no">03</span><div class="tx"><h4>Modra Capital</h4><span>How the group is funded</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-sm" style="padding-top:64px">
+    <div class="wrap">
+      <div class="trust">
+        <div><div class="t">Higher-end focus</div><div class="d">Built for West Michigan's premium homes and the standard they deserve.</div></div>
+        <div><div class="t">Full-cycle, one roof</div><div class="d">Property care, renovation, and capital aligned end to end.</div></div>
+        <div><div class="t">Builder-led quality</div><div class="d">Renovations led by a licensed Michigan Residential Builder.</div></div>
+        <div><div class="t">1% given back</div><div class="d">We pledge 1% to the planet and fund local causes.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:30px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Start here</span>
+        <h2>Choose the service that fits you.</h2>
+        <p class="lead">Most clients come to us to keep a high-end property show-ready — but the whole group is here when you need it.</p>
+      </div>
+      <div class="arms">
+        <a class="arm-card" href="#services" data-target="services">
+          <span class="no">01</span><h3>Modra Property Services</h3>
+          <p>Premium care that keeps a high-end property show-ready — cleaning, exterior upkeep, curb appeal, and seasonal work, on a simple subscription or à la carte.</p>
+          <span class="go">View services &amp; pricing <span class="arr">&rarr;</span></span>
+        </a>
+        <a class="arm-card" href="#properties" data-target="properties">
+          <span class="no">02</span><h3>Modra Properties</h3>
+          <p>We acquire and renovate homes to the studs, led by a licensed Michigan builder. See past, current, and upcoming projects and the full scope of work.</p>
+          <span class="go">See our projects <span class="arr">&rarr;</span></span>
+        </a>
+        <a class="arm-card" href="#capital" data-target="capital">
+          <span class="no">03</span><h3>Modra Capital</h3>
+          <p>The funding engine of the group — our own capital, plus financing arranged through licensed partners. See exactly how Modra is funded.</p>
+          <span class="go">How we're funded <span class="arr">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bg-cream2">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">The Modra model</span><h2>Why one roof matters.</h2>
+        <p class="lead">A property can move through all three arms with one accountable team — no dropped handoffs between owner, builder, and crew.</p></div>
+      <div class="flow">
+        <div class="node"><div class="no">01 · CAPITAL</div><h4>Fund</h4><p>Our own capital, plus financing arranged through licensed partners.</p></div>
+        <div class="arrow">&rarr;</div>
+        <div class="node"><div class="no">02 · PROPERTIES</div><h4>Rebuild</h4><p>Acquired and renovated to a premium standard by a licensed builder.</p></div>
+        <div class="arrow">&rarr;</div>
+        <div class="node"><div class="no">03 · SERVICES</div><h4>Maintain</h4><p>Kept show-ready with premium, ongoing property care.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="testimonialsSection">
+    <div class="wrap">
+      <div class="sec-head center"><span class="eyebrow">In their words</span><h2>What clients say.</h2></div>
+      <div class="quotes" id="quotesGrid"></div>
+      <p class="center" style="margin-top:18px"><span class="note">EDIT or remove these in CONFIG.testimonials — add real quotes when you have them.</span></p>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== SERVICES (Modra Property Services) ===================== -->
+<div class="page" id="services">
+  <div class="page-head">
+    <div class="wrap inner">
+      <span class="eyebrow">Modra Property Services</span>
+      <h1>Premium care that keeps your property show-ready.</h1>
+      <p>Cleaning, exterior upkeep, curb appeal, and seasonal work for West Michigan's higher-end homes — on a simple subscription or à la carte, all tracked in your member portal.</p>
+      <div class="badges"><span class="vet"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 5.6L20.5 8.5l-4.3 4 1.1 6L12 15.8 6.7 18.5l1.1-6L3.5 8.5l5.9-.9z"/></svg>Veteran-Owned &amp; Operated</span>
+        <span class="vet" id="svcArea"></span></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="svc-layout">
+        <div>
+          <div class="sec-head" style="margin-bottom:30px"><span class="eyebrow">Property-care plans</span><h2>Pick your plan.</h2>
+            <p class="lead">Recurring care that keeps your property looking its best — billed monthly, cancel anytime.</p></div>
+          <div class="plans" id="plansGrid"></div>
+
+          <div class="sec-head" style="margin:60px 0 26px"><span class="eyebrow">À-la-carte services</span><h2>Add exactly what you need.</h2>
+            <p class="lead">One-time and seasonal services you can attach to any plan — or order on their own.</p></div>
+          <div class="addons" id="addonsGrid"></div>
+          <p class="note" style="margin-top:18px">EDIT all plans, services &amp; prices in the CONFIG block. Prices are premium placeholders — adjust to your market.</p>
+        </div>
+
+        <aside class="scope">
+          <div class="sh"><h3>Your service plan</h3><p>Build it, then subscribe</p></div>
+          <div class="body" id="scopeBody"><div class="empty">Select a plan and add services to begin.</div></div>
+          <div class="foot" id="scopeFoot" style="display:none">
+            <div class="totals" id="scopeTotals"></div>
+            <a class="btn btn-gold" id="subscribeBtn">Continue to sign up <span class="arr">&rarr;</span></a>
+            <button class="btn btn-ghost btn-sm" id="clearScope" style="width:100%">Clear</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="vband">
+        <div class="seal"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 5.6L20.5 8.5l-4.3 4 1.1 6L12 15.8 6.7 18.5l1.1-6L3.5 8.5l5.9-.9z"/></svg></div>
+        <div class="tx">
+          <h2>Veteran-owned and operated.</h2>
+          <p>Modra Property Services is led by Kyle, a U.S. veteran, and it shows in how we work: clear communication, accountability, and follow-through on every commitment. When we say we'll handle it, we handle it. That standard is why owners trust us with their highest-value properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head center"><span class="eyebrow">Simple from day one</span><h2>How it works.</h2></div>
+      <div class="steps">
+        <div class="step"><div class="num">STEP 01</div><h3>Request</h3><p>Tell us about your property and what it needs — online or with a quick call.</p></div>
+        <div class="step"><div class="num">STEP 02</div><h3>Quote</h3><p>We send a clear, flat quote for your plan or the services you picked.</p></div>
+        <div class="step"><div class="num">STEP 03</div><h3>Schedule</h3><p>Choose your start date and we put your service on the calendar.</p></div>
+        <div class="step"><div class="num">STEP 04</div><h3>Track</h3><p>Follow progress, schedule, and updates anytime in your member portal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-sm bg-cream2">
+    <div class="wrap">
+      <div class="sec-head center"><span class="eyebrow">Modra gives back</span><h2>Service with a conscience.</h2>
+        <p class="lead">A share of every dollar we earn goes back to the planet and to our community.</p></div>
+      <div class="impact-grid" id="impactGridSvc"></div>
+      <div class="center"><a class="btn btn-ghost" data-target="about">See our full impact <span class="arr">&rarr;</span></a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head center"><span class="eyebrow">Good to know</span><h2>Common questions.</h2></div>
+      <div class="faq">
+        <details><summary>How does billing work?</summary><p>Care plans are billed monthly and you can cancel anytime. À-la-carte services are billed when delivered. Everything is itemized in your member portal.</p></details>
+        <details><summary>Which areas do you serve?</summary><p>We focus on West Michigan, with an emphasis on higher-end homes where a premium, hands-on level of care makes the biggest difference.</p></details>
+        <details><summary>What do you handle — and what don't you?</summary><p>We handle property care: cleaning, exterior upkeep, curb appeal, seasonal and turnover work. For specialized or licensed trade work, we coordinate trusted, licensed professionals so it's done right.</p></details>
+        <details><summary>What makes Modra different?</summary><p>We're veteran-owned, and we're part of a full-cycle group that also renovates and funds real estate — so we understand high-end properties from every angle.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="contact-band">
+        <div>
+          <div class="who">Reach Modra Property Services — Kyle</div>
+          <h3>Prefer to talk first?</h3>
+          <p>Tell Kyle about your property and what you need, and we'll send a clear quote.</p>
+        </div>
+        <a class="btn btn-green" id="servicesContact">Request a quote <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PROPERTIES ===================== -->
+<div class="page" id="properties">
+  <div class="page-head">
+    <div class="wrap inner">
+      <span class="eyebrow">Modra Properties</span>
+      <h1>Past, present, and what's next.</h1>
+      <p>We acquire and renovate homes to the studs across West Michigan — led by a licensed Michigan Residential Builder. Here's the work, and the full scope behind each project.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="phase-tabs" id="phaseTabs">
+        <button class="on" data-phase="all">All</button>
+        <button data-phase="past">Completed</button>
+        <button data-phase="current">In progress</button>
+        <button data-phase="future">Upcoming</button>
+      </div>
+      <div class="proj-grid" id="projGrid"></div>
+      <p class="note" style="margin-top:22px">EDIT projects, scope lists &amp; photos in CONFIG. Add <code>img</code> for a hero photo; each project lists its full scope of work.</p>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="contact-band" style="background:var(--green);color:var(--cream);border-color:var(--green)">
+        <div>
+          <div class="who" style="color:var(--gold-2)">Sell directly to Modra</div>
+          <h3 style="color:#fff">Have a house to sell?</h3>
+          <p style="color:var(--on-dark)">We buy homes that need work — no agents, no repairs, no listing hassle. Tell us about it and we'll take a look.</p>
+        </div>
+        <a class="btn btn-gold" id="sellContact">Tell us about it <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CAPITAL ===================== -->
+<div class="page" id="capital">
+  <div class="page-head">
+    <div class="wrap inner">
+      <span class="eyebrow">Modra Capital</span>
+      <h1>How the group is funded.</h1>
+      <p>Full transparency on where Modra's capital comes from and how it's put to work — our own funds, plus financing arranged through licensed partners.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow">Our funding approach</span>
+        <h2 style="font-size:2rem;margin:14px 0 18px">Own capital first, financing when it fits.</h2>
+        <p class="lead" style="font-size:1.05rem">Modra funds its projects with the founders' own capital, and when a deal calls for more, we arrange financing through trusted, licensed brokers and lenders. Every dollar is matched to the right stage of a project, with conservative underwriting before anything moves.</p>
+      </div>
+      <div class="sources" id="sourcesList"></div>
+    </div>
+  </section>
+
+  <section class="sec bg-cream2">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">From dollars to doors</span><h2>How capital moves through Modra.</h2></div>
+      <div class="flow">
+        <div class="node"><div class="no">SOURCES</div><h4>Commit &amp; secure</h4><p>We commit our own capital and secure any financing through licensed partners.</p></div>
+        <div class="arrow">&rarr;</div>
+        <div class="node"><div class="no">DEPLOY</div><h4>Acquire &amp; rebuild</h4><p>Properties acquires and renovates against a clear, conservative budget.</p></div>
+        <div class="arrow">&rarr;</div>
+        <div class="node"><div class="no">RETURN</div><h4>Sell or hold</h4><p>The finished home is sold or held, and proceeds fund the next project.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow">The Modra Capital difference</span>
+        <h2 style="font-size:2rem;margin:14px 0 18px">Disciplined, transparent, accountable.</h2>
+        <p class="lead" style="font-size:1.05rem">We treat capital the way we'd want our own treated — conservatively, transparently, and with a long-term view. Questions about how a project is funded? We're happy to walk you through it.</p>
+        <a class="btn btn-gold" id="capitalContact" style="margin-top:6px">Contact Modra Capital — Jordan <span class="arr">&rarr;</span></a>
+      </div>
+      <ul class="feature-list">
+        <li><span class="tick">&#10003;</span><div><strong>We use our own capital</strong><span>Modra puts the founders' funds to work first, in every project.</span></div></li>
+        <li><span class="tick">&#10003;</span><div><strong>Financing through licensed partners</strong><span>When a project needs it, financing is arranged through licensed brokers and lenders.</span></div></li>
+        <li><span class="tick">&#10003;</span><div><strong>Conservative underwriting</strong><span>Every deal is stress-tested before we commit a dollar.</span></div></li>
+        <li><span class="tick">&#10003;</span><div><strong>Capital with a conscience</strong><span>1% of revenue is pledged back to the planet and local causes.</span></div></li>
+      </ul>
+    </div>
+  </section>
+  <div class="wrap"><p class="note" style="margin-bottom:40px">Informational only. Modra develops its own projects; any financing is arranged through licensed third parties. EDIT figures in CONFIG.</p></div>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<div class="page" id="about">
+  <div class="page-head">
+    <div class="wrap inner">
+      <span class="eyebrow">About Modra Group</span>
+      <h1>The people, the mission, the impact.</h1>
+      <p>A small, accountable team in West Michigan building real estate the right way — so the homes, the neighborhoods, and the people we work with all come out ahead.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="about-intro lead">Modra Group was founded by Victor Pizarro to do real estate the right way — funding, rebuilding, and caring for homes under one roof so every party comes out ahead. Each arm is led by someone who owns the outcome.</p>
+      <div id="teamWrap"></div>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap">
+      <div class="vband" style="background:var(--green)">
+        <div class="seal" style="border-style:dashed"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.65-7 10-7 10z"/></svg></div>
+        <div class="tx"><h2>Everyone leaves ahead.</h2>
+          <p>We measure success by whether our clients, the homes we touch, our partners, and our West Michigan neighborhoods all come out ahead — not just one of them. Honest work, homes we'd live in ourselves, service that respects people, and nothing hidden. That's the whole point of Modra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bg-cream2">
+    <div class="wrap">
+      <div class="sec-head center"><span class="eyebrow">Modra Impact</span><h2>Giving 1% back.</h2>
+        <p class="lead">Modra pledges 1% of revenue to the planet, funds local charitable organizations, and puts our team's hours where our values are.</p></div>
+      <div class="impact-grid" id="impactGrid"></div>
+      <div class="center" style="margin-top:8px"><div class="eyebrow" style="justify-content:center;margin-bottom:16px">Organizations we support</div><div class="orgs" id="orgsList"></div></div>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap"><div class="contact-band">
+      <div><div class="who">Talk to Modra</div><h3>Questions about the group?</h3><p>Services, selling, renovation, or how we fund projects — we'll point you to the right person.</p></div>
+      <a class="btn btn-green" id="generalContact">Get in touch <span class="arr">&rarr;</span></a>
+    </div></div>
+  </section>
+</div>
+
+<!-- ===================== PORTAL ===================== -->
+<div class="page" id="portal">
+  <div class="page-head" id="portalHead">
+    <div class="wrap inner"><span class="eyebrow">Member portal</span><h1 id="portalTitle">Your Modra account.</h1><p id="portalSub">Sign in to track your services, schedule, and updates — or create an account to get started.</p></div>
+  </div>
+  <section class="sec"><div class="wrap" id="portalBody"></div></section>
+</div>
+
+<!-- ===================== ADMIN ===================== -->
+<div class="page" id="admin">
+  <div class="page-head"><div class="wrap inner"><span class="eyebrow">Owner back office</span><h1>Modra Admin</h1><p>Manage members, services, and schedules. For Modra owners only.</p></div></div>
+  <section class="sec"><div class="wrap" id="adminBody"></div></section>
+</div>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">MODRA GROUP<small>WEST MICHIGAN</small></div>
+        <p>Premium property care, builder-led renovation, and the capital to fund it — built so everyone leaves the table ahead.</p>
+      </div>
+      <div><h4>Services</h4>
+        <a data-target="services">Property-care plans</a>
+        <a data-target="services">À-la-carte services</a>
+        <a data-target="portal">Member portal</a></div>
+      <div><h4>The group</h4>
+        <a data-target="properties">Properties &amp; projects</a>
+        <a data-target="capital">Capital &amp; funding</a>
+        <a data-target="about">About &amp; impact</a></div>
+      <div><h4>Contact</h4>
+        <a id="footEmail">hello@modragroup.com</a>
+        <a id="footPhone">(616) 000-0000</a>
+        <a data-target="admin" style="color:var(--gold-2)">Owner login &rarr;</a></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; <span id="yr"></span> Modra Group. All rights reserved.</span><span>CAPITAL · PROPERTIES · PROPERTY SERVICES</span></div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================================
+   ###  EDIT YOUR CONTENT HERE  ###  (the only block you normally touch)
+   ========================================================================= */
+const CONFIG = {
+  brand:{ logo:"", serviceArea:["West Michigan"] },
+  general:{ email:"hello@modragroup.com", phone:"(616) 000-0000" },   // PLACEHOLDERS
+  adminCode:"modra2025",          // owner passcode for the Admin page (prototype gate -- change it)
+  seedDemoData:true,              // true = preload 2 sample members so the admin isn't empty (set false to start clean)
+
+  contacts:{
+    capital:    { name:"Jordan Sullivan", email:"jordan@modragroup.com" },
+    properties: { name:"Victor Pizarro",  email:"victor@modragroup.com" },
+    services:   { name:"Kyle Meintsma",    email:"kyle@modragroup.com" }
+  },
+
+  /* --- property-care plans (subscription tiers). priceNum drives the cart math. --- */
+  plans:[
+    { id:"essential", name:"Essential Care", priceNum:189, rate:"$189", basis:"/ month", featured:false,
+      tagline:"Recurring exterior upkeep for a single premium home.",
+      features:["Scheduled yard & exterior tidy","Spring & fall seasonal cleanups","Monthly property check with photos","Online member portal","One point of contact"] },
+    { id:"premier", name:"Premier Care", priceNum:349, rate:"$349", basis:"/ month", featured:true,
+      tagline:"Our most popular plan -- fuller care, more often.",
+      features:["Everything in Essential","Bi-weekly service visits","Turnover / make-ready clean (1 / year)","Exterior pressure wash (1 / year)","Priority scheduling","Dedicated service coordinator"] },
+    { id:"signature", name:"Signature Care", priceNum:599, rate:"$599", basis:"/ month", featured:false,
+      tagline:"White-glove care for luxury & multi-property owners.",
+      features:["Everything in Premier","Weekly service visits","On-call service team","Quarterly deep cleans","Seasonal curb-appeal refreshes","Direct line to ownership"] }
+  ],
+
+  /* --- a-la-carte services (non-licensed property care). price = dollars. --- */
+  addons:[
+    { id:"turnover", name:"Turnover / make-ready clean", price:325, unit:"per turn", recurring:false, desc:"Full clean and reset between residents or before a sale." },
+    { id:"deepclean", name:"Deep clean", price:275, unit:"one-time", recurring:false, desc:"Top-to-bottom interior deep clean." },
+    { id:"exterior", name:"Exterior & pressure washing", price:349, unit:"one-time", recurring:false, desc:"Siding, walks, drive, and entry refreshed." },
+    { id:"yard", name:"Seasonal yard cleanup", price:225, unit:"per visit", recurring:false, desc:"Leaves, beds, and yard tidied for the season." },
+    { id:"curb", name:"Curb-appeal prep", price:450, unit:"one-time", recurring:false, desc:"Front-of-home refresh so it shows its best." },
+    { id:"snow", name:"Snow removal", price:75, unit:"per event", recurring:false, desc:"Drive and walkways cleared after a snowfall." },
+    { id:"junk", name:"Junk removal / trash-out", price:300, unit:"from", recurring:false, desc:"Haul-away and clear-out of a property's contents." },
+    { id:"styling", name:"Property styling / staging prep", price:500, unit:"one-time", recurring:false, desc:"Style a home to present at its very best." }
+  ],
+
+  /* --- projects: phase = 'past' | 'current' | 'future' --- */
+  projects:[
+    { name:"1071 Bristol Ave NW", phase:"current", type:"Full renovation \u00b7 Fix & flip", status:"Listing soon",
+      location:"West Michigan", beds:4, baths:3, sqft:"+1,200 added", timeline:"~9 months", img:"",
+      desc:"A tired home taken to the studs and rebuilt into a standout on an unusually large lot.",
+      scope:["New electrical, plumbing & HVAC throughout","Added ~1,200 sq ft of living space","New master suite addition","New basement bathroom (3 full baths total)","High-end kitchen & finishes","Large half-acre lot"] },
+    { name:"[Next flip]", phase:"future", type:"Single-family \u00b7 Value-add", status:"Sourcing",
+      location:"West Michigan", beds:3, baths:2, sqft:"1,800", timeline:"TBD", img:"",
+      desc:"Short description of the opportunity and the planned scope of work.",
+      scope:["Planned kitchen & bath renovation","Mechanical updates as needed","Cosmetic refresh & curb appeal"] },
+    { name:"[Past project]", phase:"past", type:"Single-family \u00b7 Renovation", status:"Sold",
+      location:"West Michigan", beds:3, baths:2, sqft:"1,600", timeline:"7 months", img:"",
+      desc:"A completed renovation -- add photos and the real scope here.",
+      scope:["Full interior renovation","Updated mechanicals","New kitchen & baths"] }
+  ],
+
+  /* --- capital funding sources (weight = bar width %) --- */
+  fundingSources:[
+    { name:"Founder & operator capital", pct:"45%", weight:45, desc:"Modra's own funds in every project -- we put our capital to work first." },
+    { name:"Financing via licensed partners", pct:"40%", weight:40, desc:"Acquisition and renovation financing arranged through trusted, licensed brokers and lenders." },
+    { name:"Reinvested profits", pct:"15%", weight:15, desc:"Gains from completed projects recycled into the next opportunity." }
+  ],
+
+  /* --- impact / giving back --- */
+  impact:{
+    pledge:"1%", pledgeLabel:"of revenue pledged", pledgeDesc:"Committed to the planet and environmental causes.",
+    charities:"5+", charitiesLabel:"local organizations", charitiesDesc:"West Michigan charities we fund each year.",
+    volunteerHours:"250+", volunteerLabel:"volunteer hours", volunteerDesc:"Hours our team gives back annually.",
+    orgs:["Habitat for Humanity Kent County","West Michigan housing fund","Local food bank","Veteran support nonprofit","Neighborhood revitalization"]
+  },
+
+  /* --- testimonials (section hides if empty). Replace bracketed placeholders with real quotes. --- */
+  testimonials:[
+    { quote:"[Add a real client quote here -- what Modra did and the result.]", name:"[Client name]", role:"[West Michigan homeowner]" },
+    { quote:"[A second short quote about working with Modra.]", name:"[Client name]", role:"[West Michigan homeowner]" }
+  ],
+
+  /* --- team --- */
+  team:{
+    capital:[{ name:"Jordan Sullivan", role:"Principal -- Modra Capital", img:"", email:"jordan@modragroup.com",
+      bio:"Leads Modra Capital -- putting the group's own funds to work and arranging financing through licensed lending partners to power each project." }],
+    properties:[{ name:"Victor Pizarro", role:"Founder -- Modra Properties", img:"", email:"victor@modragroup.com",
+      credential:"Licensed MI Residential Builder",
+      bio:"Founder of Modra Group and a licensed Michigan Residential Builder. Sources and leads acquisitions and full renovations across West Michigan, rebuilding homes to a premium standard." }],
+    services:[{ name:"Kyle Meintsma", role:"Director -- Modra Property Services", veteran:true, img:"", email:"kyle@modragroup.com",
+      bio:"Veteran-owned and owner-first. Kyle leads Modra Property Services -- premium cleaning, exterior upkeep, and curb-appeal care that keeps high-end homes show-ready." }]
+  }
+};
+/* =========================================================================
+   ###  END EDIT BLOCK -- engine below renders & runs everything.  ###
+   ========================================================================= */
+</script>
+<script>
+/* ---------- helpers ---------- */
+const $=(s,el=document)=>el.querySelector(s), $$=(s,el=document)=>[...el.querySelectorAll(s)];
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=n=>"$"+Number(n).toLocaleString();
+const initials=n=>(n||"").replace(/[^A-Za-z ]/g,"").trim().split(/\s+/).slice(0,2).map(w=>w[0]||"").join("").toUpperCase()||"M";
+const firstName=n=>(n||"").replace(/[\[\]]/g,"").trim().split(/\s+/)[0]||"";
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const fmtDate=d=>{try{return new Date(d).toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});}catch(e){return d;}};
+const mailto=(email,subject,body="")=>`mailto:${email}?subject=${encodeURIComponent(subject)}`+(body?`&body=${encodeURIComponent(body)}`:"");
+const vetSVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 5.6L20.5 8.5l-4.3 4 1.1 6L12 15.8 6.7 18.5l1.1-6L3.5 8.5l5.9-.9z"/></svg>';
+
+/* ---------- prototype database (persists locally; swap for a real backend later) ---------- */
+const DB=(()=>{
+  const mem={}; const hasWS = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
+  async function get(k){
+    if(hasWS){ try{ const r=await window.storage.get(k,false); return r&&r.value!=null?JSON.parse(r.value):null; }catch(e){ return null; } }
+    try{ const v=localStorage.getItem(k); return v!=null?JSON.parse(v):null; }catch(e){ return (k in mem)?mem[k]:null; }
+  }
+  async function set(k,val){
+    const s=JSON.stringify(val);
+    if(hasWS){ try{ await window.storage.set(k,s,false); return; }catch(e){} }
+    try{ localStorage.setItem(k,s); }catch(e){ mem[k]=val; }
+  }
+  return {get,set};
+})();
+async function getMembers(){ return (await DB.get("modra_members"))||[]; }
+async function saveMembers(m){ await DB.set("modra_members",m); }
+async function getSession(){ return await DB.get("modra_session"); }
+async function setSession(id){ await DB.set("modra_session",id); }
+async function hashPw(s){
+  try{ if(window.crypto&&crypto.subtle){ const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("modra:"+s)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); } }catch(e){}
+  let h=0; for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))>>>0;} return "f"+h.toString(16);
+}
+
+/* ---------- app state ---------- */
+let state={ member:null, adminUnlocked:false, dashTab:"overview", adminTab:"overview", adminMemberId:null, phase:"all", authMode:"signup" };
+let scope={ plan:null, addons:{} };
+
+/* ---------- routing ---------- */
+function go(target){
+  $$(".page").forEach(p=>p.classList.toggle("active",p.id===target));
+  $$(".nav-links a[data-target]").forEach(a=>a.classList.toggle("active",a.getAttribute("data-target")===target && !a.classList.contains("nav-cta")));
+  window.scrollTo({top:0}); $("#navLinks").classList.remove("open");
+  if(location.hash.slice(1)!==target) history.replaceState(null,"","#"+target);
+  if(target==="portal") renderPortal();
+  if(target==="admin") renderAdmin();
+}
+document.addEventListener("click",e=>{ const t=e.target.closest("[data-target]"); if(t){ e.preventDefault(); go(t.getAttribute("data-target")); }});
+$("#menuBtn").addEventListener("click",()=>$("#navLinks").classList.toggle("open"));
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1); if(h&&$("#"+h)) go(h);});
+
+/* ---------- static content renderers ---------- */
+function renderBrand(){ if(CONFIG.brand.logo) $("#brandLink").innerHTML=`<img src="${CONFIG.brand.logo}" alt="Modra Group">`; }
+function wireStatic(){
+  const c=CONFIG.contacts;
+  $("#capitalContact").href=mailto(c.capital.email,"Question for Modra Capital");
+  $("#sellContact").href=mailto(c.properties.email,"I have a property to sell to Modra","Property address:\nBeds / baths:\nCondition / work needed:\nAsking price (if any):\nBest way to reach you:\n");
+  $("#servicesContact").href=mailto(c.services.email,"Property services inquiry","Property address:\nWhat you need:\nBest way to reach you:\n");
+  $("#generalContact").href=mailto(CONFIG.general.email,"Inquiry via Modra Group website");
+  $("#footEmail").textContent=CONFIG.general.email; $("#footEmail").href="mailto:"+CONFIG.general.email;
+  $("#footPhone").textContent=CONFIG.general.phone; $("#footPhone").href="tel:"+CONFIG.general.phone.replace(/[^\d+]/g,"");
+  $("#svcArea").innerHTML="Serving "+CONFIG.brand.serviceArea.join(" \u00b7 ");
+  $("#yr").textContent=new Date().getFullYear();
+}
+function renderImpact(){
+  const im=CONFIG.impact;
+  const cards=`
+    <div class="impact-card"><div class="v">${esc(im.pledge)}</div><div class="l">${esc(im.pledgeLabel)}</div><div class="d">${esc(im.pledgeDesc)}</div></div>
+    <div class="impact-card"><div class="v">${esc(im.charities)}</div><div class="l">${esc(im.charitiesLabel)}</div><div class="d">${esc(im.charitiesDesc)}</div></div>
+    <div class="impact-card"><div class="v">${esc(im.volunteerHours)}</div><div class="l">${esc(im.volunteerLabel)}</div><div class="d">${esc(im.volunteerDesc)}</div></div>`;
+  $("#impactGrid").innerHTML=cards; $("#impactGridSvc").innerHTML=cards;
+  $("#orgsList").innerHTML=im.orgs.map(o=>`<span>${esc(o)}</span>`).join("");
+}
+function renderTestimonials(){
+  const q=CONFIG.testimonials||[]; const sec=$("#testimonialsSection");
+  if(!q.length){ if(sec) sec.style.display="none"; return; }
+  $("#quotesGrid").innerHTML=q.map(t=>`<div class="quote"><div class="qm">&ldquo;</div><p>${esc(t.quote)}</p><div class="qa"><div class="qav">${initials(t.name)}</div><div><div class="qn">${esc(t.name)}</div><div class="qr">${esc(t.role)}</div></div></div></div>`).join("");
+}
+function renderTeam(){
+  const groups=[["capital","01","Modra Capital"],["properties","02","Modra Properties"],["services","03","Modra Property Services"]];
+  $("#teamWrap").innerHTML=groups.map(([k,no,label])=>{
+    const ppl=CONFIG.team[k]||[];
+    return `<div class="team-group"><div class="gh"><span class="no">${no}</span><h3>${label}</h3><span class="rule"></span></div>
+      <div class="team-grid">${ppl.map(m=>{
+        const badges=[];
+        if(m.veteran) badges.push(`<span class="vet on-light">${vetSVG}Veteran-Owned</span>`);
+        if(m.credential) badges.push(`<span class="cred">${esc(m.credential)}</span>`);
+        return `<div class="member">
+          <div class="avatar">${m.img?`<img src="${m.img}" alt="${esc(m.name)}">`:initials(m.name)}</div>
+          <h4>${esc(m.name)}</h4><div class="role">${esc(m.role)}</div>
+          ${badges.length?`<div class="badge-row">${badges.join("")}</div>`:""}
+          <p class="bio">${esc(m.bio)}</p>
+          <a class="contact" href="${mailto(m.email,"Hello "+firstName(m.name)+" -- via Modra website")}">Contact ${esc(firstName(m.name))} &rarr;</a>
+        </div>`;}).join("")}</div></div>`;
+  }).join("");
+}
+function renderSources(){
+  $("#sourcesList").innerHTML=CONFIG.fundingSources.map(s=>`
+    <div class="src"><div class="top"><h4>${esc(s.name)}</h4><span class="pct">${esc(s.pct)}</span></div>
+    <div class="bar"><span style="width:${s.weight}%"></span></div><p>${esc(s.desc)}</p></div>`).join("");
+}
+
+/* ---------- services storefront ---------- */
+function renderPlans(){
+  $("#plansGrid").innerHTML=CONFIG.plans.map(p=>`
+    <div class="plan${p.featured?" featured":""}">
+      ${p.featured?'<span class="flag">Most popular</span>':""}
+      <h3>${esc(p.name)}</h3><div class="tagline">${esc(p.tagline)}</div>
+      <div class="price"><span class="rate">${esc(p.rate)}</span><span class="basis">${esc(p.basis)}</span></div>
+      <div class="price-note">Recurring \u00b7 cancel anytime</div>
+      <ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>
+      <button class="btn ${p.featured?"btn-gold":"btn-green"} select" data-plan="${p.id}">${scope.plan===p.id?"\u2713 Selected":"Select "+esc(p.name)}</button>
+    </div>`).join("");
+}
+function renderAddons(){
+  $("#addonsGrid").innerHTML=CONFIG.addons.map(a=>{
+    const added=!!scope.addons[a.id];
+    return `<div class="addon${added?" added":""}">
+      <div class="info"><h4>${esc(a.name)}</h4><div class="d">${esc(a.desc)}</div></div>
+      <div class="right"><div class="pl">${money(a.price)}<small>${esc(a.unit)}</small></div>
+      <button class="add-btn" data-addon="${a.id}">${added?"\u2713 Added":"Add"}</button></div></div>`;
+  }).join("");
+}
+function renderScope(){
+  const items=[];
+  if(scope.plan){ const p=CONFIG.plans.find(x=>x.id===scope.plan); if(p) items.push({k:"plan:"+p.id,n:p.name+" plan",lp:p.rate+" "+p.basis}); }
+  Object.keys(scope.addons).forEach(id=>{ const a=CONFIG.addons.find(x=>x.id===id); if(a) items.push({k:"addon:"+id,n:a.name,lp:money(a.price)}); });
+  const body=$("#scopeBody"), foot=$("#scopeFoot");
+  if(!items.length){ body.innerHTML='<div class="empty">Select a plan and add services to begin.</div>'; foot.style.display="none"; updateSubscribeLabel(); return; }
+  body.innerHTML=items.map(it=>`<div class="line"><span class="ln">${esc(it.n)}</span><span class="lp">${esc(it.lp)}<button class="x" data-remove="${it.k}" aria-label="remove">\u00d7</button></span></div>`).join("");
+  let monthly=0, oneTime=0;
+  if(scope.plan){ const p=CONFIG.plans.find(x=>x.id===scope.plan); monthly += (p.priceNum||0); }
+  Object.keys(scope.addons).forEach(id=>{ const a=CONFIG.addons.find(x=>x.id===id); if(a&&a.price!=null){ if(a.recurring) monthly+=a.price; else oneTime+=a.price; } });
+  const t=[];
+  if(monthly>0) t.push(`Monthly: <b>${money(monthly)}/mo</b>`);
+  if(oneTime>0) t.push(`One-time: <b>${money(oneTime)}</b>`);
+  t.push(`<span style="color:var(--muted)">Final pricing scaled to your property.</span>`);
+  $("#scopeTotals").innerHTML=t.join("<br>");
+  foot.style.display="block"; updateSubscribeLabel();
+}
+function updateSubscribeLabel(){
+  const b=$("#subscribeBtn"); if(!b) return;
+  b.innerHTML=(state.member?"Save to my account":"Continue to sign up")+' <span class="arr">&rarr;</span>';
+}
+
+/* ---------- projects ---------- */
+function renderProjects(){
+  const list=CONFIG.projects.filter(p=>state.phase==="all"?true:p.phase===state.phase);
+  const phaseLabel={past:"Completed",current:"In progress",future:"Upcoming"};
+  $("#projGrid").innerHTML=list.length?list.map(p=>`
+    <article class="proj">
+      <div class="ph">${p.img?`<img src="${p.img}" alt="${esc(p.name)}">`:'<span class="ph-label">Add photo</span>'}
+        <span class="tag">${esc(p.status)}</span><span class="phase">${esc(phaseLabel[p.phase]||p.phase)}</span></div>
+      <div class="body">
+        <div class="meta">${esc(p.type)}</div><h3>${esc(p.name)}</h3>
+        <div class="facts">
+          ${p.location?`<span>${esc(p.location)}</span>`:""}${p.beds?`<span>${esc(p.beds)} bd</span>`:""}${p.baths?`<span>${esc(p.baths)} ba</span>`:""}${p.sqft?`<span>${esc(p.sqft)} sqft</span>`:""}${p.timeline?`<span>${esc(p.timeline)}</span>`:""}
+        </div>
+        <div class="pdesc">${esc(p.desc)}</div>
+        ${p.scope&&p.scope.length?`<div class="scope-h">Scope of work</div><ul class="scope-list">${p.scope.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>`:""}
+      </div>
+    </article>`).join(""):'<p class="empty-state">No projects in this phase yet.</p>';
+}
+
+/* ---------- AUTH ---------- */
+async function doSignup(form){
+  const name=form.name.value.trim(), email=form.email.value.trim().toLowerCase(), phone=form.phone.value.trim(), property=form.property.value.trim(), pw=form.password.value;
+  if(!name||!email||!pw){ return "Please fill in your name, email, and a password."; }
+  if(pw.length<6){ return "Password must be at least 6 characters."; }
+  const members=await getMembers();
+  if(members.some(m=>m.id===email)){ return "An account with that email already exists -- try signing in."; }
+  const plan=scope.plan?CONFIG.plans.find(x=>x.id===scope.plan):null;
+  const addonObjs=Object.keys(scope.addons).map(id=>CONFIG.addons.find(x=>x.id===id)).filter(Boolean);
+  const now=new Date();
+  const member={
+    id:email, name, email, phone, property, passHash:await hashPw(pw),
+    plan: plan?{id:plan.id,name:plan.name,rate:plan.rate,basis:plan.basis,priceNum:plan.priceNum}:null,
+    addons: addonObjs.map(a=>({id:a.id,name:a.name,priceLabel:money(a.price),status:"Scheduled"})),
+    schedule: plan?[{id:uid(),title:"Welcome call",date:new Date(now.getTime()+3*864e5).toISOString(),status:"Scheduled"}]:[],
+    notifications:[{id:uid(),text:plan?`Welcome to Modra, ${firstName(name)}! Your ${plan.name} plan is being set up -- we'll be in touch shortly.`:`Welcome to Modra, ${firstName(name)}! Browse services any time to add a plan.`,date:now.toISOString(),read:false}],
+    emailOptIn:true, status:plan?"Onboarding":"New", createdAt:now.toISOString()
+  };
+  members.push(member); await saveMembers(members); await setSession(email);
+  state.member=member; scope={plan:null,addons:{}}; renderPlans(); renderAddons(); renderScope();
+  updateAuthUI(); state.dashTab="overview"; renderPortal(); return null;
+}
+async function doSignin(form){
+  const email=form.email.value.trim().toLowerCase(), pw=form.password.value;
+  const members=await getMembers(); const m=members.find(x=>x.id===email);
+  if(!m) return "No account found for that email.";
+  if(m.passHash!==await hashPw(pw)) return "Incorrect password.";
+  await setSession(email); state.member=m; updateAuthUI(); state.dashTab="overview"; renderPortal(); return null;
+}
+async function logout(){ await setSession(null); state.member=null; updateAuthUI(); state.authMode="signin"; go("portal"); }
+function updateAuthUI(){ const a=$("#navAuth"); a.textContent=state.member?"My portal":"Sign in / Join"; }
+
+/* ---------- PORTAL (auth + dashboard) ---------- */
+function renderPortal(){
+  const head=$("#portalHead"), body=$("#portalBody");
+  if(!state.member){
+    head.style.display=""; $("#portalTitle").textContent="Your Modra account.";
+    $("#portalSub").textContent="Sign in to track your services, schedule, and updates -- or create an account to get started.";
+    const m=state.authMode;
+    const scopeItems=[];
+    if(scope.plan){const p=CONFIG.plans.find(x=>x.id===scope.plan); if(p) scopeItems.push([p.name+" plan",p.rate+" "+p.basis]);}
+    Object.keys(scope.addons).forEach(id=>{const a=CONFIG.addons.find(x=>x.id===id); if(a) scopeItems.push([a.name,money(a.price)]);});
+    body.innerHTML=`<div class="auth-wrap"><div class="auth-card">
+      <div class="auth-tabs"><button data-auth="signup" class="${m==="signup"?"on":""}">Create account</button><button data-auth="signin" class="${m==="signin"?"on":""}">Sign in</button></div>
+      ${m==="signup"&&scopeItems.length?`<div class="scope-preview"><div class="h">Your selected plan</div>${scopeItems.map(s=>`<div class="li"><span>${esc(s[0])}</span><span>${esc(s[1])}</span></div>`).join("")}</div>`:""}
+      <form id="authForm" autocomplete="off">
+        ${m==="signup"?`
+          <div class="field"><label>Full name</label><input name="name" type="text" placeholder="Jane Owner"></div>
+          <div class="row-2"><div class="field"><label>Email</label><input name="email" type="email" placeholder="you@email.com"></div>
+          <div class="field"><label>Phone</label><input name="phone" type="tel" placeholder="(616) 555-0100"></div></div>
+          <div class="field"><label>Property address <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input name="property" type="text" placeholder="123 Premium Ln"></div>
+          <div class="field"><label>Password</label><input name="password" type="password" placeholder="At least 6 characters"></div>
+        `:`
+          <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@email.com"></div>
+          <div class="field"><label>Password</label><input name="password" type="password" placeholder="Your password"></div>
+        `}
+        <div class="form-err" id="authErr"></div>
+        <button type="submit" class="btn btn-gold" style="width:100%">${m==="signup"?"Create my account":"Sign in"}</button>
+      </form>
+      <p class="center" style="margin:16px 0 0;font-size:.86rem;color:var(--muted)">${m==="signup"?"Already a member? ":"New to Modra? "}<button class="muted-link" data-auth="${m==="signup"?"signin":"signup"}">${m==="signup"?"Sign in":"Create an account"}</button></p>
+    </div>
+    <p class="note" style="display:block;margin:18px auto 0;text-align:center">Prototype accounts are stored in your browser. Real multi-device accounts, emails &amp; payments need a backend -- see the notes I sent.</p>
+    </div>`;
+    return;
+  }
+  head.style.display="none";
+  const mem=state.member, unread=mem.notifications.filter(n=>!n.read).length;
+  const nav=[["overview","Overview",0],["services","My services",0],["schedule","Schedule",0],["notifications","Notifications",unread],["profile","Profile",0]];
+  body.innerHTML=`<div class="dash">
+    <aside class="dash-side">
+      <div class="uhead"><div class="uav">${initials(mem.name)}</div><div><div class="un">${esc(mem.name)}</div><div class="ue">${esc(mem.email)}</div></div></div>
+      <nav class="dash-nav">${nav.map(([k,l,b])=>`<button data-dash="${k}" class="${state.dashTab===k?"on":""}">${l}${b?`<span class="nb">${b}</span>`:""}</button>`).join("")}</nav>
+      <div class="dash-logout"><button data-logout>Sign out</button></div>
+    </aside>
+    <div class="dash-main">${dashView(mem)}</div>
+  </div>`;
+}
+function dashView(mem){
+  const t=state.dashTab;
+  if(t==="overview"){
+    const nextSched=[...mem.schedule].filter(s=>new Date(s.date)>=new Date(Date.now()-864e5)).sort((a,b)=>new Date(a.date)-new Date(b.date))[0];
+    const svcCount=(mem.plan?1:0)+mem.addons.length, unread=mem.notifications.filter(n=>!n.read).length;
+    return `<h2 class="dash-h">Welcome back, ${esc(firstName(mem.name))}.</h2><p class="dash-sub">Here's a snapshot of your account with Modra.</p>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="v">${svcCount}</div><div class="l">Active services</div></div>
+        <div class="stat-card"><div class="v">${nextSched?fmtDate(nextSched.date):"--"}</div><div class="l">Next scheduled</div></div>
+        <div class="stat-card"><div class="v">${unread}</div><div class="l">New updates</div></div>
+      </div>
+      <div class="panel"><h3>Your plan</h3>${mem.plan?`<div class="svc-item"><div><div class="n">${esc(mem.plan.name)} plan</div><div class="d">${esc(mem.plan.rate)} ${esc(mem.plan.basis)} \u00b7 status: ${esc(mem.status)}</div></div><span class="pill ${pillClass(mem.status)}">${esc(mem.status)}</span></div>`:`<div class="empty-state">No care plan yet. <button class="muted-link" data-target="services">Browse plans &rarr;</button></div>`}</div>
+      <div class="panel"><h3>Recent updates</h3>${mem.notifications.slice(0,3).map(n=>`<div class="notif ${n.read?"":"unread"}"><div><div class="nt">${esc(n.text)}</div><div class="nd">${fmtDate(n.date)}</div></div></div>`).join("")||'<div class="empty-state">No updates yet.</div>'}</div>`;
+  }
+  if(t==="services"){
+    const addons=mem.addons.map(a=>`<div class="svc-item"><div><div class="n">${esc(a.name)}</div><div class="d">${esc(a.priceLabel||"")}</div></div><span class="pill ${pillClass(a.status)}">${esc(a.status||"Active")}</span></div>`).join("");
+    return `<h2 class="dash-h">My services</h2><p class="dash-sub">Everything Modra is handling for you.</p>
+      <div class="panel"><h3>Care plan</h3>${mem.plan?`<div class="svc-item"><div><div class="n">${esc(mem.plan.name)} plan</div><div class="d">${esc(mem.plan.rate)} ${esc(mem.plan.basis)}</div></div><span class="pill ${pillClass(mem.status)}">${esc(mem.status)}</span></div>`:'<div class="empty-state">No plan selected yet.</div>'}</div>
+      <div class="panel"><h3>À-la-carte services</h3>${addons||'<div class="empty-state">No à-la-carte services yet.</div>'}</div>
+      <button class="btn btn-green" data-target="services">Add more services &rarr;</button>`;
+  }
+  if(t==="schedule"){
+    const items=[...mem.schedule].sort((a,b)=>new Date(a.date)-new Date(b.date));
+    return `<h2 class="dash-h">Schedule</h2><p class="dash-sub">Upcoming and recent service activity.</p>
+      <div class="panel">${items.length?items.map(s=>`<div class="sched-item"><div><div class="n">${esc(s.title)}</div><div class="d">${fmtDate(s.date)}</div></div><span class="pill ${pillClass(s.status)}">${esc(s.status)}</span></div>`).join(""):'<div class="empty-state">Nothing scheduled yet. We\'ll add visits and key dates here.</div>'}</div>`;
+  }
+  if(t==="notifications"){
+    return `<h2 class="dash-h">Notifications</h2><p class="dash-sub">Updates from your Modra team.</p>
+      <div style="margin-bottom:14px"><button class="mini" data-readall>Mark all as read</button></div>
+      <div class="panel">${mem.notifications.length?mem.notifications.map(n=>`<div class="notif ${n.read?"":"unread"}"><div><div class="nt">${esc(n.text)}</div><div class="nd">${fmtDate(n.date)}</div></div></div>`).join(""):'<div class="empty-state">No notifications yet.</div>'}</div>`;
+  }
+  if(t==="profile"){
+    return `<h2 class="dash-h">Profile &amp; preferences</h2><p class="dash-sub">Your details and how we reach you.</p>
+      <div class="panel"><h3>Contact details</h3>
+        <div class="detail-grid">
+          <div class="field"><label>Name</label><input id="pfName" value="${esc(mem.name)}"></div>
+          <div class="field"><label>Phone</label><input id="pfPhone" value="${esc(mem.phone||"")}"></div>
+          <div class="field"><label>Email</label><input value="${esc(mem.email)}" disabled></div>
+          <div class="field"><label>Property</label><input id="pfProp" value="${esc(mem.property||"")}"></div>
+        </div>
+        <button class="btn btn-green btn-sm" data-saveprofile>Save changes</button>
+      </div>
+      <div class="panel"><h3>Notifications</h3>
+        <div class="svc-item"><div><div class="n">Email notifications</div><div class="d">Get service updates and schedule reminders by email.</div></div>
+        <div class="switch ${mem.emailOptIn?"on":""}" data-toggleemail role="switch" aria-checked="${mem.emailOptIn}"><span class="track"></span></div></div>
+        <p class="note" style="margin-top:14px">In this prototype, opting in is recorded but no email is actually sent -- connecting a real email service is part of going live.</p>
+      </div>`;
+  }
+  return "";
+}
+function pillClass(s){ s=(s||"").toLowerCase(); if(s.includes("active")) return "active"; if(s.includes("schedul")) return "sched"; if(s.includes("onboard")||s.includes("new")) return "onb"; if(s.includes("progress")) return "prog"; if(s.includes("complete")||s.includes("done")||s.includes("sold")) return "done"; return "sched"; }
+
+/* ---------- ADMIN ---------- */
+async function renderAdmin(){
+  const body=$("#adminBody");
+  if(!state.adminUnlocked){
+    body.innerHTML=`<div class="admin-gate"><div class="auth-card">
+      <h2 style="margin-bottom:8px">Owner access</h2><p style="color:var(--muted);margin-bottom:18px">Enter the Modra owner passcode to continue.</p>
+      <form id="gateForm"><div class="field"><input name="code" type="password" placeholder="Passcode"></div><div class="form-err" id="gateErr"></div>
+      <button class="btn btn-green" style="width:100%">Unlock admin</button></form>
+      <p class="note" style="display:block;margin-top:16px">Prototype gate only. Real access control needs server-side authentication.</p>
+    </div></div>`;
+    return;
+  }
+  const members=await getMembers();
+  body.innerHTML=`
+    <div class="admin-tabs">
+      <button data-adm="overview" class="${state.adminTab==="overview"?"on":""}">Overview</button>
+      <button data-adm="members" class="${state.adminTab==="members"?"on":""}">Members</button>
+      <button data-adm="schedule" class="${state.adminTab==="schedule"?"on":""}">Schedule</button>
+      <button data-adm="broadcast" class="${state.adminTab==="broadcast"?"on":""}">Send update</button>
+      <button data-adm="lock" style="margin-left:auto">Lock</button>
+    </div>
+    <div id="admView">${adminView(members)}</div>`;
+}
+function adminView(members){
+  const t=state.adminTab;
+  if(t==="overview"){
+    const withPlan=members.filter(m=>m.plan).length;
+    const upcoming=members.flatMap(m=>m.schedule.map(s=>({...s,who:m.name}))).filter(s=>new Date(s.date)>=new Date()).length;
+    const addonCount=members.reduce((n,m)=>n+m.addons.length,0);
+    return `<div class="admin-stats">
+        <div class="stat-card"><div class="v">${members.length}</div><div class="l">Members</div></div>
+        <div class="stat-card"><div class="v">${withPlan}</div><div class="l">Active plans</div></div>
+        <div class="stat-card"><div class="v">${addonCount}</div><div class="l">Add-on services</div></div>
+        <div class="stat-card"><div class="v">${upcoming}</div><div class="l">Upcoming visits</div></div>
+      </div>
+      <div class="panel"><h3>Newest members</h3>${members.length?[...members].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt)).slice(0,5).map(m=>`<div class="svc-item"><div><div class="n">${esc(m.name)}</div><div class="d">${esc(m.plan?m.plan.name+" plan":"No plan")} \u00b7 joined ${fmtDate(m.createdAt)}</div></div><span class="pill ${pillClass(m.status)}">${esc(m.status)}</span></div>`).join(""):'<div class="empty-state">No members yet. New sign-ups appear here.</div>'}</div>
+      <button class="mini danger" data-resetdemo>Reset demo data</button>`;
+  }
+  if(t==="members"){
+    if(state.adminMemberId){ const m=members.find(x=>x.id===state.adminMemberId); if(m) return adminMemberDetail(m); }
+    return `<div class="table-wrap"><table class="adm"><thead><tr><th>Member</th><th>Contact</th><th>Plan</th><th>Status</th><th>Services</th><th></th></tr></thead><tbody>
+      ${members.length?members.map(m=>`<tr>
+        <td><div class="nm">${esc(m.name)}</div><div style="font-size:.78rem;color:var(--muted)">${esc(m.property||"--")}</div></td>
+        <td style="font-size:.84rem">${esc(m.email)}<br>${esc(m.phone||"--")}</td>
+        <td>${esc(m.plan?m.plan.name:"--")}</td>
+        <td><span class="pill ${pillClass(m.status)}">${esc(m.status)}</span></td>
+        <td>${(m.plan?1:0)+m.addons.length}</td>
+        <td><button class="mini" data-member="${esc(m.id)}">Manage</button></td>
+      </tr>`).join(""):'<tr><td colspan="6"><div class="empty-state">No members yet.</div></td></tr>'}
+    </tbody></table></div>`;
+  }
+  if(t==="schedule"){
+    const all=members.flatMap(m=>m.schedule.map(s=>({...s,who:m.name,mid:m.id}))).sort((a,b)=>new Date(a.date)-new Date(b.date));
+    return `<div class="panel"><h3>All scheduled activity</h3>${all.length?all.map(s=>`<div class="sched-item"><div><div class="n">${esc(s.title)}</div><div class="d">${esc(s.who)} \u00b7 ${fmtDate(s.date)}</div></div><span class="pill ${pillClass(s.status)}">${esc(s.status)}</span></div>`).join(""):'<div class="empty-state">Nothing scheduled. Add visits from a member\'s detail page.</div>'}</div>`;
+  }
+  if(t==="broadcast"){
+    return `<div class="panel" style="max-width:560px"><h3>Send an update</h3><p style="color:var(--muted);margin-bottom:16px">Push a notification to a member's portal. (Email delivery is added when you connect a backend.)</p>
+      <form id="bcForm">
+        <div class="field"><label>Recipient</label><select name="to"><option value="__all">All members</option>${members.map(m=>`<option value="${esc(m.id)}">${esc(m.name)}</option>`).join("")}</select></div>
+        <div class="field"><label>Message</label><textarea name="msg" rows="3" placeholder="Your seasonal service is scheduled for Friday..."></textarea></div>
+        <div class="form-err" id="bcErr"></div>
+        <button class="btn btn-green">Send notification</button>
+      </form></div>`;
+  }
+  return "";
+}
+function adminMemberDetail(m){
+  return `<button class="mini" data-memberback style="margin-bottom:16px">&larr; All members</button>
+    <div class="panel"><h3>${esc(m.name)}</h3>
+      <div class="detail-grid">
+        <div><div class="d" style="color:var(--muted);font-size:.84rem">Email</div><div>${esc(m.email)}</div></div>
+        <div><div class="d" style="color:var(--muted);font-size:.84rem">Phone</div><div>${esc(m.phone||"--")}</div></div>
+        <div><div class="d" style="color:var(--muted);font-size:.84rem">Property</div><div>${esc(m.property||"--")}</div></div>
+        <div><div class="d" style="color:var(--muted);font-size:.84rem">Joined</div><div>${fmtDate(m.createdAt)}</div></div>
+      </div>
+      <div class="field" style="max-width:260px;margin-top:16px"><label>Account status</label>
+        <select data-status="${esc(m.id)}">${["New","Onboarding","Active","On hold","Completed"].map(s=>`<option ${m.status===s?"selected":""}>${s}</option>`).join("")}</select></div>
+    </div>
+    <div class="panel"><h3>Services</h3>
+      ${m.plan?`<div class="svc-item"><div><div class="n">${esc(m.plan.name)} plan</div><div class="d">${esc(m.plan.rate)} ${esc(m.plan.basis)}</div></div><span class="pill ${pillClass(m.status)}">plan</span></div>`:'<div class="empty-state">No care plan.</div>'}
+      ${m.addons.map((a,i)=>`<div class="svc-item"><div><div class="n">${esc(a.name)}</div><div class="d">${esc(a.priceLabel||"")}</div></div><button class="mini danger" data-rmaddon="${esc(m.id)}|${i}">Remove</button></div>`).join("")}
+    </div>
+    <div class="panel"><h3>Schedule</h3>
+      ${m.schedule.map((s,i)=>`<div class="sched-item"><div><div class="n">${esc(s.title)}</div><div class="d">${fmtDate(s.date)}</div></div><div class="adm-actions"><span class="pill ${pillClass(s.status)}">${esc(s.status)}</span><button class="mini danger" data-rmsched="${esc(m.id)}|${i}">\u00d7</button></div></div>`).join("")||'<div class="empty-state">No scheduled items.</div>'}
+      <form id="schedForm" data-mid="${esc(m.id)}" style="margin-top:16px"><div class="row-2"><div class="field"><label>Add visit / task</label><input name="title" placeholder="Seasonal cleanup"></div><div class="field"><label>Date</label><input name="date" type="date"></div></div><button class="mini">Add to schedule</button></form>
+    </div>
+    <div class="panel"><h3>Send this member an update</h3>
+      <form id="noteForm" data-mid="${esc(m.id)}"><div class="field"><textarea name="msg" rows="2" placeholder="Message to ${esc(firstName(m.name))}..."></textarea></div><button class="mini">Send notification</button></form>
+    </div>`;
+}
+
+/* ---------- demo seed ---------- */
+async function seedDemo(){
+  if(!CONFIG.seedDemoData) return;
+  const members=await getMembers(); if(members.length) return;
+  const now=Date.now(), demoHash=await hashPw("demo1234");
+  const mk=(name,email,phone,prop,planId,addons,status,daysAgo,sched,notes)=>{
+    const p=CONFIG.plans.find(x=>x.id===planId);
+    return { id:email,name,email,phone,property:prop,passHash:demoHash,
+      plan:p?{id:p.id,name:p.name,rate:p.rate,basis:p.basis,priceNum:p.priceNum}:null,
+      addons:addons.map(id=>{const a=CONFIG.addons.find(x=>x.id===id);return{id,name:a.name,priceLabel:money(a.price),status:"Active"};}),
+      schedule:sched, notifications:notes, emailOptIn:true, status, createdAt:new Date(now-daysAgo*864e5).toISOString() };
+  };
+  const m1=mk("Sarah Whitman","sarah@example.com","(616) 555-0142","2210 Lakeshore Dr","signature",["turnover","curb"],"Active",24,
+    [{id:uid(),title:"Curb-appeal refresh",date:new Date(now+9*864e5).toISOString(),status:"Scheduled"},{id:uid(),title:"Turnover clean completed",date:new Date(now-12*864e5).toISOString(),status:"Completed"}],
+    [{id:uid(),text:"Your fall curb-appeal refresh is on the calendar -- we'll send before/after photos.",date:new Date(now-2*864e5).toISOString(),read:false},{id:uid(),text:"September service summary is ready in your portal.",date:new Date(now-6*864e5).toISOString(),read:true}]);
+  const m2=mk("Marcus Webb","marcus@example.com","(616) 555-0188","48 Heritage Hill Ct","premier",["deepclean"],"Onboarding",3,
+    [{id:uid(),title:"First service visit",date:new Date(now+2*864e5).toISOString(),status:"Scheduled"}],
+    [{id:uid(),text:"Welcome to Modra, Marcus! We're getting your first visit scheduled now.",date:new Date(now-3*864e5).toISOString(),read:false}]);
+  await saveMembers([m1,m2]);
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click",async e=>{
+  const el=e.target;
+  const pl=el.closest("[data-plan]"); if(pl){ scope.plan = scope.plan===pl.dataset.plan?null:pl.dataset.plan; renderPlans(); renderScope(); return; }
+  const ad=el.closest("[data-addon]"); if(ad){ const id=ad.dataset.addon; if(scope.addons[id]) delete scope.addons[id]; else scope.addons[id]=true; renderAddons(); renderScope(); return; }
+  const rm=el.closest("[data-remove]"); if(rm){ const k=rm.dataset.remove; if(k.startsWith("plan:")) scope.plan=null; else delete scope.addons[k.split(":")[1]]; renderPlans(); renderAddons(); renderScope(); return; }
+  if(el.closest("#clearScope")){ scope={plan:null,addons:{}}; renderPlans(); renderAddons(); renderScope(); return; }
+  if(el.closest("#subscribeBtn")){
+    if(state.member){
+      const members=await getMembers(); const m=members.find(x=>x.id===state.member.id);
+      if(scope.plan){const p=CONFIG.plans.find(x=>x.id===scope.plan); m.plan={id:p.id,name:p.name,rate:p.rate,basis:p.basis,priceNum:p.priceNum}; if(m.status==="New")m.status="Onboarding";}
+      Object.keys(scope.addons).forEach(id=>{ if(!m.addons.some(a=>a.id===id)){ const a=CONFIG.addons.find(x=>x.id===id); m.addons.push({id,name:a.name,priceLabel:money(a.price),status:"Scheduled"}); }});
+      m.notifications.unshift({id:uid(),text:"Your service plan was updated. We'll confirm details shortly.",date:new Date().toISOString(),read:false});
+      await saveMembers(members); state.member=m; scope={plan:null,addons:{}}; renderPlans(); renderAddons(); renderScope();
+      state.dashTab="services"; go("portal");
+    } else { state.authMode="signup"; go("portal"); }
+    return;
+  }
+  const ph=el.closest("[data-phase]"); if(ph){ state.phase=ph.dataset.phase; $$("#phaseTabs button").forEach(b=>b.classList.toggle("on",b===ph)); renderProjects(); return; }
+  const au=el.closest("[data-auth]"); if(au){ state.authMode=au.dataset.auth; renderPortal(); return; }
+  const dn=el.closest("[data-dash]"); if(dn){ state.dashTab=dn.dataset.dash; renderPortal(); return; }
+  if(el.closest("[data-logout]")){ logout(); return; }
+  if(el.closest("[data-readall]")){ const members=await getMembers(); const m=members.find(x=>x.id===state.member.id); m.notifications.forEach(n=>n.read=true); await saveMembers(members); state.member=m; renderPortal(); updateAuthUI(); return; }
+  if(el.closest("[data-saveprofile]")){ const members=await getMembers(); const m=members.find(x=>x.id===state.member.id); m.name=$("#pfName").value.trim()||m.name; m.phone=$("#pfPhone").value.trim(); m.property=$("#pfProp").value.trim(); await saveMembers(members); state.member=m; renderPortal(); return; }
+  const tg=el.closest("[data-toggleemail]"); if(tg){ const members=await getMembers(); const m=members.find(x=>x.id===state.member.id); m.emailOptIn=!m.emailOptIn; await saveMembers(members); state.member=m; renderPortal(); return; }
+  const at=el.closest("[data-adm]"); if(at){ const v=at.dataset.adm; if(v==="lock"){ state.adminUnlocked=false; renderAdmin(); return; } state.adminTab=v; state.adminMemberId=null; renderAdmin(); return; }
+  const mb=el.closest("[data-member]"); if(mb){ state.adminMemberId=mb.dataset.member; renderAdmin(); return; }
+  if(el.closest("[data-memberback]")){ state.adminMemberId=null; renderAdmin(); return; }
+  const rmA=el.closest("[data-rmaddon]"); if(rmA){ const [id,i]=rmA.dataset.rmaddon.split("|"); const members=await getMembers(); const m=members.find(x=>x.id===id); m.addons.splice(+i,1); await saveMembers(members); renderAdmin(); return; }
+  const rmS=el.closest("[data-rmsched]"); if(rmS){ const [id,i]=rmS.dataset.rmsched.split("|"); const members=await getMembers(); const m=members.find(x=>x.id===id); m.schedule.splice(+i,1); await saveMembers(members); renderAdmin(); return; }
+  if(el.closest("[data-resetdemo]")){ if(confirm("Clear all member data and reload demo samples?")){ await saveMembers([]); await seedDemo(); state.adminMemberId=null; renderAdmin(); } return; }
+});
+document.addEventListener("change",async e=>{
+  const st=e.target.closest("[data-status]"); if(st){ const members=await getMembers(); const m=members.find(x=>x.id===st.dataset.status); m.status=st.value; await saveMembers(members); return; }
+});
+document.addEventListener("submit",async e=>{
+  const f=e.target;
+  if(f.id==="authForm"){ e.preventDefault(); const err=state.authMode==="signup"?await doSignup(f):await doSignin(f); if(err)$("#authErr").textContent=err; return; }
+  if(f.id==="gateForm"){ e.preventDefault(); if(f.code.value===CONFIG.adminCode){ state.adminUnlocked=true; renderAdmin(); } else $("#gateErr").textContent="Incorrect passcode."; return; }
+  if(f.id==="schedForm"){ e.preventDefault(); const id=f.dataset.mid; const title=f.title.value.trim(), date=f.date.value; if(!title||!date){return;} const members=await getMembers(); const m=members.find(x=>x.id===id); m.schedule.push({id:uid(),title,date:new Date(date).toISOString(),status:"Scheduled"}); await saveMembers(members); renderAdmin(); return; }
+  if(f.id==="noteForm"){ e.preventDefault(); const id=f.dataset.mid, msg=f.msg.value.trim(); if(!msg)return; const members=await getMembers(); const m=members.find(x=>x.id===id); m.notifications.unshift({id:uid(),text:msg,date:new Date().toISOString(),read:false}); await saveMembers(members); f.reset(); renderAdmin(); return; }
+  if(f.id==="bcForm"){ e.preventDefault(); const to=f.to.value, msg=f.msg.value.trim(); if(!msg){$("#bcErr").textContent="Write a message first.";return;} const members=await getMembers(); const targets=to==="__all"?members:members.filter(m=>m.id===to); targets.forEach(m=>m.notifications.unshift({id:uid(),text:msg,date:new Date().toISOString(),read:false})); await saveMembers(members); $("#bcErr").style.color="var(--ok)"; $("#bcErr").textContent=`Sent to ${targets.length} member(s).`; f.reset(); return; }
+});
+
+/* ---------- init ---------- */
+(async function init(){
+  renderBrand(); wireStatic(); renderImpact(); renderTestimonials(); renderTeam(); renderSources();
+  renderPlans(); renderAddons(); renderScope(); renderProjects();
+  await seedDemo();
+  const sid=await getSession();
+  if(sid){ const members=await getMembers(); const m=members.find(x=>x.id===sid); if(m) state.member=m; }
+  updateAuthUI();
+  const start=location.hash.slice(1);
+  if(start && $("#"+start)) go(start);
+})();
+</script>
+<script>
+/* ---------- interaction layer (isolated; fails open) ---------- */
+(function(){
+  try{
+    var nav=document.querySelector('header.nav');
+    var bar=document.createElement('div'); bar.className='scroll-progress'; document.body.appendChild(bar);
+    var top=document.createElement('button'); top.className='to-top'; top.type='button'; top.setAttribute('aria-label','Back to top'); top.innerHTML='\u2191'; document.body.appendChild(top);
+    top.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+    function onScroll(){
+      var y=window.scrollY||document.documentElement.scrollTop||0;
+      var h=(document.documentElement.scrollHeight-window.innerHeight)||1;
+      bar.style.width=Math.max(0,Math.min(100,(y/h)*100))+'%';
+      if(nav) nav.classList.toggle('scrolled',y>8);
+      top.classList.toggle('show',y>560);
+    }
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  }catch(e){}
+  /* scroll-reveal: home only, progressive enhancement, safety reveal after 1.4s */
+  try{
+    if(!window.matchMedia||!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      if('IntersectionObserver' in window){
+        var sels='#home .sec-head,#home .arm-card,#home .trust>div,#home .flow .node,#home .quote';
+        var els=[].slice.call(document.querySelectorAll(sels));
+        els.forEach(function(el,i){ el.classList.add('rv'); el.style.transitionDelay=((i%4)*70)+'ms'; });
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('rv-in'); io.unobserve(en.target); } });
+        },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+        els.forEach(function(el){ io.observe(el); });
+        setTimeout(function(){ els.forEach(function(el){ el.classList.add('rv-in'); }); },1400);
+      }
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
