@@ -31,10 +31,17 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["HomeAndConstructionBusiness", "GeneralContractor"],
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "GeneralContractor"
+      ],
       "@id": "https://modraproperties.com/#business",
       "name": "Modra Group",
-      "alternateName": ["Modra Properties", "Modra Property Services", "Modra Capital"],
+      "alternateName": [
+        "Modra Properties",
+        "Modra Property Services",
+        "Modra Capital"
+      ],
       "url": "https://modraproperties.com/",
       "telephone": "+1-616-834-3979",
       "email": "info@modraproperties.com",
@@ -43,21 +50,105 @@
       "priceRange": "$$",
       "description": "Modra Group renovates, cares for, and invests in homes across Grand Rapids and West Michigan — full renovations, property care plans, handyman work, and fast, fair home sales.",
       "slogan": "From upkeep to rebuild, one team.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Holland", "addressRegion": "MI", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Holland",
+        "addressRegion": "MI",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Grand Rapids" },
-        { "@type": "City", "name": "Holland" },
-        { "@type": "AdministrativeArea", "name": "West Michigan" }
+        {
+          "@type": "City",
+          "name": "Grand Rapids"
+        },
+        {
+          "@type": "City",
+          "name": "Holland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Michigan"
+        }
       ],
-      "knowsAbout": ["Home renovation", "Property maintenance", "Handyman services", "Real estate investment", "Curb appeal", "Home staging"],
+      "knowsAbout": [
+        "Home renovation",
+        "Property maintenance",
+        "Handyman services",
+        "Real estate investment",
+        "Curb appeal",
+        "Home staging"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Modra services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property care plans", "description": "Ongoing home care: cleaning, curb appeal, seasonal upkeep, and turnover." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home renovation", "description": "Builder-led full renovations, from kitchens and baths to whole-home rebuilds." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Handyman and repairs", "description": "Small repairs and projects, with permits pulled through a licensed builder when needed." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sell your home to Modra", "description": "A fast, fair offer for homes in any condition across West Michigan." } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Property care plans",
+              "description": "Ongoing home care: cleaning, curb appeal, seasonal upkeep, and turnover."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Home renovation",
+              "description": "Builder-led full renovations, from kitchens and baths to whole-home rebuilds."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Handyman and repairs",
+              "description": "Small repairs and projects, with permits pulled through a licensed builder when needed."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sell your home to Modra",
+              "description": "A fast, fair offer for homes in any condition across West Michigan."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pool & spa care (CPO certified)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutter cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof soft-wash cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lawn & landscape maintenance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Snow plowing"
+            }
+          }
         ]
       }
     },
@@ -67,7 +158,9 @@
       "url": "https://modraproperties.com/",
       "name": "Modra Group",
       "description": "Home renovation, property care, and real estate in Grand Rapids and West Michigan.",
-      "publisher": { "@id": "https://modraproperties.com/#business" }
+      "publisher": {
+        "@id": "https://modraproperties.com/#business"
+      }
     }
   ]
 }
@@ -82,7 +175,7 @@
       "name": "How does billing work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Care plans are billed monthly and you can cancel anytime. À-la-carte services are billed when delivered. We'll send a clear quote before any work begins."
+        "text": "Care plans start with a 3-month minimum, then run month-to-month — cancel with 30 days’ notice after that. The first visit is quoted a bit higher than the regular rate because we bring the property up to a clean, maintained baseline before the plan takes over; the same goes for first-time services like roof or gutter cleaning. À-la-carte work is billed when delivered, and we always send a clear quote before anything begins."
       }
     },
     {
@@ -145,6 +238,7 @@ input,select,textarea{font-family:var(--body)}
 ::selection{background:rgba(200,148,60,.28)}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:6px}
 .skip-link{position:fixed;left:14px;top:-60px;z-index:100;background:var(--green);color:var(--cream);padding:10px 18px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:.9rem;transition:top .25s}.skip-link:focus{top:14px}
+.svc-note{max-width:860px;margin:26px auto 0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--radius);padding:20px 26px}.svc-note p{color:var(--muted);font-size:.94rem;margin:0 0 12px}.svc-note p:last-child{margin:0}.svc-note b{color:var(--green)}
 .sys-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 2px}.sys-chip{font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--green);background:var(--gold-soft);border:1px solid rgba(200,148,60,.35);border-radius:999px;padding:7px 14px}
 .hero-inner>div,.arm-card,.proj,.member,.step,.flow .node,.plan,.addon,.stat-card,.svc-item,.sched-item,.notif,.contact-band>div,.impact-card,.src,.quote,.trust>div{min-width:0}
 
@@ -632,7 +726,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
           <div style="margin-bottom:30px">
             <span class="eyebrow">Modra Property Services</span>
             <h2 style="color:var(--green);font-size:clamp(1.8rem,3.6vw,2.7rem);margin:14px 0 12px">Care that keeps your property show-ready.</h2>
-            <p class="lead">Cleaning, exterior upkeep, curb appeal, and seasonal work — on a simple monthly plan or à la carte. Built around your property, billed clearly, cancel anytime.</p>
+            <p class="lead">Cleaning, exterior upkeep, curb appeal, and seasonal work — on a simple monthly plan or à la carte. Built around your property, billed clearly — plans start with a simple 3-month minimum.</p>
           </div>
 
           <div class="sec-head" style="margin-bottom:26px"><span class="eyebrow">Care plans</span><h3 style="font-size:1.5rem">Pick your plan.</h3></div>
@@ -640,6 +734,10 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
 
           <div class="sec-head" style="margin:54px 0 22px"><span class="eyebrow">À-la-carte services</span><h3 style="font-size:1.5rem">Add exactly what you need.</h3></div>
           <div class="addons" id="addonsGrid"></div>
+          <div class="svc-note">
+            <p><b>First visits run deeper.</b> One-time and first-time services are quoted to condition — bringing a pool, roof, or yard up to a maintained baseline takes more than keeping it there. You’ll always have the number before we start.</p>
+            <p><b>Right-sized and license-smart.</b> Everything here is maintenance, upkeep, and minor handyman work — no contractor’s license required. The moment a job crosses into construction or permits, <a href="#properties" data-target="properties"><b>Modra Properties</b></a> steps in under its residential builder license and carries it from there. One group, no gray areas.</p>
+          </div>
         </div>
 
         <aside class="scope">
@@ -736,7 +834,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
     <div class="wrap">
       <div class="sec-head center"><span class="eyebrow">Good to know</span><h2>Common questions.</h2></div>
       <div class="faq">
-        <details><summary>How does billing work?</summary><p>Care plans are billed monthly and you can cancel anytime. À-la-carte services are billed when delivered. We'll send a clear quote before any work begins.</p></details>
+        <details><summary>How does billing work?</summary><p>Care plans start with a 3-month minimum, then run month-to-month — cancel with 30 days’ notice after that. The first visit is quoted a bit higher than the regular rate because we bring the property up to a clean, maintained baseline before the plan takes over; the same goes for first-time services like roof or gutter cleaning. À-la-carte work is billed when delivered, and we always send a clear quote before anything begins.</p></details>
         <details><summary>Which areas do you serve?</summary><p>We work across West Michigan. Reach out with your address and we'll confirm we can take great care of you.</p></details>
         <details><summary>What do you handle — and what don't you?</summary><p>We handle property care: cleaning, exterior upkeep, curb appeal, seasonal and turnover work. For specialized or licensed trade work, we coordinate trusted, licensed professionals so it's done right.</p></details>
         <details><summary>What makes Modra different?</summary><p>Our property care is veteran-owned and owner-led, and Modra is a group that also renovates and funds real estate — so the same accountable team can take your home from upkeep to rebuild.</p></details>
@@ -809,7 +907,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
     <div class="wrap inner">
       <span class="eyebrow">Modra Capital</span>
       <h1>How the group is funded.</h1>
-      <p>Full transparency on how Modra funds its work — our own capital covers purchase and renovation, with a network of trusted investors and licensed partners ready when a project needs more.</p>
+      <p>Full transparency on how Modra funds its work — every project is funded 100% in-house through Modra Capital. Our own capital carries the purchase and the renovation, start to finish.</p>
     </div>
   </div>
 
@@ -818,7 +916,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
       <div>
         <span class="eyebrow">Our funding approach</span>
         <h2 style="font-size:2rem;margin:14px 0 18px">Everything funded, under one roof.</h2>
-        <p class="lead" style="font-size:1.05rem">Modra keeps the whole project under one roof. We can fully fund both the purchase and the renovation in-house — no outside money needed to get a home done — and we keep a network of trusted investors ready for when a project calls for expansion or additional capital. On the Bristol House, Modra covered the purchase and renovation directly, then sourced secured funding to carry it across the finish line. Every dollar is matched to the right stage, with conservative underwriting before anything moves.</p>
+        <p class="lead" style="font-size:1.05rem">Modra keeps the whole project under one roof — and funds it there, too. Every Modra project is funded 100% in-house through Modra Capital: the purchase, the renovation, and the carry, covered by the group’s own capital from day one. No outside lenders, no committee approvals, no waiting on a bank — when the numbers work, we move. Every dollar is matched to the right stage, with conservative underwriting before anything does.</p>
       </div>
       <div class="sources" id="sourcesList"></div>
     </div>
@@ -828,7 +926,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
     <div class="wrap">
       <div class="sec-head"><span class="eyebrow">From dollars to doors</span><h2>How capital moves through Modra.</h2></div>
       <div class="flow">
-        <div class="node"><div class="no">SOURCES</div><h4>Commit &amp; secure</h4><p>We commit our own capital and secure any financing through licensed partners.</p></div>
+        <div class="node"><div class="no">SOURCES</div><h4>Commit &amp; deploy</h4><p>Modra Capital commits and deploys the group’s own funds — 100% in-house, no outside lenders.</p></div>
         <div class="arrow">&rarr;</div>
         <div class="node"><div class="no">DEPLOY</div><h4>Acquire &amp; rebuild</h4><p>Properties acquires and renovates against a clear, conservative budget.</p></div>
         <div class="arrow">&rarr;</div>
@@ -847,13 +945,13 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
       </div>
       <ul class="feature-list">
         <li><span class="tick">&#10003;</span><div><strong>Fully funded in-house</strong><span>Modra can cover both the purchase and the full renovation with its own capital — everything under one roof.</span></div></li>
-        <li><span class="tick">&#10003;</span><div><strong>A network ready when it's needed</strong><span>Trusted investors and licensed partners stand ready for expansion or additional capital on larger projects.</span></div></li>
+        <li><span class="tick">&#10003;</span><div><strong>Capital ready before the deal</strong><span>Modra Capital’s funds are committed in advance — closing never waits on a lender’s timeline.</span></div></li>
         <li><span class="tick">&#10003;</span><div><strong>Conservative underwriting</strong><span>Every deal is stress-tested before we commit a dollar.</span></div></li>
         <li><span class="tick">&#10003;</span><div><strong>Capital with a conscience</strong><span>1% of revenue is pledged back to the planet and local causes.</span></div></li>
       </ul>
     </div>
   </section>
-  <div class="wrap"><p style="font-size:.82rem;color:var(--muted-2);margin-bottom:40px;max-width:74ch">Informational only. Modra develops its own projects; any financing is arranged through licensed third parties.</p></div>
+  <div class="wrap"><p class="fineprint">Informational only. Modra Capital funds Modra’s own projects; nothing on this page is an offer to lend, borrow, or invest.</p></div>
 </div>
 
 <!-- ===================== WHY MODRA ===================== -->
@@ -889,7 +987,7 @@ footer.site{background:radial-gradient(800px 400px at 90% -20%,rgba(200,148,60,.
       <div class="sec-head"><span class="eyebrow">The Modra model</span><h2>Why one roof matters.</h2>
         <p class="lead">A home can move through all three arms with one accountable team — no dropped handoffs between owner, builder, and crew.</p></div>
       <div class="flow">
-        <div class="node"><div class="no">01 · CAPITAL</div><h4>Fund</h4><p>Our own capital, plus financing arranged through licensed partners.</p></div>
+        <div class="node"><div class="no">01 · CAPITAL</div><h4>Fund</h4><p>Funded 100% in-house by Modra Capital — our own money, in every deal.</p></div>
         <div class="arrow">&rarr;</div>
         <div class="node"><div class="no">02 · PROPERTIES</div><h4>Rebuild</h4><p>Acquired and renovated to last by a licensed builder.</p></div>
         <div class="arrow">&rarr;</div>
@@ -1049,7 +1147,7 @@ const CONFIG = {
 
   /* --- care plans (subscription tiers). priceNum drives the quote math. --- */
   plans:[
-    { id:"essential", name:"Essential Care", priceNum:189, rate:"$189", basis:"/ month", featured:false,
+    { id:"essential", name:"Essential Care", priceNum:239, rate:"$239", basis:"/ month", featured:false,
       tagline:"Recurring exterior upkeep for one home.",
       features:["Scheduled yard & exterior tidy","Spring & fall seasonal cleanups","Monthly property check with photos","One point of contact"] },
     { id:"premier", name:"Premier Care", priceNum:349, rate:"$349", basis:"/ month", featured:true,
@@ -1064,13 +1162,20 @@ const CONFIG = {
   addons:[
     { id:"turnover", name:"Turnover / make-ready clean", price:325, unit:"per turn", recurring:false, desc:"Full clean and reset between residents or before a sale." },
     { id:"deepclean", name:"Deep clean", price:275, unit:"one-time", recurring:false, desc:"Top-to-bottom interior deep clean." },
-    { id:"exterior", name:"Exterior & pressure washing", price:349, unit:"one-time", recurring:false, desc:"Siding, walks, drive, and entry refreshed." },
+    { id:"exterior", name:"House power washing", price:349, unit:"one-time", recurring:false, desc:"Soft-wash siding plus walks, drive, and entry \u2014 the whole exterior refreshed." },
     { id:"yard", name:"Seasonal yard cleanup", price:225, unit:"per visit", recurring:false, desc:"Leaves, beds, and yard tidied for the season." },
     { id:"curb", name:"Curb-appeal prep", price:450, unit:"one-time", recurring:false, desc:"Front-of-home refresh so it shows its best." },
-    { id:"snow", name:"Snow removal", price:75, unit:"per event", recurring:false, desc:"Drive and walkways cleared after a snowfall." },
+    { id:"snow", name:"Snow plowing & removal", price:75, unit:"per event", recurring:false, desc:"Driveway and walkways plowed and cleared after each snowfall." },
     { id:"junk", name:"Junk removal / trash-out", price:300, unit:"from", recurring:false, desc:"Haul-away and clear-out of a property's contents." },
     { id:"styling", name:"Property styling / staging prep", price:500, unit:"one-time", recurring:false, desc:"Style a home to present at its very best." },
-    { id:"handyman", name:"Handyman & small repairs", price:95, unit:"per hour", recurring:false, desc:"Doors, fixtures, mounting, patching, and the small fixes that keep a home right." }
+    { id:"handyman", name:"Handyman & small repairs", price:95, unit:"per hour", recurring:false, desc:"Doors, fixtures, mounting, patching, and the small fixes that keep a home right." },
+    { id:"pool", name:"Pool care \u2014 CPO\u00ae certified", price:129, unit:"per visit", recurring:false, desc:"Skim, brush, vacuum, and full water-chemistry balancing by a Certified Pool Operator\u00ae." },
+    { id:"poolseason", name:"Pool opening / closing", price:349, unit:"from", recurring:false, desc:"Seasonal open or winterize \u2014 lines, equipment, chemistry, and cover handled right." },
+    { id:"hottub", name:"Hot tub & spa care", price:119, unit:"per visit", recurring:false, desc:"Water testing, chemistry, and filter care \u2014 drain-and-refills quoted flat." },
+    { id:"gutters", name:"Gutter cleaning", price:149, unit:"from", recurring:false, desc:"Gutters and downspouts cleared, flushed, and flow-tested." },
+    { id:"roofclean", name:"Roof cleaning \u2014 soft wash", price:399, unit:"from", recurring:false, desc:"Low-pressure moss & algae treatment that protects shingles instead of blasting them." },
+    { id:"lawn", name:"Lawn & landscape maintenance", price:65, unit:"per visit", recurring:false, desc:"Mow, edge, trim, and blow \u2014 beds and shrubs kept sharp on a schedule." },
+    { id:"plowseason", name:"Seasonal snow plan (Nov\u2013Mar)", price:449, unit:"per season", recurring:false, desc:"Priority plowing all winter \u2014 every qualifying snowfall, one flat rate." }
   ],
 
   /* --- projects: phase = 'past' | 'current' | 'future' --- */
@@ -1083,8 +1188,8 @@ const CONFIG = {
 
   /* --- capital funding sources (weight = bar width %) --- */
   fundingSources:[
-    { name:"Founder & operator capital", pct:"45%", weight:45, desc:"Modra's own funds in every project -- we put our capital to work first." },
-    { name:"Financing via licensed partners", pct:"40%", weight:40, desc:"Acquisition and renovation financing arranged through trusted, licensed brokers and lenders." },
+    { name:"Modra Capital -- deal equity", pct:"55%", weight:55, desc:"The group's own investment arm funds each project at the deal level -- purchase through renovation." },
+    { name:"Founder & operator capital", pct:"30%", weight:30, desc:"Our personal capital committed alongside every project -- we invest first." },
     { name:"Reinvested profits", pct:"15%", weight:15, desc:"Gains from completed projects recycled into the next opportunity." }
   ],
 
@@ -1097,12 +1202,12 @@ const CONFIG = {
   /* --- team (each person's Contact button routes to the matching inbox) --- */
   team:{
     capital:[{ name:"Jordan Sullivan", role:"Principal -- Modra Capital", img:"", email:"capital@modraproperties.com",
-      bio:"Leads Modra Capital -- putting the group's own funds to work and arranging financing through licensed lending partners to power each project." }],
+      bio:"Leads Modra Capital -- the group's own investment arm, funding every Modra project 100% in-house from purchase through renovation." }],
     properties:[{ name:"Victor Pizarro", role:"Founder -- Modra Properties", img:"", email:"info@modraproperties.com",
       credential:"Licensed MI Residential Builder",
       bio:"Founder of Modra Group and a licensed Michigan Residential Builder. Sources and leads acquisitions and full renovations across West Michigan, rebuilding homes to last." }],
-    services:[{ name:"Kyle Meintsma", role:"Director -- Modra Property Services", veteran:true, img:"", email:"services@modraproperties.com",
-      bio:"Veteran-owned and owner-first. Kyle leads Modra Property Services -- cleaning, exterior upkeep, and curb-appeal care that keeps homes looking their best." }]
+    services:[{ name:"Kyle Meintsma", role:"Director -- Modra Property Services", veteran:true, credential:"Certified Pool Operator (CPO\u00ae)", img:"", email:"services@modraproperties.com",
+      bio:"Veteran-owned and owner-first. Kyle leads Modra Property Services -- cleaning, exterior upkeep, pool & spa care, and the curb-appeal work that keeps homes looking their best." }]
   }
 };
 /* =========================================================================
@@ -1209,7 +1314,7 @@ function renderPlans(){
       ${p.featured?'<span class="flag">Most popular</span>':""}
       <h3>${esc(p.name)}</h3><div class="tagline">${esc(p.tagline)}</div>
       <div class="price"><span class="rate">${esc(p.rate)}</span><span class="basis">${esc(p.basis)}</span></div>
-      <div class="price-note">Recurring \u00b7 cancel anytime</div>
+      <div class="price-note">3-month minimum \u00b7 then month-to-month</div>
       <ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>
       <button class="btn ${p.featured?"btn-gold":"btn-green"} select" data-plan="${p.id}">${scope.plan===p.id?"\u2713 Selected":"Select "+esc(p.name)}</button>
     </div>`).join("");
