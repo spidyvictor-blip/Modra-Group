@@ -118,6 +118,10 @@
   .btn.light{background:#F6FAFD;color:var(--navy);box-shadow:0 12px 30px rgba(0,0,0,.25)}
   .btn.outline{border:1.5px solid rgba(156,200,227,.6);color:#DCEBF5}
   .cnote{margin-top:22px;font-size:11.5px;color:#8FAEC4;letter-spacing:.06em}
+  .joinBox{margin:26px auto 0;max-width:560px;background:rgba(255,255,255,.07);border:1px solid rgba(156,200,227,.25);
+    border-radius:16px;padding:18px 22px;text-align:center}
+  .joinBox b{display:block;font-size:14px;color:#F4F9FC}
+  .joinBox span{display:block;margin-top:6px;font-size:12.5px;color:#A9C2D4}
   .procRow{margin-top:26px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
   .proc{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#DCEBF5;text-transform:uppercase}
   .proc b{width:24px;height:24px;border-radius:50%;background:rgba(87,159,203,.25);color:var(--sky);
@@ -178,6 +182,30 @@
   .cc3{left:6vw;top:50%;transform:translateY(calc(-50% + 20px))}.cc3.show{transform:translateY(-50%)}
   .cc4{right:6vw;top:50%;transform:translateY(calc(-50% + 20px))}.cc4.show{transform:translateY(-50%)}
 
+  /* ================= WORDS ================= */
+  #words{background:var(--paper)}
+  .quoteGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  #words{display:none}
+  .quote{background:linear-gradient(160deg,#FBFDFE,var(--mist));border:1px solid var(--line);border-radius:18px;
+    padding:26px 24px 20px;position:relative;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+  .quote:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(18,54,80,.16)}
+  .quote::before{content:"\201C";position:absolute;top:6px;left:18px;font-size:58px;line-height:1;
+    font-weight:800;color:rgba(87,159,203,.32)}
+  .quote blockquote{font-size:14px;line-height:1.62;color:#3d5769;position:relative;z-index:1;margin-top:14px}
+  .quote figcaption{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);display:flex;
+    flex-direction:column;gap:1px}
+  .quote figcaption b{font-size:12.5px;color:var(--navy);font-weight:800}
+  .quote figcaption span{font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .wordsNote{margin-top:20px;font-size:11.5px;color:var(--muted);text-align:center}
+  #answers{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .faqGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .faq{background:linear-gradient(160deg,#FBFDFE,var(--mist));border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+  .faq:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(18,54,80,.16)}
+  .faq h4{font-size:14.5px;color:var(--navy);font-weight:800;display:flex;gap:9px;align-items:flex-start}
+  .faq h4::before{content:"";flex:0 0 auto;width:8px;height:8px;margin-top:6px;border-radius:2px;background:var(--grad)}
+  .faq p{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.6}
+
   /* ================= TEAM ================= */
   .teamGrid{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:22px;justify-content:center;margin-top:36px}
   .member{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow);
@@ -228,9 +256,17 @@
   #bWorld{position:absolute;left:50%;top:56%;width:0;height:0;transform-style:preserve-3d}
   #bWorld *{transform-style:preserve-3d}
   .pl{position:absolute;left:0;top:0}
-  .wire{border:1.5px solid rgba(18,54,80,.55);background:rgba(38,97,142,.045)}
+  .wire{border:1.5px solid rgba(18,54,80,.5);background:#FBFBF7}
+  .roofp{border:1.5px solid rgba(18,54,80,.5);background:#DCE6EE}
+  .floorp{border:1px solid rgba(18,54,80,.26);background:#F1F1EA}
+  /* directional shading — makes the volume read as solid */
+  .fLit{background:#FDFDFA}
+  .fMid{background:#EDEFEB;box-shadow:inset 0 0 40px rgba(18,54,80,.06)}
+  .fDim{background:#DFE4E4;box-shadow:inset 0 0 60px rgba(18,54,80,.12)}
+  .rLit{background:#E6EDF3}
+  .rDim{background:#CBD8E3}
   .wire2{border:1px solid rgba(18,54,80,.28);background:transparent}
-  .hot{border:1.5px solid rgba(87,159,203,.95);background:rgba(87,159,203,.10)}
+  .hot{border:1.5px solid rgba(87,159,203,.95);background:#DCEBF6}
   .lbl3{font-family:var(--mono);color:var(--modra);white-space:nowrap;letter-spacing:.12em;font-size:20px;
     font-weight:600;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
   .lbl3.dim{color:#7f97a8;font-size:15px}
@@ -249,7 +285,7 @@
     -webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%);
     mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)}
   .lotline{border:2px dashed rgba(87,159,203,.55);background:transparent}
-  .stone{background-color:rgba(38,97,142,.05);background-image:
+  .stone{background-color:#E4DFD4;background-image:
     radial-gradient(circle 3px at 22% 30%, rgba(18,54,80,.30) 0 60%, transparent 70%),
     radial-gradient(circle 4px at 68% 62%, rgba(18,54,80,.24) 0 60%, transparent 70%),
     radial-gradient(circle 3px at 45% 82%, rgba(18,54,80,.26) 0 60%, transparent 70%),
@@ -304,6 +340,7 @@
     .stats{grid-template-columns:repeat(2,1fr)}
     .teamGrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
     .miniProjects{grid-template-columns:1fr}
+    .faqGrid,.quoteGrid{grid-template-columns:1fr}
     .facts{grid-template-columns:repeat(2,1fr)}
     .onePct{text-align:center}
     .sec{padding:62px 0}
@@ -329,6 +366,7 @@
       <a href="#home" class="on">Home</a>
       <a href="#story">The Model</a>
       <a href="#craft">The Craft</a>
+      <a href="#answers">Answers</a>
       <a href="#team">Team</a>
       <a href="#pledge">1% Pledge</a>
       <a href="#projects">Projects</a>
@@ -505,8 +543,8 @@
 <section id="standard" class="sec">
   <div class="wrap">
     <div class="kicker rev">The Modra standard</div>
-    <h2 class="title rev d1">Why people trust us with <em>six figures.</em></h2>
-    <p class="lead rev d2">Veteran-owned and operated — clear communication, accountability, and follow-through are the operating system, not the slogan.</p>
+    <h2 class="title rev d1">Why people trust Modra<br>with <em>their homes.</em></h2>
+    <p class="lead rev d2">A home is most people's biggest investment and their softest place to land. We treat every one like it's ours — veteran-owned, owner-led, and accountable from the first handshake to the final walkthrough.</p>
     <div class="stdGrid">
       <div class="std rev">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><circle cx="12" cy="12" r="9"/></svg></div>
@@ -527,6 +565,44 @@
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
         <h4>Owner-led accountability</h4>
         <p>Every division is run by someone who answers for the outcome personally. When you call Modra, an owner picks up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<!-- REAL REVIEWS: when clients approve named quotes, paste them here as
+     <figure class="quote"><blockquote>…</blockquote><figcaption><b>Name</b><span>City</span></figcaption></figure>
+     inside a <div class="quoteGrid"> — the styles are already built. -->
+<section id="answers" class="sec">
+  <div class="wrap">
+    <div class="kicker rev">Straight answers</div>
+    <h2 class="title rev d1">The questions people ask <em>before they trust us.</em></h2>
+    <p class="lead rev d2">No fine print, no runaround. If you're wondering it, someone else asked it first.</p>
+    <div class="faqGrid">
+      <div class="faq rev d1">
+        <h4>What areas do you serve?</h4>
+        <p>Grand Rapids, Holland, and the surrounding West Michigan lakeshore. If you're near the edge of that, ask — we'd rather tell you honestly than stretch.</p>
+      </div>
+      <div class="faq rev d2">
+        <h4>How does billing work on care plans?</h4>
+        <p>Monthly plans with a three-month minimum, then month-to-month. First visits run deeper — we're establishing a baseline, not just passing through.</p>
+      </div>
+      <div class="faq rev d3">
+        <h4>Where's the line between upkeep and construction?</h4>
+        <p>Maintenance work we handle directly. Anything requiring permits or a licensed trade runs through Modra Properties under a licensed Michigan Residential Builder — with the permit pulled and the inspection passed.</p>
+      </div>
+      <div class="faq rev d1">
+        <h4>Will the quote change once you start?</h4>
+        <p>The number you approve is the number you pay. If we find something genuinely unexpected behind a wall, we stop, show you, and you decide before anything else happens.</p>
+      </div>
+      <div class="faq rev d2">
+        <h4>Can I sell you my house directly?</h4>
+        <p>Yes. If it needs work, that's our favorite kind. No agents, no repairs, no listing hassle — we walk it, make an honest offer, and close on your timeline.</p>
+      </div>
+      <div class="faq rev d3">
+        <h4>What makes Modra different?</h4>
+        <p>Three divisions, one roof, and an owner who answers for each. The same people who underwrite the deal swing the hammers and come back to maintain it.</p>
       </div>
     </div>
   </div>
@@ -671,6 +747,10 @@
       <a class="btn outline" href="tel:+16168343979">(616) 834-3979</a>
     </div>
     <div class="cnote rev d3">We answer within one business day · Grand Rapids · Holland · West Michigan</div>
+    <div class="joinBox rev d3">
+      <b>Good with your hands? We're always glad to meet good trades.</b>
+      <span>Modra grows by adding people who take pride in the work — carpenters, subs, and crews who want their name on something that lasts. Say hello.</span>
+    </div>
   </div>
 </section>
 
@@ -708,7 +788,7 @@ function navState(){
   pbar.style.width = (mx > 0 ? (window.scrollY / mx) * 100 : 0) + "%";
 }
 window.addEventListener("scroll", navState, {passive:true}); navState();
-var secIds = ["home","story","craft","team","pledge","projects","contact"];
+var secIds = ["home","story","craft","answers","team","pledge","projects","contact"];
 function activeTab(){
   var y = window.scrollY + window.innerHeight*0.35, cur = "home";
   secIds.forEach(function(id){
@@ -802,192 +882,256 @@ function box(parent, w,h,d2, x,y,z, cls){
   add(g, cls, w,d2, "rotateX(90deg) "+T(0,0, h/2));
   return g;
 }
-/* --- site --- */
-var gSite = group(world, "");
-add(gSite, "bGrid", 3400, 3400, "rotateX(90deg)");
-add(gSite, "lotline", 1750, 1400, "rotateX(90deg) "+T(0,30,-1));
-lbl(gSite, "LOT · 0.46 AC", -560, -2, 660, "hi", 22, true);
-add(gSite, "wire2", 110, 380, "rotateX(90deg) "+T(30,430,-0.5));
-add(gSite, "wire2", 240, 560, "rotateX(90deg) "+T(430,480,-0.5));
-lbl(gSite, "WEST SIDE · GRAND RAPIDS", 0, -2, 810, "dim", 17, true);
-lbl(gSite, "REGRADE + SEED", -520, -2, -430, "dim", 15, true);
-lbl(gSite, "GRAVEL DRIVE REDONE", 470, -2, 690, "dim", 14, true);
-function tree(x,z,s){
-  var g = group(gSite, T(x,0,z));
+/* ===================== BRISTOL HOUSE — clean build =====================
+   Coordinate convention (verified):
+     x → right, y → DOWN (negative = up), z → toward viewer.
+     Vertical plane facing ±z:  T(cx, cy, cz)
+     Vertical plane facing ±x:  "rotateY(90deg) " + T(-cz, cy, cx)
+     Horizontal plane:          "rotateX(90deg) " + T(cx, cz, -cy)
+   ====================================================================== */
+function vplaneZ(parent, cls, w, ht, cx, cy, cz){ return add(parent, cls, w, ht, T(cx, cy, cz)); }
+function vplaneX(parent, cls, d, ht, cx, cy, cz){ return add(parent, cls, d, ht, "rotateY(90deg) "+T(-cz, cy, cx)); }
+function hplane(parent, cls, w, d, cx, cy, cz){ return add(parent, cls, w, d, "rotateX(90deg) "+T(cx, cz, -cy)); }
+
+/* a closed rectangular volume: footprint w×d centred at (cx,cz), from yBase up by ht */
+function volume(parent, cls, w, d, ht, cx, cz, yBase, opts){
+  opts = opts || {};
+  var g = group(parent, "");
+  var cy = yBase - ht/2;
+  var front = vplaneZ(g, cls + " fLit", w, ht, cx, cy, cz + d/2);
+  var back  = vplaneZ(g, cls + " fDim", w, ht, cx, cy, cz - d/2);
+  var right = vplaneX(g, cls + " fMid", d, ht, cx + w/2, cy, cz);
+  var left  = vplaneX(g, cls + " fDim", d, ht, cx - w/2, cy, cz);
+  if (opts.cap !== false) hplane(g, opts.capCls || "floorp", w, d, cx, yBase - ht, cz);
+  g.faces = {front:front, back:back, right:right, left:left};
+  return g;
+}
+function siding(el){
+  var s = document.createElement("div");
+  s.style.cssText = "position:absolute;inset:0;background-image:"+
+    "repeating-linear-gradient(0deg, rgba(18,54,80,.13) 0 1px, transparent 1px 9px)";
+  el.appendChild(s);
+}
+function windowOn(el, offX, offY, w, ht){
+  var f = document.createElement("div");
+  f.style.cssText = "position:absolute;left:50%;top:50%;width:"+w+"px;height:"+ht+"px;"+
+    "margin-left:"+(offX-w/2)+"px;margin-top:"+(offY-ht/2)+"px;"+
+    "background:linear-gradient(150deg,#CFE2EF,#EAF3F9);border:2px solid #FBFCFD;"+
+    "box-shadow:0 0 0 1px rgba(18,54,80,.35)";
+  f.innerHTML = '<div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(18,54,80,.3)"></div>';
+  el.appendChild(f);
+  return f;
+}
+
+/* ---------- dimensions (from site photos: 2 stories + fieldstone basement) ---------- */
+var HW = 470, HD = 320;      /* main body footprint */
+var BD = 110;                /* basement depth below grade */
+var F1 = 165, F2 = 330;      /* top of main floor, top of upper floor */
+var RG = 460;                /* ridge height */
+var WGW = 190, WGD = 120;    /* front cross-gable wing */
+var WGX = -95;               /* wing centre x */
+var WGZ = HD/2 + WGD/2;      /* wing centre z */
+
+var gSite  = group(world, "");
+var gBase  = group(world, "");
+var gMain  = group(world, "");
+var gUpper = group(world, "");
+var gRoof  = group(world, "");
+gBase.style.opacity = "0";
+
+/* ---------------- SITE ---------------- */
+hplane(gSite, "bGrid", 3400, 3400, 0, 0, 0);
+var shadow = hplane(gSite, "", 900, 700, 20, -1, 30);
+shadow.style.background = "radial-gradient(closest-side, rgba(18,54,80,.20), rgba(18,54,80,.07) 55%, transparent 78%)";
+hplane(gSite, "lotline", 1620, 1300, 0, -2, 20);
+hplane(gSite, "wire2", 100, 340, -95, -3, HD/2 + WGD + 200);      /* front walk */
+hplane(gSite, "wire2", 230, 520, 330, -3, 300);                    /* drive */
+lbl(gSite, "LOT · 0.46 AC", -520, -6, 600, "hi", 21, true);
+lbl(gSite, "WEST SIDE · GRAND RAPIDS", 0, -6, 730, "dim", 16, true);
+lbl(gSite, "REGRADE + SEED", -430, -6, -380, "dim", 14, true);
+lbl(gSite, "DRIVE REDONE", 330, -6, 540, "dim", 14, true);
+function tree(x, z, s){
+  var g = group(gSite, T(x, 0, z));
   var svg = '<svg class="pl" width="'+(80*s)+'" height="'+(130*s)+'" viewBox="0 0 80 130">'+
-    '<g fill="rgba(38,97,142,.07)" stroke="rgba(18,54,80,.4)" stroke-width="2">'+
+    '<g fill="rgba(38,97,142,.09)" stroke="rgba(18,54,80,.42)" stroke-width="2">'+
     '<path d="M40 6 L60 42 L20 42 Z"/><path d="M40 27 L67 70 L13 70 Z"/><path d="M40 52 L74 100 L6 100 Z"/>'+
     '<path d="M36 100 L44 100 L44 126 L36 126 Z"/></g></svg>';
-  add(g, "", 80*s, 130*s, T(0,-65*s,0), svg);
-  add(g, "", 80*s, 130*s, "rotateY(90deg) "+T(0,-65*s,0), svg);
+  add(g, "", 80*s, 130*s, T(0, -65*s, 0), svg);
+  add(g, "", 80*s, 130*s, "rotateY(90deg) "+T(0, -65*s, 0), svg);
 }
-tree(-640, 420, 1.25); tree(-800,-320, 1.6); tree(720,-480, 1.15); tree(900, 300, 0.95);
+tree(-780, 340, 1.3); tree(-820, -360, 1.55); tree(760, -420, 1.15); tree(880, 250, 0.95);
 
-/* helpers: billboard callouts + leader stems */
+/* ---------------- BASEMENT (fieldstone, below grade) ---------------- */
+var vBase = volume(gBase, "stone", HW + 24, HD + 24, BD, 0, 0, BD, {capCls:"floorp"});
+hplane(gBase, "floorp", HW + 24, HD + 24, 0, BD, 0);
+var eg = vplaneZ(gBase, "hot", 66, 48, 120, BD/2 + 6, (HD+24)/2 + 2);
+box(gBase, 58, 76, 58, -150, BD - 38, -60, "hot");     /* heat pump / HVAC */
+box(gBase, 38, 64, 38, -75, BD - 32, -70, "wire2");    /* water heater */
+box(gBase, 84, 42, 46, 55, BD - 21, -85, "wire2");     /* panel run */
+var riser = add(gBase, "", 0, BD, T(HW/2 - 20, BD/2, -HD/2 + 20));
+riser.style.borderLeft = "2px solid rgba(87,159,203,.9)";
+
+/* ---------------- MAIN FLOOR ---------------- */
+var vMain = volume(gMain, "wire", HW, HD, F1, 0, 0, 0, {capCls:"floorp"});
+siding(vMain.faces.front); siding(vMain.faces.back); siding(vMain.faces.right); siding(vMain.faces.left);
+windowOn(vMain.faces.front, -168, -6, 58, 52);
+windowOn(vMain.faces.front,  150, -6, 58, 52);
+windowOn(vMain.faces.right,  -70, -6, 54, 50);
+windowOn(vMain.faces.back,    90, -6, 58, 52);
+/* front cross-gable wing */
+var vWing = volume(gMain, "wire", WGW, WGD, F1, WGX, WGZ, 0, {capCls:"floorp"});
+siding(vWing.faces.front); siding(vWing.faces.right); siding(vWing.faces.left);
+var door = vplaneZ(gMain, "hot", 56, 112, WGX, -56, WGZ + WGD/2 + 2);
+windowOn(vWing.faces.front, 62, -14, 46, 44);
+hplane(gMain, "wire2", 150, 70, WGX, -8, WGZ + WGD/2 + 38);        /* stoop */
+/* rear deck */
+var vDeck = volume(gMain, "wire2", 280, 170, 18, 150, -HD/2 - 85, 0, {capCls:"floorp"});
+/* interior (revealed when upper lifts) */
+box(gMain, 170, 46, 40, -125, -23, -110, "wire");                  /* counters */
+box(gMain, 112, 50, 58, -85, -25, -40, "hot");                     /* island */
+box(gMain, 130, 38, 52, 120, -19, 60, "wire2");                    /* living */
+vplaneX(gMain, "wire2", 150, F1, -20, -F1/2, -70);                 /* interior partition */
+vplaneZ(gMain, "wire2", 180, F1, 110, -F1/2, -40);                 /* interior partition */
+box(gMain, 70, 30, 70, 150, -15, -105, "wire2");                   /* dining table */
+
+/* ---------------- UPPER FLOOR ---------------- */
+var vUp = volume(gUpper, "wire", HW, HD, F2 - F1, 0, 0, -F1, {capCls:"floorp"});
+siding(vUp.faces.front); siding(vUp.faces.back); siding(vUp.faces.right); siding(vUp.faces.left);
+windowOn(vUp.faces.front, -160, 0, 56, 56);
+windowOn(vUp.faces.front,    0, 0, 56, 56);
+windowOn(vUp.faces.front,  152, 0, 56, 56);
+windowOn(vUp.faces.back,   -90, 0, 56, 56);
+windowOn(vUp.faces.back,    90, 0, 56, 56);
+windowOn(vUp.faces.left,   -40, 0, 50, 52);
+box(gUpper, 88, 28, 44, -155, -(F1 + 14), -70, "hot");             /* new bath */
+box(gUpper, 116, 26, 78, 118, -(F1 + 13), 45, "wire2");            /* primary bed */
+box(gUpper, 96, 24, 66, -140, -(F1 + 12), 80, "wire2");            /* bedroom 2 bed */
+vplaneX(gUpper, "wire2", 200, F2 - F1, 10, -(F1 + (F2-F1)/2), -20);  /* hall wall */
+vplaneZ(gUpper, "wire2", 150, F2 - F1, -80, -(F1 + (F2-F1)/2), 20);  /* hall wall */
+
+/* ---------------- ROOF ---------------- */
+var rise  = RG - F2;
+var slope = Math.sqrt((HD/2)*(HD/2) + rise*rise);
+var rAng  = Math.atan2(rise, HD/2) * 180 / Math.PI;
+add(gRoof, "roofp rLit", HW + 26, slope, T(0, -(F2 + rise/2),  HD/4) + " rotateX(" + (-(90 - rAng)) + "deg)");
+add(gRoof, "roofp rDim", HW + 26, slope, T(0, -(F2 + rise/2), -HD/4) + " rotateX(" + ((90 - rAng)) + "deg)");
+var gableSvg = '<svg class="pl" width="'+HD+'" height="'+rise+'" viewBox="0 0 '+HD+' '+rise+'" preserveAspectRatio="none">'+
+  '<path d="M0 '+rise+' L'+(HD/2)+' 0 L'+HD+' '+rise+' Z" fill="#F2F5F8" stroke="rgba(18,54,80,.5)" stroke-width="2"/></svg>';
+add(gRoof, "", HD, rise, "rotateY(90deg) "+T(0, -(F2 + rise/2),  HW/2), gableSvg);
+add(gRoof, "", HD, rise, "rotateY(90deg) "+T(0, -(F2 + rise/2), -HW/2), gableSvg);
+var ridge = add(gRoof, "", HW + 26, 0, T(0, -RG, 0));
+ridge.style.borderTop = "3px solid rgba(18,54,80,.55)";
+/* wing cross-gable */
+var wRise  = 74;
+var wSlope = Math.sqrt((WGW/2)*(WGW/2) + wRise*wRise);
+var wAng   = Math.atan2(wRise, WGW/2) * 180 / Math.PI;
+add(gRoof, "roofp rDim", WGD + 30, wSlope, "rotateY(90deg) "+T(-WGZ, -(F1 + wRise/2), WGX - WGW/4) + " rotateX(" + (-(90 - wAng)) + "deg)");
+add(gRoof, "roofp rLit", WGD + 30, wSlope, "rotateY(90deg) "+T(-WGZ, -(F1 + wRise/2), WGX + WGW/4) + " rotateX(" + ((90 - wAng)) + "deg)");
+var wGableSvg = '<svg class="pl" width="'+WGW+'" height="'+wRise+'" viewBox="0 0 '+WGW+' '+wRise+'" preserveAspectRatio="none">'+
+  '<path d="M0 '+wRise+' L'+(WGW/2)+' 0 L'+WGW+' '+wRise+' Z" fill="#F2F5F8" stroke="rgba(18,54,80,.5)" stroke-width="2"/></svg>';
+add(gRoof, "", WGW, wRise, T(WGX, -(F1 + wRise/2), WGZ + WGD/2), wGableSvg);
+/* brick chimney */
+var chim = volume(gRoof, "wire", 40, 40, 96, 110, -40, -(RG - 26), {});
+Array.prototype.forEach.call(chim.querySelectorAll(".wire"), function(f){
+  f.style.borderColor = "rgba(146,74,58,.7)"; f.style.background = "#E9DCD6";
+});
+
+/* ---------------- CALLOUTS (per phase, only current shown) ---------------- */
+function coGroup(){ var g = group(world, ""); g.style.transition = "opacity .5s"; g.style.opacity = "0"; return g; }
+function co(g, text, x, y, z, rise, hi){
+  var s = add(g, "", 2, rise, T(x, y - rise/2, z));
+  s.style.background = "linear-gradient(180deg, rgba(87,159,203,.15), rgba(87,159,203,.9))";
+  var dot = add(g, "", 7, 7, T(x, y, z));
+  dot.style.cssText += "background:#579FCB;border-radius:50%;box-shadow:0 0 0 3px rgba(87,159,203,.22)";
+  bbLabel(g, text, x, y - rise - 14, z, hi);
+}
 function bbLabel(parent, text, x, y, z, hi){
   var d = document.createElement("div");
   d.className = "bb";
-  d.style.transform = T(x,y,z)+" translate(-50%,-50%)";
-  d.innerHTML = '<span class="bbi"><span class="co'+(hi?" hi":"")+'">'+text+"</span></span>";
+  d.style.transform = T(x, y, z) + " translate(-50%,-50%)";
+  d.innerHTML = '<span class="bbi"><span class="co' + (hi ? " hi" : "") + '">' + text + '</span></span>';
   parent.appendChild(d);
   return d;
 }
-function stem(parent, x, yTop, yBot, z){
-  var d = add(parent, "", 2, Math.abs(yBot-yTop), T(x, (yTop+yBot)/2, z));
-  d.style.background = "rgba(87,159,203,.75)";
-  var dot = add(parent, "", 6, 6, T(x, yBot, z));
-  dot.style.cssText += "background:#579FCB;border-radius:50%";
-  return d;
-}
-function callout(parent, text, px, py, pz, rise, hi){
-  stem(parent, px, py - rise, py, pz);
-  bbLabel(parent, text, px, py - rise - 16, pz, hi);
-}
-/* site callout: deck (rebuilt) */
-/* --- house: two stories on a fieldstone basement, drawn from site photos --- */
-var HW=520, HD=340, F1=170, F2=340, RG=475, BD=125;
-var WGW=210, WGD=130;   /* front cross-gable wing */
-var gBase = group(world, ""), gMain = group(world, ""), gUpper = group(world, ""), gRoof = group(world, "");
+var CO = [coGroup(), coGroup(), coGroup(), coGroup(), coGroup()];
+/* 01 site */
+co(CO[0], "0.46 ACRE LOT", -520, -4, 300, 120, true);
+co(CO[0], "REAR DECK REBUILT", 150, -18, -HD/2 - 85, 150, false);
+co(CO[0], "DRIVE + WALK REDONE", 330, -4, 380, 210, false);
+co(CO[0], "REGRADE + LANDSCAPE", -300, -4, -340, 120, false);
+/* 02 envelope */
+co(CO[1], "NEW ROOF + GUTTERS", 0, -RG - 6, 0, 96, true);
+co(CO[1], "CHIMNEY REPOINTED", 110, -(RG + 40), -40, 74, false);
+co(CO[1], "SIDING + TRIM REFRESH", -HW/2 - 8, -F1 - 40, 60, 150, false);
+co(CO[1], "NEW WINDOWS · EVERY FLOOR", 0, -(F2 - 40), HD/2 + 6, 190, true);
+co(CO[1], "ENTRY + PORCH REBUILT", WGX, -F1 - 20, WGZ + WGD/2, 120, false);
+/* 03 upstairs */
+co(CO[2], "SECOND FULL BATH — ADDED", -155, -(F1 + 44), -70, 130, true);
+co(CO[2], "PRIMARY SUITE", 118, -(F1 + 42), 45, 100, false);
+co(CO[2], "BEDROOMS REBUILT", -60, -(F1 + 30), 90, 190, false);
+/* 04 main floor */
+co(CO[3], "KITCHEN — TO THE STUDS", -85, -78, -40, 130, true);
+co(CO[3], "OPEN LIVING", 120, -60, 60, 108, false);
+co(CO[3], "FLOORS · TRIM · PAINT", -30, -30, HD/2 - 20, 210, false);
+/* 05 below grade */
+co(CO[4], "FIELDSTONE REPOINTED", -(HW/2) - 30, BD - 40, HD/2 - 40, 150, false);
+co(CO[4], "EGRESS WINDOW — NEW", 120, BD/2, (HD+24)/2 + 4, 210, true);
+co(CO[4], "HEAT PUMP HVAC", -150, BD - 80, -60, 120, true);
+co(CO[4], "200A · PEX · INSULATION", 55, BD - 46, -85, 175, false);
 
-/* ---- basement: fieldstone, below grade ---- */
-function bwall(w,tf){ var e = add(gBase, "wire stone", w, BD, tf); return e; }
-bwall(HW+26, T(0, BD/2, (HD+26)/2));
-bwall(HW+26, T(0, BD/2, -(HD+26)/2));
-bwall(HD+26, "rotateY(90deg) "+T(0, BD/2, -(HW+26)/2));
-bwall(HD+26, "rotateY(90deg) "+T(0, BD/2, (HW+26)/2));
-add(gBase, "wire2", HW+26, HD+26, "rotateX(90deg) "+T(0, BD, 0));   /* slab */
-/* egress window (new) */
-add(gBase, "hot", 70, 54, T(150, BD/2-8, (HD+26)/2+1));
-/* mechanicals */
-box(gBase, 62, 84, 62, -170, BD-42, -60, "hot");
-box(gBase, 40, 70, 40, -90, BD-35, -70, "wire2");
-box(gBase, 90, 46, 50, 60, BD-23, -90, "wire2");
-var riser = add(gBase, "", 0, F2+BD, T(HW/2-22, (BD-F2)/2, -HD/2+22));
-riser.style.borderLeft = "2px solid rgba(87,159,203,.9)";
-callout(gBase, "FIELDSTONE REPOINTED", -HW/2-13, BD*0.5, HD/2+40, 150, false);
-callout(gBase, "EGRESS WINDOW — NEW", 150, BD/2-8, HD/2+40, 210, true);
-callout(gBase, "HVAC + HEAT PUMP", -170, BD-84, -60, 120, true);
-callout(gBase, "200A · PEX · INSULATION", 60, BD-46, -90, 170, false);
-
-/* ---- main floor ---- */
-function wallM(g,w,h,tf,sid){ var e = add(g, "wire", w, h, tf); if(sid){var s=document.createElement("div");
-  s.style.cssText="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg, rgba(18,54,80,.10) 0 1px, transparent 1px 9px)";e.appendChild(s);} return e; }
-var mFront = wallM(gMain, HW, F1, T(0,-F1/2, HD/2), true);
-wallM(gMain, HW, F1, T(0,-F1/2,-HD/2), true);
-wallM(gMain, HD, F1, "rotateY(90deg) "+T(0,-F1/2,-HW/2), true);
-wallM(gMain, HD, F1, "rotateY(90deg) "+T(0,-F1/2, HW/2), true);
-/* front wing walls (lower) */
-wallM(gMain, WGW, F1, T(-105, -F1/2, HD/2+WGD), true);
-add(gMain, "wire", WGD, F1, "rotateY(90deg) "+T(-(HD/2+WGD/2), -F1/2, -210));
-add(gMain, "wire", WGD, F1, "rotateY(90deg) "+T(-(HD/2+WGD/2), -F1/2, 0));
-/* door + stoop on wing */
-add(gMain, "hot", 60, 118, T(-105, -59, HD/2+WGD+2));
-add(gMain, "wire2", 150, 14, "rotateX(90deg) "+T(-105, 7, HD/2+WGD+46));
-function winM(wl, x, y, w2, h2){
-  var f = document.createElement("div");
-  f.style.cssText="position:absolute;left:50%;top:50%;width:"+w2+"px;height:"+h2+"px;margin-left:"+(x-w2/2)+"px;margin-top:"+(y-h2/2)+"px;border:1.4px solid rgba(18,54,80,.42);background:rgba(156,200,227,.18)";
-  wl.appendChild(f);
-}
-winM(mFront, -190, -10, 62, 54); winM(mFront, 150, -10, 62, 54);
-/* interior main */
-box(gMain, 180, 50, 42, -140, -25, -130, "wire");
-box(gMain, 120, 54, 62, -95, -27, -50, "hot");
-box(gMain, 140, 40, 56, 130, -20, 70, "wire2");
-add(gMain, "wire2", HW, HD, "rotateX(90deg) "+T(0, -F1, 0));
-callout(gMain, "KITCHEN — TO THE STUDS", -95, -54, -50, 116, true);
-callout(gMain, "OPEN LIVING", 130, -40, 70, 96, false);
-callout(gMain, "NEW ENTRY + STOOP", -105, -118, HD/2+WGD+2, 96, true);
-callout(gMain, "REAR DECK REBUILT", 175, 0, -HD/2-110, 120, false);
-box(gMain, 300, 20, 190, 175, 10, -HD/2-95, "wire2"); /* deck reads with main level */
-
-/* ---- upper story (full second floor) ---- */
-wallM(gUpper, HW, F2-F1, T(0,-(F1+(F2-F1)/2), HD/2), true);
-wallM(gUpper, HW, F2-F1, T(0,-(F1+(F2-F1)/2),-HD/2), true);
-wallM(gUpper, HD, F2-F1, "rotateY(90deg) "+T(0,-(F1+(F2-F1)/2),-HW/2), true);
-wallM(gUpper, HD, F2-F1, "rotateY(90deg) "+T(0,-(F1+(F2-F1)/2), HW/2), true);
-var uFront = gUpper.children[0];
-winM(uFront, -190, 0, 62, 58); winM(uFront, 0, 0, 62, 58); winM(uFront, 150, 0, 62, 58);
-box(gUpper, 95, 30, 48, -175, -(F1+15), -75, "hot");
-box(gUpper, 125, 28, 85, 135, -(F1+14), 40, "wire2");
-add(gUpper, "wire2", HW, HD, "rotateX(90deg) "+T(0, -F2, 0));
-callout(gUpper, "BATH 2 — ADDED", -175, -(F1+30), -75, 120, true);
-callout(gUpper, "PRIMARY SUITE", 135, -(F1+28), 40, 96, false);
-callout(gUpper, "NEW WINDOWS, EVERY FLOOR", 0, -(F1+(F2-F1)), HD/2, 70, false);
-
-/* ---- roof: side-gable main + front cross-gable + brick chimney ---- */
-var slope = Math.sqrt((HD/2)*(HD/2) + (RG-F2)*(RG-F2));
-var rAng = Math.atan2(RG-F2, HD/2)*180/Math.PI;
-add(gRoof, "wire glass", HW, slope, T(0, -(F2+(RG-F2)/2),  HD/4) + " rotateX("+(-(90-rAng))+"deg)");
-add(gRoof, "wire glass", HW, slope, T(0, -(F2+(RG-F2)/2), -HD/4) + " rotateX("+((90-rAng))+"deg)");
-var gbl = '<svg class="pl" width="340" height="'+(RG-F2)+'" viewBox="0 0 340 135" preserveAspectRatio="none">'+
-  '<path d="M0 135 L170 0 L340 135" fill="rgba(255,255,255,.5)" stroke="rgba(18,54,80,.55)" stroke-width="2"/></svg>';
-add(gRoof, "", 340, RG-F2, "rotateY(90deg) "+T(0, -(F2+(RG-F2)/2), -HW/2), gbl);
-add(gRoof, "", 340, RG-F2, "rotateY(90deg) "+T(0, -(F2+(RG-F2)/2),  HW/2), gbl);
-var ridge = add(gRoof, "", HW, 0, T(0, -RG, 0));
-ridge.style.borderTop = "2px solid rgba(18,54,80,.6)";
-/* front cross-gable over the wing */
-var wgRG = F2+66;
-var wSlope = Math.sqrt((WGW/2)*(WGW/2) + 66*66);
-var wAng = Math.atan2(66, WGW/2)*180/Math.PI;
-add(gRoof, "wire glass", WGD+40, wSlope, "rotateY(90deg) "+T(-(HD/2+WGD/2-6), -(F2+33), -157.5) + " rotateZ("+(90-wAng)+"deg)");
-add(gRoof, "wire glass", WGD+40, wSlope, "rotateY(90deg) "+T(-(HD/2+WGD/2-6), -(F2+33), -52.5) + " rotateZ("+(-(90-wAng))+"deg)");
-var wgbl = '<svg class="pl" width="'+WGW+'" height="66" viewBox="0 0 210 66" preserveAspectRatio="none">'+
-  '<path d="M0 66 L105 0 L210 66" fill="rgba(255,255,255,.5)" stroke="rgba(18,54,80,.55)" stroke-width="2"/></svg>';
-add(gRoof, "", WGW, 66, T(-105, -(F2+33), HD/2+WGD), wgbl);
-/* brick chimney */
-var chim = box(gRoof, 42, 92, 42, 120, -(RG-14), -30, "wire");
-Array.prototype.forEach.call(chim.querySelectorAll(".wire"), function(f){
-  f.style.borderColor = "rgba(146,74,58,.75)";
-  f.style.background = "rgba(146,74,58,.10)";
-});
-callout(gRoof, "NEW ROOF + GUTTERS", 0, -RG, 0, 90, true);
-callout(gRoof, "CHIMNEY REPOINTED", 120, -(RG+32), -30, 60, false);
-callout(gRoof, "SIDING + TRIM REFRESH", -HW/2, -F2, 0, 80, false);
-
-/* --- choreography: 5 phases, no numbers --- */
+/* ---------------- PHASES ---------------- */
 var PHASES = [
   {ck:"PHASE 01 · THE SITE", t:"Nearly half an acre, in the city.",
-   b:"Rare room to breathe on the west side. The whole lot gets regraded and seeded, the drive redone, and the tired rear deck rebuilt for summers that deserve it."},
+   b:"Rare room to breathe on the west side. The lot gets regraded and seeded, the drive and walk redone, and the tired rear deck rebuilt for summers that deserve it."},
   {ck:"PHASE 02 · THE ENVELOPE", t:"Buttoned up against the lake-effect sky.",
-   b:"The roof lifts away: new architectural shingles and gutters, refreshed siding and trim, the brick chimney repointed, and new windows on every floor."},
+   b:"New architectural shingles and gutters, refreshed siding and trim, the brick chimney repointed, a rebuilt front porch, and new windows on every floor."},
   {ck:"PHASE 03 · UPSTAIRS", t:"A true second story, re-drafted.",
    b:"Both bedrooms rebuilt, a real primary suite, and the house's second full bath added — the floor that makes a family stay."},
   {ck:"PHASE 04 · MAIN FLOOR", t:"Taken to the studs. Rebuilt with intention.",
-   b:"The kitchen goes open with an island at its heart, living spaces reconnect, and a proper entry replaces the worn-out front step."},
+   b:"The kitchen opens up with an island at its heart, living spaces reconnect, and new floors, trim and paint carry through the whole level."},
   {ck:"PHASE 05 · BELOW GRADE", t:"An 1880 fieldstone base, made bulletproof.",
    b:"The original stone foundation is repointed, an egress window brings light and safety down, and all-new systems — heat pump HVAC, 200A service, PEX, insulation — go in behind it all."}
 ];
-var bCk=document.getElementById("bCk"), bTitle=document.getElementById("bTitle"), bBody=document.getElementById("bBody");
-var bDots=Array.prototype.slice.call(document.querySelectorAll("#bDots i"));
-var curPhase=-1;
+var bCk = document.getElementById("bCk"), bTitle = document.getElementById("bTitle"), bBody = document.getElementById("bBody");
+var bDots = Array.prototype.slice.call(document.querySelectorAll("#bDots i"));
+var curPhase = -1;
 function setPhase(i){
-  if (i===curPhase) return;
-  curPhase=i;
-  bCk.textContent=PHASES[i].ck; bTitle.textContent=PHASES[i].t; bBody.textContent=PHASES[i].b;
-  bDots.forEach(function(d,k){ d.classList.toggle("on", k===i); });
+  if (i === curPhase) return;
+  curPhase = i;
+  bCk.textContent = PHASES[i].ck; bTitle.textContent = PHASES[i].t; bBody.textContent = PHASES[i].b;
+  bDots.forEach(function(d, k){ d.classList.toggle("on", k === i); });
+  CO.forEach(function(g, k){ g.style.opacity = (k === i) ? "1" : "0"; });
 }
+
 function bFrame(p){
-  var ry = 15 + p*330;
-  var rx = lerp(50, 26, ease(clamp01(p/0.55)));
-  var tz = lerp(-1440, -1090, ease(clamp01(p/0.45)));
-  tz = lerp(tz, -960, ease(clamp01((p-0.80)/0.18)));
-  var cy = lerp(-60, -160, ease(clamp01((p-0.18)/0.45)));
-  cy = lerp(cy, 30, ease(clamp01((p-0.78)/0.2)));
-  world.style.transform = "translate3d(0,0,"+tz+"px) rotateX("+rx+"deg) rotateY("+ry+"deg) translate3d(0,"+(-cy)+"px,0)";
-  world.style.setProperty("--bby", (-ry)+"deg");
-  world.style.setProperty("--bbx", (-rx)+"deg");
-  var cutRoof  = ease(clamp01((p-0.20)/0.08));
-  var cutUpper = ease(clamp01((p-0.42)/0.08));
-  var cutMain  = ease(clamp01((p-0.62)/0.08));
-  var baseIn   = ease(clamp01((p-0.74)/0.10));
-  gRoof.style.opacity  = String(1 - cutRoof*0.94);
-  gRoof.style.transform = "translate3d(0,"+(-cutRoof*160)+"px,0)";
-  gUpper.style.opacity = String(1 - cutUpper*0.92);
-  gUpper.style.transform = "translate3d(0,"+(-cutUpper*120)+"px,0)";
-  gMain.style.opacity  = String(1 - cutMain*0.62);
-  gBase.style.opacity  = String(0.28 + baseIn*0.72);
-  gSite.style.opacity  = String(1 - baseIn*0.5);
-  setPhase(p < 0.20 ? 0 : p < 0.42 ? 1 : p < 0.62 ? 2 : p < 0.78 ? 3 : 4);
+  var ry = 22 + p * 320;
+  var rx = lerp(23, 18, ease(clamp01(p / 0.35)));
+  rx = lerp(rx, 40, ease(clamp01((p - 0.40) / 0.30)));   /* tip down into the open floors */
+  rx = lerp(rx, 46, ease(clamp01((p - 0.74) / 0.20)));
+  var tz = lerp(-980, -830, ease(clamp01(p / 0.5)));
+  tz = lerp(tz, -740, ease(clamp01((p - 0.72) / 0.24)));
+  var cy = lerp(-130, -210, ease(clamp01((p - 0.16) / 0.42)));
+  cy = lerp(cy, 30, ease(clamp01((p - 0.72) / 0.24)));
+  world.style.transform = "translate3d(0,0," + tz + "px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translate3d(0," + (-cy) + "px,0)";
+  world.style.setProperty("--bby", (-ry) + "deg");
+  world.style.setProperty("--bbx", (-rx) + "deg");
+
+  /* each layer lifts away as the NEXT phase begins, revealing what it covered */
+  var cutRoof  = ease(clamp01((p - 0.40) / 0.06));   /* roof off → upstairs revealed */
+  var cutUpper = ease(clamp01((p - 0.60) / 0.06));   /* upper off → main revealed */
+  var cutMain  = ease(clamp01((p - 0.755) / 0.055)); /* main off → basement revealed */
+  var baseIn   = ease(clamp01((p - 0.735) / 0.07));
+
+  gRoof.style.opacity   = String(1 - cutRoof);
+  gRoof.style.transform = "translate3d(0," + (-cutRoof * 230) + "px,0)";
+  gUpper.style.opacity   = String(1 - cutUpper);
+  gUpper.style.transform = "translate3d(0," + (-cutUpper * 190) + "px,0)";
+  gMain.style.opacity   = String(1 - cutMain * 0.9);
+  gMain.style.transform = "translate3d(0," + (-cutMain * 150) + "px,0)";
+  gBase.style.opacity  = String(baseIn);
+  gSite.style.opacity  = String(1 - baseIn * 0.5);
+
+  setPhase(p < 0.21 ? 0 : p < 0.43 ? 1 : p < 0.63 ? 2 : p < 0.76 ? 3 : 4);
 }
 
 /* ---------------- master RAF ---------------- */
@@ -1039,5 +1183,3 @@ if (window.matchMedia && window.matchMedia("(hover:hover) and (pointer:fine)").m
 })();
 </script>
 </body>
-</html>
-
