@@ -118,7 +118,38 @@
   .btn.light{background:#F6FAFD;color:var(--navy);box-shadow:0 12px 30px rgba(0,0,0,.25)}
   .btn.outline{border:1.5px solid rgba(156,200,227,.6);color:#DCEBF5}
   .cnote{margin-top:22px;font-size:11.5px;color:#8FAEC4;letter-spacing:.06em}
-  .joinBox{margin:26px auto 0;max-width:560px;background:rgba(255,255,255,.07);border:1px solid rgba(156,200,227,.25);
+  .contactGrid{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:start;position:relative;z-index:2;text-align:left}
+  .cLeft .lead{margin-left:0}
+  .cLeft .procRow{justify-content:flex-start}
+  .cDirect{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:12.5px}
+  .cDirect span{color:#8FAEC4;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;font-weight:700}
+  .cDirect a{color:#DCEBF5;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(156,200,227,.4)}
+  .cDirect a:hover{color:#fff;border-color:#fff}
+  .formCard{background:rgba(255,255,255,.97);border-radius:20px;padding:28px 28px 24px;
+    box-shadow:0 30px 70px rgba(0,0,0,.35);position:relative}
+  .fRow2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .fld{margin-bottom:14px}
+  .fld label{display:block;font-size:10px;letter-spacing:.16em;font-weight:800;color:var(--modra);
+    text-transform:uppercase;margin-bottom:6px}
+  .fld input,.fld select,.fld textarea{width:100%;box-sizing:border-box;font-family:inherit;font-size:14px;
+    color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:11px;
+    padding:11px 13px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+  .fld select{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2326618E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+  .fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--lake);box-shadow:0 0 0 3px rgba(87,159,203,.18)}
+  .fld input.bad,.fld select.bad,.fld textarea.bad{border-color:#C25B4E;box-shadow:0 0 0 3px rgba(194,91,78,.15)}
+  .fld textarea{resize:vertical;min-height:96px}
+  .fSubmit{width:100%;border:none;cursor:pointer;font-family:inherit;font-size:15px;padding:14px}
+  .fSubmit:disabled{opacity:.65;cursor:default;transform:none}
+  .fStatus{margin-top:10px;font-size:12px;color:var(--muted);text-align:center;min-height:16px}
+  .fDone{text-align:center;padding:30px 10px}
+  .fCheck{width:64px;height:64px;border-radius:50%;background:var(--grad);color:#fff;font-size:30px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 12px 28px rgba(38,97,142,.4)}
+  .fDone h3{color:var(--navy);font-size:20px;font-weight:800}
+  .fDone p{margin-top:8px;font-size:13.5px;color:var(--muted)}
+  .fAgain{margin-top:18px;background:none;border:1.5px solid var(--line);border-radius:10px;padding:9px 18px;
+    font-family:inherit;font-size:12.5px;font-weight:700;color:var(--modra);cursor:pointer}
+  .joinBox{margin:26px 0 0;max-width:560px;background:rgba(255,255,255,.07);border:1px solid rgba(156,200,227,.25);
     border-radius:16px;padding:18px 22px;text-align:center}
   .joinBox b{display:block;font-size:14px;color:#F4F9FC}
   .joinBox span{display:block;margin-top:6px;font-size:12.5px;color:#A9C2D4}
@@ -341,6 +372,8 @@
     .teamGrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
     .miniProjects{grid-template-columns:1fr}
     .faqGrid,.quoteGrid{grid-template-columns:1fr}
+    .contactGrid{grid-template-columns:1fr}
+    .fRow2{grid-template-columns:1fr}
     .facts{grid-template-columns:repeat(2,1fr)}
     .onePct{text-align:center}
     .sec{padding:62px 0}
@@ -732,24 +765,84 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="sec">
   <div class="markM" style="position:absolute;right:-30px;bottom:-24px;width:400px;aspect-ratio:1.12;background:#9CC8E3;opacity:.09;pointer-events:none"></div>
-  <div class="wrap contactIn">
-    <div class="kicker rev">Contact</div>
-    <h2 class="title rev d1">Let's draft your <em>next project.</em></h2>
-    <p class="lead rev d2">A house to sell, a lot to build on, a project to fund, or a rebuild to plan — bring it to the table. We'll bring the numbers and the crew.</p>
-    <div class="procRow rev d2">
-      <span class="proc"><b>1</b>Request</span><i class="parrow">→</i>
-      <span class="proc"><b>2</b>Quote</span><i class="parrow">→</i>
-      <span class="proc"><b>3</b>Schedule</span><i class="parrow">→</i>
-      <span class="proc"><b>4</b>Relax</span>
-    </div>
-    <div class="cbtns rev d2">
-      <a class="btn light" href="mailto:info@modraproperties.com">info@modraproperties.com</a>
-      <a class="btn outline" href="tel:+16168343979">(616) 834-3979</a>
-    </div>
-    <div class="cnote rev d3">We answer within one business day · Grand Rapids · Holland · West Michigan</div>
-    <div class="joinBox rev d3">
-      <b>Good with your hands? We're always glad to meet good trades.</b>
-      <span>Modra grows by adding people who take pride in the work — carpenters, subs, and crews who want their name on something that lasts. Say hello.</span>
+  <div class="wrap">
+    <div class="contactGrid">
+      <div class="cLeft">
+        <div class="kicker rev">Contact</div>
+        <h2 class="title rev d1">Let's draft your <em>next project.</em></h2>
+        <p class="lead rev d2">A house to sell, a plan for care, a rebuild to scope — tell us about it below and it lands straight in our inbox. We answer within one business day.</p>
+        <div class="procRow rev d2">
+          <span class="proc"><b>1</b>Request</span><i class="parrow">→</i>
+          <span class="proc"><b>2</b>Quote</span><i class="parrow">→</i>
+          <span class="proc"><b>3</b>Schedule</span><i class="parrow">→</i>
+          <span class="proc"><b>4</b>Relax</span>
+        </div>
+        <div class="cDirect rev d3">
+          <span>Prefer direct?</span>
+          <a href="mailto:info@modraproperties.com">info@modraproperties.com</a>
+          <a href="tel:+12138701102">(213) 870-1102</a>
+        </div>
+        <div class="joinBox rev d3">
+          <b>Good with your hands? We're always glad to meet good trades.</b>
+          <span>Modra grows by adding people who take pride in the work — carpenters, subs, and crews who want their name on something that lasts. Pick "Join the crew" and say hello.</span>
+        </div>
+      </div>
+      <div class="formCard rev d2">
+        <form id="cForm" novalidate>
+          <div class="fRow2">
+            <div class="fld">
+              <label for="cfName">Name *</label>
+              <input id="cfName" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="fld">
+              <label for="cfPhone">Phone</label>
+              <input id="cfPhone" name="phone" type="tel" autocomplete="tel" placeholder="(___) ___-____">
+            </div>
+          </div>
+          <div class="fld">
+            <label for="cfEmail">Email *</label>
+            <input id="cfEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="fRow2">
+            <div class="fld">
+              <label for="cfReason">What can we do for you? *</label>
+              <select id="cfReason" name="reason" required>
+                <option value="" disabled selected>Choose one…</option>
+                <option>Property care plan</option>
+                <option>Renovation project</option>
+                <option>Sell my house to Modra</option>
+                <option>Join the crew (trades)</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="fld">
+              <label for="cfHeard">How did you hear about us?</label>
+              <select id="cfHeard" name="heard">
+                <option value="" disabled selected>Choose one…</option>
+                <option>Google / search</option>
+                <option>Referral from a friend</option>
+                <option>Saw a Modra project</option>
+                <option>Social media</option>
+                <option>Community / Kids' Food Basket</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="cfMsg">Your message *</label>
+            <textarea id="cfMsg" name="message" rows="4" placeholder="Tell us about the property, the project, or the idea…" required></textarea>
+          </div>
+          <input type="text" name="_honey" id="cfHoney" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn blue fSubmit" id="cfGo">Send it to Modra →</button>
+          <div class="fStatus" id="cfStatus"></div>
+        </form>
+        <div class="fDone" id="cfDone" style="display:none">
+          <div class="fCheck">✓</div>
+          <h3>Got it. It's on Victor &amp; Kyle's desk.</h3>
+          <p>We answer within one business day — usually faster. Talk soon.</p>
+          <button class="fAgain" id="cfAgain">Send another message</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -759,7 +852,7 @@
     <a class="logo" href="#home"><i class="markM" style="width:23px;height:21px"></i><span class="lt">MODRA</span></a>
     <span class="whis">modra · adj. · blue — like the lake, like the prints.</span>
     <div class="fine">
-      Grand Rapids · Holland · West Michigan · <a href="mailto:info@modraproperties.com">info@modraproperties.com</a> · <a href="tel:+16168343979">(616)&nbsp;834-3979</a><br>
+      Grand Rapids · Holland · West Michigan · <a href="mailto:info@modraproperties.com">info@modraproperties.com</a> · <a href="tel:+12138701102">(213)&nbsp;870-1102</a><br>
       © 2026 Modra Group — Property Services · Properties · Capital<br>
       <span style="opacity:.75">Modra Capital structures funding for Modra's own projects through secured lending partners and internal capital. Nothing on this site is an offer to lend, borrow, or invest.</span>
     </div>
@@ -1169,6 +1262,57 @@ var io3 = new IntersectionObserver(function(es){
 }, {threshold:0.6});
 document.querySelectorAll("[data-count]").forEach(function(el){ io3.observe(el); });
 
+/* ---------------- contact form: relay first, mail-app fallback ---------------- */
+var cForm = document.getElementById("cForm");
+if (cForm){
+  var cfGo = document.getElementById("cfGo"), cfStatus = document.getElementById("cfStatus");
+  var cfDone = document.getElementById("cfDone");
+  function fv(id){ var el = document.getElementById(id); return el ? el.value.trim() : ""; }
+  function markBad(el, bad){ el.classList.toggle("bad", bad); }
+  cForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (fv("cfHoney")) return;                                  /* spam honeypot */
+    var need = [["cfName", fv("cfName")], ["cfEmail", /.+@.+\..+/.test(fv("cfEmail")) ? "ok" : ""],
+                ["cfReason", fv("cfReason")], ["cfMsg", fv("cfMsg")]];
+    var ok = true;
+    need.forEach(function(n){ var bad = !n[1]; markBad(document.getElementById(n[0]), bad); if (bad) ok = false; });
+    if (!ok){ cfStatus.textContent = "A couple of fields still need you — they're outlined."; return; }
+    var d = { name: fv("cfName"), phone: fv("cfPhone") || "—", email: fv("cfEmail"),
+              reason: fv("cfReason"), heard: fv("cfHeard") || "—", message: fv("cfMsg") };
+    cfGo.disabled = true; cfGo.textContent = "Sending…"; cfStatus.textContent = "";
+    var timer = setTimeout(function(){ mailFallback("slow"); }, 9000);
+    fetch("https://formsubmit.co/ajax/info@modraproperties.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "MODRA inquiry — " + d.reason + " — " + d.name,
+        _template: "table", _captcha: "false",
+        Name: d.name, Phone: d.phone, Email: d.email,
+        Reason: d.reason, "Heard about us": d.heard, Message: d.message
+      })
+    }).then(function(r){ if (!r.ok) throw 0; return r.json(); })
+      .then(function(){ clearTimeout(timer); showDone(); })
+      .catch(function(){ clearTimeout(timer); mailFallback("err"); });
+    function showDone(){
+      cForm.style.display = "none"; cfDone.style.display = "block";
+      cfGo.disabled = false; cfGo.textContent = "Send it to Modra →";
+    }
+    function mailFallback(){
+      if (cfGo.disabled === false) return;                       /* already handled */
+      cfGo.disabled = false; cfGo.textContent = "Send it to Modra →";
+      var body = "Name: " + d.name + "\nPhone: " + d.phone + "\nEmail: " + d.email +
+                 "\nReason: " + d.reason + "\nHeard about us: " + d.heard + "\n\n" + d.message;
+      location.href = "mailto:info@modraproperties.com?subject=" +
+        encodeURIComponent("MODRA inquiry — " + d.reason + " — " + d.name) +
+        "&body=" + encodeURIComponent(body);
+      cfStatus.textContent = "Your email app just opened with everything filled in — hit send and it's on its way.";
+    }
+  });
+  document.getElementById("cfAgain").addEventListener("click", function(){
+    cForm.reset(); cForm.style.display = "block"; cfDone.style.display = "none"; cfStatus.textContent = "";
+  });
+}
+
 /* ---------------- pointer tilt (desktop) ---------------- */
 if (window.matchMedia && window.matchMedia("(hover:hover) and (pointer:fine)").matches){
   Array.prototype.forEach.call(document.querySelectorAll(".std,.member,.mini,.pillar,.fact"), function(card){
@@ -1183,3 +1327,4 @@ if (window.matchMedia && window.matchMedia("(hover:hover) and (pointer:fine)").m
 })();
 </script>
 </body>
+</html>
