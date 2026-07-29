@@ -265,22 +265,33 @@
   .faq h4::before{content:"";flex:0 0 auto;width:8px;height:8px;margin-top:6px;border-radius:2px;background:var(--grad)}
   .faq p{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.6}
 
-  /* ================= CRAFT v3 + CARE ================= */
-  #craftWrap{height:400vh}
-  #craftSticky{display:flex;align-items:center}
-  .craftGrid2{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;width:100%}
-  #craftView{position:relative;height:86vh;overflow:hidden;border-radius:22px;border:1px solid var(--line);
-    background:linear-gradient(180deg,#FDFDFA,#EFF3F3 55%,#F3F0E7);box-shadow:var(--shadow)}
-  #craftView svg{position:absolute;left:50%;top:0;width:118%;transform:translateX(-50%)}
-  .craftHint{font-size:20px;color:var(--modra);margin:8px 0 18px;transform:rotate(-.8deg)}
-  .craftCard2{background:rgba(255,254,250,.95);border:1px solid var(--line);border-radius:18px;padding:22px 24px;
-    box-shadow:var(--shadow)}
-  .craftCard2 .ck{font-size:10px;letter-spacing:.24em;font-weight:700;color:var(--lake);text-transform:uppercase}
-  .craftCard2 h3{color:var(--navy);font-weight:800;font-size:21px;margin-top:4px}
-  .craftCard2 p{font-size:13.5px;color:var(--muted);margin-top:7px}
-  .craftCard2 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-  #crDots{display:flex;gap:6px;margin-top:14px}
-  #crDots i{width:26px;height:4px;border-radius:2px;background:var(--line);transition:background .3s}
+  /* ================= CRAFT: annotated walkthrough ================= */
+  #craftWrap{height:460vh}
+  #craftSticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;
+    background:linear-gradient(180deg,var(--bg),#EFF3F3 55%,#F3F0E7)}
+  .craftGrid2{display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center;width:100%}
+  #craftView{position:relative;border-radius:22px;border:1px solid var(--line);
+    background:linear-gradient(180deg,#FDFDFA,#EDF2F4 60%,#F4F1E9);box-shadow:var(--shadow);padding:18px}
+  .artWrap{position:relative;width:100%}
+  #csvg{width:100%;height:auto;display:block}
+  #csvg .zn{transition:opacity .5s ease}
+  #csvg .zn.dim{opacity:.28}
+  .hotspots{position:absolute;inset:0;pointer-events:none}
+  .hs{position:absolute;transform:translate(-50%,-50%) scale(.9);opacity:0;
+    transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);
+    display:flex;align-items:center;gap:7px;white-space:nowrap}
+  .hs.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .hs i{flex:0 0 auto;width:9px;height:9px;border-radius:50%;background:var(--grad);
+    box-shadow:0 0 0 4px rgba(87,159,203,.18)}
+  .hs span{font-size:11.5px;font-weight:700;letter-spacing:.02em;color:var(--navy);
+    background:rgba(255,254,250,.94);border:1px solid var(--line);border-radius:999px;
+    padding:5px 11px;box-shadow:0 4px 14px rgba(18,54,80,.10)}
+  .hs.l{flex-direction:row-reverse}
+  .craftSide .title{font-size:clamp(26px,3.6vw,40px)}
+  .craftSide p{margin-top:12px;font-size:14.5px;color:var(--muted);max-width:420px}
+  .crNote{font-size:20px;color:var(--modra);margin-top:18px;transform:rotate(-.8deg)}
+  #crDots{display:flex;gap:6px;margin-top:20px}
+  #crDots i{width:28px;height:4px;border-radius:2px;background:var(--line);transition:background .35s}
   #crDots i.on{background:var(--grad)}
 
   #care{background:linear-gradient(180deg,var(--bg),#EFF2F0 60%,var(--bg))}
@@ -483,11 +494,14 @@
     .teamGrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
     .miniProjects{grid-template-columns:1fr}
     .faqGrid,.quoteGrid,.capGrid,.tierGrid{grid-template-columns:1fr}
-    .craftGrid2{grid-template-columns:1fr;gap:16px;align-content:center}
-    #craftView{height:44vh}
-    .craftGrid2 .title{font-size:22px}
-    .craftHint{display:none}
-    #craftWrap{height:330vh}
+    .craftGrid2{grid-template-columns:1fr;gap:14px;align-content:center}
+    #craftView{padding:10px}
+    .craftSide .title{font-size:21px}
+    .craftSide p{font-size:13px;margin-top:8px}
+    .crNote{display:none}
+    .hs span{font-size:9.5px;padding:4px 8px}
+    .hs i{width:7px;height:7px}
+    #craftWrap{height:380vh}
     .contactGrid{grid-template-columns:1fr}
     .fRow2{grid-template-columns:1fr}
     .facts{grid-template-columns:repeat(2,1fr)}
@@ -612,147 +626,119 @@
   </div>
 </section>
 
-<!-- ================= THE CRAFT: walkthrough ================= -->
+<!-- ================= THE CRAFT: annotated walkthrough ================= -->
 <div id="craftWrap">
   <section id="craft"></section>
   <div id="craftSticky">
     <div class="wrap craftGrid2">
       <div id="craftView">
-        <svg id="csvg" viewBox="0 0 900 1560" aria-label="Cross-section of a Modra rebuild">
-        <g fill="none" stroke="#13293C" stroke-opacity=".6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M450 60 L130 330 M450 60 L770 330" stroke-width="3.4"/>
-          <path d="M160 330 V1070 M740 330 V1070" stroke-width="2.6"/>
-          <path d="M160 330 H740" stroke-width="2.4"/>
-          <path d="M160 700 H740" stroke-width="2.6"/>
-          <path d="M160 1070 H740" stroke-width="2.6"/>
-          <path d="M150 1070 V1420 M750 1070 V1420" stroke-width="3.2"/>
-          <path d="M118 1442 H782" stroke-width="3.4"/>
-          <path d="M118 1442 L150 1420 M782 1442 L750 1420"/>
-          <path d="M70 1070 H150 M750 1070 H830" stroke-width="2.2"/>
-          <path d="M80 1078 l-12 12 M108 1078 l-12 12 M136 1078 l-12 12 M772 1078 l-12 12 M800 1078 l-12 12 M824 1078 l-12 12" stroke-opacity=".35"/>
-        </g>
-        <g fill="none" stroke="#579FCB" stroke-width="2.2" stroke-linecap="round">
-          <path d="M150 330 H120 M150 700 H120 M150 1070 H120 M150 1420 H120"/>
-        </g>
-        <g class="zone" id="zRoof">
-          <rect class="zglow" x="70" y="44" width="760" height="300" rx="18"/>
-          <g fill="none" stroke="#13293C" stroke-opacity=".45" stroke-width="2" stroke-linecap="round">
-            <path d="M450 108 L196 322 M450 156 L253 322 M450 204 L310 322 M450 252 L367 322"/>
-            <path d="M450 108 L704 322 M450 156 L647 322 M450 204 L590 322 M450 252 L533 322"/>
-            <path d="M330 232 H570" stroke-opacity=".35"/>
-            <path d="M560 152 V96 H614 V198"/>
-            <path d="M552 96 H622" stroke-width="3.2"/>
-            <path d="M573 110 v-26 M601 110 v-26" stroke-opacity=".3" stroke-dasharray="4 5"/>
-          </g>
-          <g fill="none" stroke="#579FCB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M156 336 H744" stroke-width="3"/>
-            <path d="M748 340 V1064 M748 1064 l16 10" stroke-opacity=".7"/>
-            <path d="M180 318 l12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8 12 -8 12 8" stroke-opacity=".55" stroke-width="2"/>
-          </g>
-          <g class="ztags">
-            <text class="ztag" x="215" y="150">ARCHITECTURAL SHINGLES</text>
-            <text class="ztag" x="608" y="222">CHIMNEY REPOINTED</text>
-            <text class="ztag" x="196" y="296">R-49 INSULATION</text>
-            <text class="ztag" x="600" y="360">GUTTERS + DOWNSPOUTS</text>
-          </g>
-        </g>
-        <g class="zone" id="zUpper">
-          <rect class="zglow" x="70" y="342" width="760" height="350" rx="18"/>
-          <g fill="none" stroke="#13293C" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M470 700 V376" stroke-opacity=".4"/>
-            <rect x="196" y="380" width="158" height="184" fill="rgba(87,159,203,.06)" stroke-opacity=".3"/>
-            <path d="M196 426 h158 M196 472 h158 M196 518 h158 M249 380 v184 M302 380 v184" stroke-opacity=".22"/>
-            <path d="M200 640 h150 v-40 a20 20 0 0 0 -20 -20 h-110 a20 20 0 0 0 -20 20 Z"/>
-            <path d="M262 566 v-24 M246 542 h32" stroke-opacity=".5"/>
-            <path d="M390 700 v-92 h44 v92" stroke-opacity=".5"/>
-            <path d="M404 655 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0" stroke-opacity=".4"/>
-            <path d="M520 700 v-52 h178 v52 M520 664 h178"/>
-            <path d="M530 648 h42 v-16 h-42 Z M576 648 h42 v-16 h-42 Z" stroke-opacity=".5"/>
-            <path d="M520 700 v-88 h14 v88" stroke-opacity=".55"/>
-            <path d="M708 700 v-44 h24 v44 M720 672 v-14" stroke-opacity=".45"/>
-            <path d="M636 430 h84 v66 h-84 Z M678 430 v66 M636 463 h84" stroke-opacity=".45"/>
-            <path d="M636 430 c-8 20 -8 46 0 66 M720 430 c8 20 8 46 0 66" stroke-opacity=".3"/>
-            <path d="M560 396 v22 M548 418 h24 l-12 14 Z" stroke-opacity=".4"/>
-          </g>
-          <g class="ztags">
-            <text class="ztag" x="205" y="372">BATH 2 — ADDED</text>
-            <text class="ztag" x="560" y="640">PRIMARY SUITE</text>
-            <text class="ztag" x="628" y="420">NEW WINDOWS</text>
-            <text class="ztag" x="205" y="600">TILE + STONE</text>
-          </g>
-        </g>
-        <g class="zone" id="zMain">
-          <rect class="zglow" x="70" y="708" width="760" height="352" rx="18"/>
-          <g fill="none" stroke="#13293C" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M196 1070 v-64 h58 v64 M225 1030 h20"/>
-            <path d="M266 1070 v-56 h150 v56 M266 1042 h150 M300 1014 h4 M336 1014 h4 M372 1014 h4"/>
-            <path d="M300 1002 h84 v12 h-84 Z" stroke-opacity=".5"/>
-            <path d="M336 996 c0 -8 12 -8 12 0" stroke-opacity=".5"/>
-            <path d="M196 810 h160 v58 h-160 Z M276 810 v58" stroke-opacity=".5"/>
-            <path d="M216 842 h24 M316 842 h24" stroke-opacity=".35"/>
-            <path d="M436 1070 v-58 h132 v58" stroke-width="2.4"/>
-            <path d="M436 1040 h132" stroke-opacity=".4"/>
-            <path d="M472 712 v66 M536 712 v66" stroke-opacity=".5"/>
-            <path d="M462 792 h20 l-10 14 Z M526 792 h20 l-10 14 Z" stroke-opacity=".55"/>
-            <path d="M586 1070 v-14 a8 8 0 0 1 8 -8 h4 a8 8 0 0 0 8 -8 v-8 M580 1070 a10 10 0 1 0 0 -2" stroke-opacity=".45"/>
-            <path d="M614 1070 v-40 h120 v40 M614 1048 h120 M626 1030 a12 12 0 0 1 12 -12 h72 a12 12 0 0 1 12 12" stroke-opacity=".6"/>
-            <path d="M648 1018 v-8 M700 1018 v-8" stroke-opacity=".4"/>
-            <path d="M624 790 h92 v78 h-92 Z M670 790 v78 M624 829 h92" stroke-opacity=".45"/>
-            <path d="M604 1070 c40 -14 120 -14 148 0" stroke-opacity=".28" stroke-dasharray="5 6"/>
-          </g>
-          <g fill="none" stroke="#579FCB" stroke-width="2.2" stroke-linecap="round">
-            <path d="M578 712 V1062" stroke-dasharray="7 8" stroke-opacity=".75"/>
-            <path d="M568 860 l20 20 M588 860 l-20 20 M568 940 l20 20 M588 940 l-20 20" stroke-opacity=".6"/>
-          </g>
-          <g class="ztags">
-            <text class="ztag" x="205" y="742">OPEN KITCHEN</text>
-            <text class="ztag" x="436" y="742">ISLAND + PENDANTS</text>
-            <text class="ztag" x="596" y="905">WALL OPENED UP</text>
-            <text class="ztag" x="610" y="742">NEW FLOORS</text>
-          </g>
-        </g>
-        <g class="zone" id="zBase">
-          <rect class="zglow" x="60" y="1078" width="780" height="372" rx="18"/>
-          <g fill="none" stroke="#13293C" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M180 1092 h28 M236 1092 h28 M292 1092 h28 M348 1092 h28 M404 1092 h28 M460 1092 h28 M516 1092 h28 M572 1092 h28 M628 1092 h28 M684 1092 h28" stroke-opacity=".35"/>
-            <path d="M210 1420 v-116 h86 v116 M232 1304 v-30 M253 1274 h-42"/>
-            <path d="M310 1160 h330 M310 1160 v-24 M420 1160 v-14 M530 1160 v-14 M640 1160 v-24" stroke-opacity=".4"/>
-            <path d="M370 1420 v-86 a28 28 0 0 1 56 0 v86" stroke-opacity=".6"/>
-            <path d="M398 1334 v-40" stroke-opacity=".35" stroke-dasharray="4 5"/>
-            <path d="M470 1420 v-84 h58 v84 M480 1354 a19 19 0 1 0 38 0 a19 19 0 1 0 -38 0"/>
-            <path d="M540 1420 v-84 h58 v84 M550 1354 a19 19 0 1 0 38 0 a19 19 0 1 0 -38 0"/>
-            <path d="M652 1240 h44 v88 h-44 Z M660 1254 h12 M660 1272 h12 M660 1290 h12 M676 1254 h12 M676 1272 h12"/>
-            <path d="M674 1240 v-160" stroke-opacity=".4" stroke-dasharray="4 6"/>
-            <path d="M188 1404 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0 M204 1404 v-22 M204 1382 h-30" stroke-opacity=".5"/>
-          </g>
-          <g fill="none" stroke="rgba(18,54,80,.4)" stroke-width="1.8">
-            <ellipse cx="158" cy="1130" rx="7" ry="10"/><ellipse cx="157" cy="1180" rx="6" ry="9"/>
-            <ellipse cx="159" cy="1235" rx="7" ry="11"/><ellipse cx="157" cy="1290" rx="6" ry="9"/>
-            <ellipse cx="158" cy="1345" rx="7" ry="10"/><ellipse cx="158" cy="1396" rx="6" ry="8"/>
-            <ellipse cx="742" cy="1130" rx="7" ry="10"/><ellipse cx="743" cy="1180" rx="6" ry="9"/>
-            <ellipse cx="741" cy="1235" rx="7" ry="11"/><ellipse cx="743" cy="1290" rx="6" ry="9"/>
-            <ellipse cx="742" cy="1345" rx="7" ry="10"/><ellipse cx="742" cy="1396" rx="6" ry="8"/>
-          </g>
-          <g class="ztags">
-            <text class="ztag" x="316" y="1146">HEAT PUMP + NEW DUCTS</text>
-            <text class="ztag" x="612" y="1226">200A SERVICE</text>
-            <text class="ztag" x="452" y="1310">LAUNDRY, DOWN HERE</text>
-            <text class="ztag" x="170" y="1452">SUMP + DRAINAGE</text>
-            <text class="ztag" x="586" y="1452">FIELDSTONE REPOINTED</text>
-          </g>
-        </g>
-      </svg>
+        <div class="artWrap">
+          <svg id="csvg" viewBox="0 0 880 660" aria-label="What Modra does, room by room">
+            <g fill="none" stroke="#13293C" stroke-linecap="round" stroke-linejoin="round">
+              <!-- ROOF -->
+              <g class="zn" id="z0">
+                <path d="M108 196 L440 58 L772 196" stroke-width="3.4" stroke-opacity=".7"/>
+                <path d="M140 190 L440 66 L740 190" stroke-width="1.6" stroke-opacity=".3"/>
+                <path d="M108 196 h64 M708 196 h64" stroke-width="3" stroke-opacity=".6"/>
+                <path d="M120 200 h56 v12 h-56 Z M704 200 h56 v12 h-56 Z" stroke-width="1.6" stroke-opacity=".45"/>
+                <g stroke-opacity=".22" stroke-width="1.4">
+                  <path d="M188 172 L440 68 M236 148 L440 80 M284 124 L440 92 M332 100 L440 104"/>
+                  <path d="M692 172 L440 68 M644 148 L440 80 M596 124 L440 92 M548 100 L440 104"/>
+                </g>
+                <g stroke-opacity=".3" stroke-width="1.5">
+                  <path d="M200 190 l14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6 14 -6 14 6"/>
+                </g>
+              </g>
+              <!-- SHELL -->
+              <path d="M140 190 V470 M740 190 V470" stroke-width="2.8" stroke-opacity=".65"/>
+              <path d="M140 330 H740" stroke-width="2.4" stroke-opacity=".55"/>
+              <path d="M140 470 H740" stroke-width="2.8" stroke-opacity=".65"/>
+              <path d="M96 470 H140 M740 470 H784" stroke-width="2" stroke-opacity=".4"/>
+              <path d="M104 478 l-10 10 M132 478 l-10 10 M752 478 l-10 10 M776 478 l-10 10" stroke-opacity=".3"/>
+              <!-- UPPER -->
+              <g class="zn" id="z1">
+                <path d="M440 330 V196" stroke-opacity=".35" stroke-width="2"/>
+                <path d="M175 330 v-60 h150 v60 M175 300 h150" stroke-opacity=".55" stroke-width="2"/>
+                <path d="M186 270 h44 v-14 h-44 Z M244 270 h44 v-14 h-44 Z" stroke-opacity=".4" stroke-width="1.6"/>
+                <path d="M355 330 v-52 h56 v52" stroke-opacity=".45" stroke-width="1.8"/>
+                <path d="M470 330 h132 v-40 a18 18 0 0 0 -18 -18 h-96 a18 18 0 0 0 -18 18 Z" stroke-opacity=".55" stroke-width="2"/>
+                <path d="M536 272 v-22 M520 250 h32" stroke-opacity=".45" stroke-width="1.8"/>
+                <path d="M636 330 v-46 h72 v46 M660 284 v-16 h24 v16" stroke-opacity=".5" stroke-width="1.8"/>
+                <path d="M648 300 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0" stroke-opacity=".35" stroke-width="1.5"/>
+                <path d="M596 232 h68 v52 h-68 Z M630 232 v52 M596 258 h68" stroke-opacity=".4" stroke-width="1.8"/>
+                <path d="M176 232 h60 v52 h-60 Z M206 232 v52" stroke-opacity=".4" stroke-width="1.8"/>
+              </g>
+              <!-- MAIN -->
+              <g class="zn" id="z2">
+                <path d="M470 470 V346" stroke-opacity=".3" stroke-width="2" stroke-dasharray="7 8"/>
+                <path d="M175 470 v-56 h132 v56 M175 442 h132" stroke-opacity=".55" stroke-width="2"/>
+                <path d="M200 414 v-14 h18 v14 M240 414 v-14 h18 v14" stroke-opacity=".4" stroke-width="1.6"/>
+                <path d="M330 470 v-44 h108 v44 M330 448 h108" stroke-width="2.2" stroke-opacity=".6"/>
+                <path d="M352 426 v-12 M384 426 v-12 M416 426 v-12" stroke-opacity=".4" stroke-width="1.5"/>
+                <path d="M540 470 v-40 h140 v40 M540 448 h140 M556 430 a14 14 0 0 1 14 -14 h80 a14 14 0 0 1 14 14" stroke-opacity=".55" stroke-width="2"/>
+                <path d="M176 372 h58 v46 h-58 Z" stroke-opacity=".35" stroke-width="1.8"/>
+                <path d="M596 356 h72 v58 h-72 Z M632 356 v58 M596 385 h72" stroke-opacity=".4" stroke-width="1.8"/>
+                <path d="M498 470 v-84 h16 v84" stroke-opacity=".45" stroke-width="1.8"/>
+              </g>
+              <!-- BELOW -->
+              <g class="zn" id="z3">
+                <path d="M150 470 V600 M730 470 V600" stroke-width="3" stroke-opacity=".6"/>
+                <path d="M120 614 H760" stroke-width="3.2" stroke-opacity=".65"/>
+                <path d="M120 614 L150 600 M760 614 L730 600"/>
+                <g stroke-opacity=".3" stroke-width="1.5">
+                  <path d="M170 484 h26 M216 484 h26 M262 484 h26 M308 484 h26 M354 484 h26 M400 484 h26 M446 484 h26 M492 484 h26 M538 484 h26 M584 484 h26 M630 484 h26 M676 484 h26"/>
+                </g>
+                <path d="M196 600 v-74 h56 v74 M212 526 v-18 M240 508 h-34" stroke-opacity=".55" stroke-width="2"/>
+                <path d="M296 600 v-58 a20 20 0 0 1 40 0 v58" stroke-opacity=".5" stroke-width="2"/>
+                <path d="M316 542 v-26" stroke-opacity=".3" stroke-dasharray="4 5"/>
+                <path d="M400 560 h180 M400 560 v-18 M460 560 v-12 M520 560 v-12 M580 560 v-18" stroke-opacity=".4" stroke-width="1.8"/>
+                <path d="M620 600 v-58 h44 v58 M632 556 h20 M632 574 h20" stroke-opacity=".5" stroke-width="1.8"/>
+                <path d="M676 600 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0 M690 586 v-20 M690 566 h-28" stroke-opacity=".45" stroke-width="1.8"/>
+                <path d="M700 470 h30 v34 h-30 Z" stroke-opacity=".5" stroke-width="1.8"/>
+              </g>
+            </g>
+            <g fill="none" stroke="#579FCB" stroke-width="2.2" stroke-linecap="round" stroke-opacity=".75">
+              <path d="M96 190 H120 M96 330 H120 M96 470 H120 M96 600 H120"/>
+            </g>
+          </svg>
+          <div class="hotspots" id="hotspots">
+          <div class="hs l" data-g="0" data-i="0" style="left:29%;top:17%"><i></i><span>New Roof</span></div>
+          <div class="hs r" data-g="0" data-i="1" style="left:70%;top:24%"><i></i><span>Shingles</span></div>
+          <div class="hs l" data-g="0" data-i="2" style="left:11%;top:31%"><i></i><span>Fascia Repair</span></div>
+          <div class="hs r" data-g="0" data-i="3" style="left:89%;top:31%"><i></i><span>Gutters</span></div>
+          <div class="hs r" data-g="0" data-i="4" style="left:57%;top:12%"><i></i><span>Roof Repairs</span></div>
+          <div class="hs r" data-g="0" data-i="5" style="left:74%;top:42%"><i></i><span>Window Replacement</span></div>
+          <div class="hs l" data-g="0" data-i="6" style="left:12%;top:44%"><i></i><span>Siding &amp; Trim</span></div>
+          <div class="hs l" data-g="0" data-i="7" style="left:43%;top:30%"><i></i><span>Attic Insulation</span></div>
+          <div class="hs l" data-g="1" data-i="8" style="left:25%;top:38%"><i></i><span>New Bedrooms</span></div>
+          <div class="hs r" data-g="1" data-i="9" style="left:70%;top:38%"><i></i><span>New Bathrooms</span></div>
+          <div class="hs r" data-g="1" data-i="10" style="left:82%;top:47%"><i></i><span>Vanities</span></div>
+          <div class="hs r" data-g="1" data-i="11" style="left:57%;top:50%"><i></i><span>Tile &amp; Stone</span></div>
+          <div class="hs l" data-g="1" data-i="12" style="left:45%;top:33%"><i></i><span>Closets</span></div>
+          <div class="hs l" data-g="1" data-i="13" style="left:12%;top:49%"><i></i><span>Egress Windows</span></div>
+          <div class="hs l" data-g="2" data-i="14" style="left:24%;top:63%"><i></i><span>Kitchens &amp; Cabinetry</span></div>
+          <div class="hs r" data-g="2" data-i="15" style="left:52%;top:55%"><i></i><span>New Walls</span></div>
+          <div class="hs l" data-g="2" data-i="16" style="left:38%;top:72%"><i></i><span>Flooring</span></div>
+          <div class="hs r" data-g="2" data-i="17" style="left:70%;top:52%"><i></i><span>Ceiling Modification</span></div>
+          <div class="hs r" data-g="2" data-i="18" style="left:84%;top:66%"><i></i><span>Trim &amp; Paint</span></div>
+          <div class="hs l" data-g="2" data-i="19" style="left:12%;top:59%"><i></i><span>Interior Doors</span></div>
+          <div class="hs l" data-g="3" data-i="20" style="left:24%;top:81%"><i></i><span>HVAC</span></div>
+          <div class="hs l" data-g="3" data-i="21" style="left:41%;top:77%"><i></i><span>Water Heater</span></div>
+          <div class="hs r" data-g="3" data-i="22" style="left:53%;top:90%"><i></i><span>PEX Lines</span></div>
+          <div class="hs r" data-g="3" data-i="23" style="left:66%;top:79%"><i></i><span>Plumbing</span></div>
+          <div class="hs r" data-g="3" data-i="24" style="left:80%;top:85%"><i></i><span>Electrical</span></div>
+          <div class="hs r" data-g="3" data-i="25" style="left:90%;top:94%"><i></i><span>Sump &amp; Drainage</span></div>
+          <div class="hs l" data-g="3" data-i="26" style="left:45%;top:97%"><i></i><span>Concrete</span></div>
+          <div class="hs l" data-g="3" data-i="27" style="left:12%;top:89%"><i></i><span>Foundation Repair</span></div>
+          </div>
+        </div>
       </div>
       <div class="craftSide">
-        <div class="kicker">The craft — renovation</div>
-        <h2 class="title">One rebuild,<br><em>top to bottom.</em></h2>
-        <div class="craftCard2">
-          <div class="ck" id="crCk">01 · THE ENVELOPE</div>
-          <h3 id="crTitle">Weather-proof, Michigan-proof.</h3>
-          <p id="crBody">Roof, siding, windows, gutters — everything that faces the lake-effect sky gets replaced or restored first.</p>
-          <div class="chips" id="crChips"></div>
-          <div id="crDots"><i class="on"></i><i></i><i></i><i></i></div>
-        </div>
+        <div class="kicker">The craft — what we do</div>
+        <h2 class="title" id="crTitle">Roof &amp; <em>exterior.</em></h2>
+        <p id="crBody">Everything that faces the lake-effect sky — replaced, repaired, sealed and made to last a Michigan winter.</p>
+        <div id="crDots"><i class="on"></i><i></i><i></i><i></i></div>
+        <div class="scriptA crNote">if it's part of a home, it's part of our craft</div>
       </div>
     </div>
   </div>
@@ -1179,49 +1165,43 @@ function heroFrame(p){
   heroHint.style.opacity = p < 0.04 ? 0.85 : 0;
 }
 
-/* ---------------- craft walkthrough (side-by-side) ---------------- */
+/* ---------------- craft: annotated walkthrough ---------------- */
 var craftWrap = document.getElementById("craftWrap");
-var csvg = document.getElementById("csvg");
-var craftView = document.getElementById("craftView");
-var craftZones = ["zRoof","zUpper","zMain","zBase"].map(function(id){ return document.getElementById(id); });
-var CR_BEATS = [
-  {ck:"01 · THE ENVELOPE", t:"Weather-proof, Michigan-proof.",
-   b:"Roof, siding, windows, gutters — everything that faces the lake-effect sky gets replaced or restored first.",
-   c:["ROOFING","SIDING & TRIM","WINDOWS","GUTTERS","ATTIC INSULATION"]},
-  {ck:"02 · UPSTAIRS", t:"The quiet luxury floor.",
-   b:"Bathroom additions, primary suites, closets that finally work — tile laid like it matters.",
-   c:["BATH ADDITIONS","TILE & STONE","SUITES","CEILING MODIFICATION"]},
-  {ck:"03 · MAIN FLOOR", t:"Taken to studs and back.",
-   b:"Open kitchens, islands built for a crowd, walls opened up, floors that run true through the whole level.",
-   c:["KITCHENS","ISLANDS","WALL REMOVAL","FLOORING","TRIM & PAINT"]},
-  {ck:"04 · BELOW THE DRYWALL", t:"The parts you never see — done right.",
-   b:"Rewired, re-plumbed, insulated, permitted. A Modra house is renovated behind the walls before it's beautiful in front of them.",
-   c:["ELECTRICAL","PLUMBING","HVAC","FOUNDATION","EGRESS","PERMITS"]}
+var hotspots = Array.prototype.slice.call(document.querySelectorAll("#hotspots .hs"));
+var craftZones = ["z0","z1","z2","z3"].map(function(id){ return document.getElementById(id); });
+var CR = [
+  {t:'Roof &amp; <em>exterior.</em>', b:"Everything that faces the lake-effect sky — replaced, repaired, sealed, and made to last a Michigan winter."},
+  {t:'Upstairs, <em>re-drafted.</em>', b:"Bedrooms that finally fit the furniture, baths added where there were none, and tile laid like it matters."},
+  {t:'Main floor, <em>opened up.</em>', b:"Walls moved, ceilings raised, kitchens rebuilt around an island — the level where a house starts feeling like home."},
+  {t:'Systems &amp; <em>below grade.</em>', b:"The parts you never see: plumbing, PEX, electrical, HVAC, concrete and foundation work — done first, done right."}
 ];
-var crCk = document.getElementById("crCk"), crTitle = document.getElementById("crTitle"),
-    crBody = document.getElementById("crBody"), crChips = document.getElementById("crChips");
+var crTitle = document.getElementById("crTitle"), crBody = document.getElementById("crBody");
 var crDots = Array.prototype.slice.call(document.querySelectorAll("#crDots i"));
-var crCur = -1;
-function crSet(i){
-  if (i === crCur) return;
-  crCur = i;
-  var bt = CR_BEATS[i];
-  crCk.textContent = bt.ck; crTitle.textContent = bt.t; crBody.textContent = bt.b;
-  crChips.innerHTML = bt.c.map(function(x){ return '<span class="chip">' + x + '</span>'; }).join("");
-  crDots.forEach(function(d,k){ d.classList.toggle("on", k === i); });
-  craftZones.forEach(function(z,k){ if (z) z.classList.toggle("on", k === i); });
-}
-crSet(0);
+var crGroup = -1;
+var GCOUNT = [0,0,0,0];
+hotspots.forEach(function(el){ GCOUNT[+el.dataset.g]++; });
 function craftFrame(p){
-  var svgH = csvg.getBoundingClientRect().height || 1;
-  var viewH = craftView.getBoundingClientRect().height || 1;
-  var travel = Math.max(0, svgH - viewH);
-  var pan = ease(clamp01((p - 0.03) / 0.92));
-  csvg.style.transform = "translateX(-50%) translateY(" + (-pan * travel) + "px)";
-  crSet(p < 0.27 ? 0 : p < 0.52 ? 1 : p < 0.76 ? 2 : 3);
+  var seg = 1 / CR.length;
+  var g = Math.min(CR.length - 1, Math.floor(p / seg));
+  var local = clamp01((p - g * seg) / seg);
+  if (g !== crGroup){
+    crGroup = g;
+    crTitle.innerHTML = CR[g].t; crBody.textContent = CR[g].b;
+    crDots.forEach(function(d,k){ d.classList.toggle("on", k === g); });
+    craftZones.forEach(function(z,k){ if (z) z.classList.toggle("dim", k !== g); });
+  }
+  /* reveal this group's callouts one after another as you scroll through it */
+  var shown = Math.ceil(clamp01((local - 0.06) / 0.62) * GCOUNT[g]);
+  var seen = 0;
+  for (var i = 0; i < hotspots.length; i++){
+    var el = hotspots[i], eg = +el.dataset.g;
+    if (eg !== g){ el.classList.remove("on"); continue; }
+    seen++;
+    el.classList.toggle("on", seen <= shown);
+  }
 }
 
-/* ---------------- Bristol rotating cutaway ---------------- */
+/* ---------------- Bristol rotating cutaway ---------------- *//* ---------------- Bristol rotating cutaway ---------------- */
 var bWrap = document.getElementById("bWrap");
 var world = document.getElementById("bWorld");
 function add(parent, cls, w, h, transform, html){
@@ -1462,7 +1442,6 @@ co(CO[0], "DRIVE + WALK REDONE", 190, -4, 190, 108, false);
 co(CO[0], "REGRADE + LANDSCAPE", -140, -4, -180, 92, false);
 /* 02 envelope */
 co(CO[1], "NEW ROOF + GUTTERS", -60, -RG - 6, 0, 104, true);
-co(CO[1], "CHIMNEY REPOINTED", 150, -(RG + 46), -40, 66, false);
 co(CO[1], "SIDING + TRIM REFRESH", -HW/2 - 4, -F1 - 40, 40, 120, false);
 co(CO[1], "NEW WINDOWS · EVERY FLOOR", 120, -(F2 - 60), HD/2 + 6, 150, true);
 co(CO[1], "ENTRY + PORCH REBUILT", WGX, -F1 - 14, WGZ + WGD/2, 92, false);
@@ -1505,7 +1484,7 @@ function setPhase(i){
 }
 
 function bFrame(p){
-  var ry = 24 + p * 244;
+  var ry = 26 + p * 186;
   var rx = lerp(-16, -21, ease(clamp01(p / 0.35)));      /* eye-level side view, slight elevation */
   rx = lerp(rx, -36, ease(clamp01((p - 0.40) / 0.30)));   /* tip down into the opened floors */
   var stepIn = ease(clamp01((p - 0.63) / 0.10)) * (1 - ease(clamp01((p - 0.755) / 0.06)));
@@ -1551,11 +1530,11 @@ function onFrame(){
   var tb = prog(bWrap), tc = prog(craftWrap);
   if (first){ sB = tb; sC = tc; first = false; }
   if (nearView(craftWrap, 400)){
-    sC += (tc - sC) * 0.12;
+    sC += (tc - sC) * 0.16;
     craftFrame(sC);
   } else { sC = tc; }
   if (nearView(bWrap, 400)){
-    sB += (tb - sB) * 0.11;
+    sB += (tb - sB) * 0.085;
     bFrame(sB);
   } else { sB = tb; }
 }
