@@ -389,75 +389,24 @@
   .partner img{height:42px;width:auto;display:block;max-width:150px;object-fit:contain}
   .partner span{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--navy);text-transform:uppercase;line-height:1.4}
 
-  /* ================= PROJECTS / BRISTOL 3D ================= */
-  #projects .lead{max-width:720px}
-  #bWrap{height:520vh;position:relative;margin-top:34px}
-  #bSticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;
-    background:linear-gradient(180deg,#FBFDFE,#EFF3F3 55%,#F3F0E7)}
-  .bGrid2{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;width:100%}
-  #bStage{position:relative;height:78vh;border-radius:22px;border:1px solid var(--line);overflow:hidden;
-    background:linear-gradient(180deg,#FDFDFA,#EDF2F4 60%,#F4F1E9);box-shadow:var(--shadow);
-    perspective:1150px;perspective-origin:50% 46%}
-  #bWorld{position:absolute;left:50%;top:62%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
-  #bWorld *{transform-style:preserve-3d}
-  .pl{position:absolute;left:0;top:0}
-  .wire{border:1.5px solid rgba(18,54,80,.5);background:#FBFBF7}
-  .roofp{border:1.5px solid rgba(18,54,80,.5);background-color:#DCE6EE}
-  .shingle{background-image:
-    repeating-linear-gradient(180deg, rgba(18,54,80,.17) 0 1.4px, transparent 1.4px 15px),
-    repeating-linear-gradient(90deg, rgba(18,54,80,.09) 0 1px, transparent 1px 30px)}
-  .fascia{background:#FBFBF7;border:1px solid rgba(18,54,80,.42)}
-  .cull{backface-visibility:hidden;-webkit-backface-visibility:hidden}
-  .ridgecap{background:#CBD8E4;border:1px solid rgba(18,54,80,.5)}
-  .floorp{border:1px solid rgba(18,54,80,.26);background:#F1F1EA}
-  /* directional shading — makes the volume read as solid */
-  .fLit{background:#FDFDFA}
-  .fMid{background:#EDEFEB;box-shadow:inset 0 0 40px rgba(18,54,80,.06)}
-  .fDim{background:#DFE4E4;box-shadow:inset 0 0 60px rgba(18,54,80,.12)}
-  .rLit{background-color:#E6EDF3}
-  .rDim{background-color:#CBD8E3}
-  .wire2{border:1px solid rgba(18,54,80,.28);background:transparent}
-  .hot{border:1.5px solid rgba(87,159,203,.95);background:#DCEBF6}
-  .lbl3{font-family:var(--mono);color:var(--modra);white-space:nowrap;letter-spacing:.12em;font-size:20px;
-    font-weight:600;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-  .lbl3.dim{color:#7f97a8;font-size:15px}
-  .lbl3.hi{color:var(--lake)}
-  .bb{position:absolute;left:0;top:0}
-  .bbi{display:inline-block;transform:rotateY(var(--bby,0deg)) rotateX(var(--bbx,0deg))}
-  .co{font-family:var(--mono);font-weight:700;font-size:13.5px;letter-spacing:.1em;color:var(--navy);
-    background:rgba(255,255,255,.85);border:1px solid rgba(38,97,142,.35);border-radius:8px;padding:4px 10px;
-    white-space:nowrap;box-shadow:0 6px 18px rgba(18,54,80,.15)}
-  .co.hi{color:#2a6f9e;border-color:rgba(87,159,203,.6)}
-  .bGrid{background-image:
-    repeating-linear-gradient(0deg, rgba(38,97,142,.10) 0 1px, transparent 1px 180px),
-    repeating-linear-gradient(90deg, rgba(38,97,142,.10) 0 1px, transparent 1px 180px),
-    repeating-linear-gradient(0deg, rgba(38,97,142,.04) 0 1px, transparent 1px 36px),
-    repeating-linear-gradient(90deg, rgba(38,97,142,.04) 0 1px, transparent 1px 36px);
-    -webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%);
-    mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)}
-  .lotline{border:2px dashed rgba(87,159,203,.55);background:transparent}
-  .stone{background-color:#E4DFD4;background-image:
-    radial-gradient(circle 3px at 22% 30%, rgba(18,54,80,.30) 0 60%, transparent 70%),
-    radial-gradient(circle 4px at 68% 62%, rgba(18,54,80,.24) 0 60%, transparent 70%),
-    radial-gradient(circle 3px at 45% 82%, rgba(18,54,80,.26) 0 60%, transparent 70%),
-    repeating-linear-gradient(0deg, rgba(18,54,80,.28) 0 1.5px, transparent 1.5px 24px),
-    repeating-linear-gradient(90deg, rgba(18,54,80,.20) 0 1.5px, transparent 1.5px 34px);
-    background-size:56px 46px,74px 58px,64px 52px,auto,auto}
-  .glass{background:linear-gradient(160deg, rgba(255,255,255,.5), rgba(38,97,142,.04) 60%)}
-  #bHead .addr{font-weight:800;color:var(--navy);font-size:clamp(22px,3.4vw,34px);line-height:1.1;margin-top:2px}
-  #bHead .sub{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--muted);margin-top:5px}
-  #bCard{margin-top:20px;background:rgba(255,254,250,.95);border:1px solid var(--line);
-    border-radius:18px;padding:22px 24px;box-shadow:var(--shadow)}
-  #bCard .ck{font-size:10px;letter-spacing:.24em;font-weight:700;color:var(--lake);text-transform:uppercase}
-  #bCard h3{color:var(--navy);font-weight:800;font-size:20px;margin-top:3px}
-  #bCard p{font-size:13px;color:var(--muted);margin-top:6px}
-  #bDots{display:flex;gap:6px;margin-top:12px}
-  #bDots i{width:22px;height:4px;border-radius:2px;background:var(--line);transition:background .3s}
-  #bDots i.on{background:var(--grad)}
-  .conceptTag{position:absolute;right:16px;bottom:14px;z-index:6;font-family:var(--mono);font-size:9px;
-    letter-spacing:.14em;color:var(--muted);text-align:right;opacity:.75;line-height:1.5}
-
-  .factsWrap{margin-top:42px}
+  /* ================= PROJECTS ================= */
+  .projGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+  .proj{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(18,54,80,.15)}
+  .projArt{background:linear-gradient(170deg,#FDFDFA,#EDF2F4 65%,#F4F1E9);border-bottom:1px solid var(--line);padding:14px 18px}
+  .projArt svg{width:100%;height:auto;display:block}
+  .projBody{padding:22px 24px 20px;flex:1;display:flex;flex-direction:column}
+  .projTop{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .projTop h3{font-size:18px;color:var(--navy);font-weight:800}
+  .projMeta{margin-top:3px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted)}
+  .projBody p{margin-top:11px;font-size:13.5px;color:var(--muted);line-height:1.6;flex:1}
+  .projChips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .projChips span{font-size:10.5px;font-weight:600;color:var(--modra);background:var(--bg);
+    border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+  .projNote{font-size:19px;color:var(--modra);margin-top:12px;transform:rotate(-.8deg)}
+  .projFoot{margin-top:22px;text-align:center;font-size:12.5px;color:var(--muted)}
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .fact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
   .fact .v{font-weight:800;color:var(--navy);font-size:17px}
@@ -493,7 +442,7 @@
     .stats{grid-template-columns:repeat(2,1fr)}
     .teamGrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
     .miniProjects{grid-template-columns:1fr}
-    .faqGrid,.quoteGrid,.capGrid,.tierGrid{grid-template-columns:1fr}
+    .faqGrid,.quoteGrid,.capGrid,.tierGrid,.projGrid{grid-template-columns:1fr}
     .craftGrid2{grid-template-columns:1fr;gap:14px;align-content:center}
     #craftView{padding:10px}
     .craftSide .title{font-size:21px}
@@ -517,9 +466,7 @@
     #bHead .addr{font-size:22px}
     #bCard{margin-top:12px;padding:16px 18px}
     #bCard h3{font-size:17px}
-    .conceptTag{display:none}
     #craftRule{display:none}
-    #bSticky{perspective:880px}
   }
 </style>
 </head>
@@ -927,61 +874,71 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="sec" style="padding-bottom:0">
+<section id="projects" class="sec">
   <div class="wrap">
-    <div class="kicker rev">Current projects</div>
-    <h2 class="title rev d1">On the boards: <em>the Bristol House.</em></h2>
-    <p class="lead rev d2">An 1880 two-story on a fieldstone foundation, on nearly half an acre of Grand Rapids' west side — acquired November 2025. Scroll along and the house turns, opening floor by floor — every touchpoint gently called out as you go.</p>
-  </div>
-</section>
-<div id="bWrap">
-  <div id="bSticky">
-    <div class="wrap bGrid2">
-      <div id="bStage">
-        <div id="bWorld"></div>
-        <div class="conceptTag">CONCEPT MODEL · DRAWN FROM SITE PHOTOS<br>1880 · FIELDSTONE · NOT FOR CONSTRUCTION</div>
-      </div>
-      <div class="bSide">
-        <div id="bHead">
-          <div class="kicker">Current project</div>
-          <div class="addr">The Bristol House</div>
-          <div class="sub">GRAND RAPIDS · WEST SIDE · CONCEPT STUDY</div>
+    <div class="kicker rev">The pipeline</div>
+    <h2 class="title rev d1">What we're <em>working on.</em></h2>
+    <p class="lead rev d2">A short list, on purpose. We take on what we can stand behind — and we'd rather show you two done right than ten in progress.</p>
+
+    <div class="projGrid">
+      <article class="proj rev d1">
+        <div class="projArt" aria-hidden="true">
+          <svg viewBox="0 0 320 150">
+            <g fill="none" stroke="#13293C" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M28 132 H292" stroke-width="2.4"/>
+              <path d="M62 132 V64 L160 24 L258 64 V132" />
+              <path d="M50 70 L160 26 L270 70" stroke-width="2.6"/>
+              <path d="M212 46 V30 h20 v28" />
+              <path d="M92 132 v-40 h34 v40" stroke="#579FCB" stroke-opacity=".9"/>
+              <path d="M148 84 h34 v28 h-34 Z M165 84 v28 M148 98 h34" stroke-opacity=".45"/>
+              <path d="M206 84 h34 v28 h-34 Z M223 84 v28 M206 98 h34" stroke-opacity=".45"/>
+              <g stroke-opacity=".3">
+                <path d="M62 118 H258 M62 104 H258"/>
+                <path d="M84 118 v14 M118 118 v14 M186 118 v14 M228 118 v14"/>
+              </g>
+            </g>
+          </svg>
         </div>
-        <div id="bCard">
-          <div class="ck" id="bCk">PHASE 01 · THE SITE</div>
-          <h3 id="bTitle">Nearly half an acre, in the city.</h3>
-          <p id="bBody">Rare room to breathe on the west side. The whole lot gets regraded and seeded, the drive redone, and the tired rear deck rebuilt for summers that deserve it.</p>
-          <div id="bDots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div class="projBody">
+          <div class="projTop"><h3>The Bristol House</h3><span class="badge live">IN PROGRESS</span></div>
+          <div class="projMeta">Grand Rapids · west side · full renovation</div>
+          <p>An 1880 two-story on a fieldstone foundation, on nearly half an acre. New roof and windows, a second full bath added upstairs, the main floor opened up, and every system replaced behind the walls.</p>
+          <div class="projChips">
+            <span>1880 · fieldstone</span><span>2 stories + basement</span><span>0.46 acres</span><span>studs-out</span>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="proj rev d2">
+        <div class="projArt" aria-hidden="true">
+          <svg viewBox="0 0 320 150">
+            <g fill="none" stroke="#13293C" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M28 132 H292" stroke-width="2.4"/>
+              <path d="M78 132 V78 L160 40 L242 78 V132"/>
+              <path d="M66 84 L160 42 L254 84" stroke-width="2.6"/>
+              <path d="M146 132 v-34 h28 v34"/>
+              <path d="M100 92 h26 v22 h-26 Z M196 92 h26 v22 h-26 Z" stroke-opacity=".45"/>
+              <g stroke="#579FCB" stroke-opacity=".85">
+                <path d="M254 84 q10 14 -2 24 M66 84 q-10 14 2 24"/>
+                <path d="M160 42 v-14 M150 32 l10 -10 10 10"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="projBody">
+          <div class="projTop"><h3>The Valley House</h3><span class="badge soft">PROPERTY SERVICES</span></div>
+          <div class="projMeta">Grand Rapids · west side · ongoing care</div>
+          <p>Not every project is a gut rehab — some houses just need a crew that keeps showing up. Roof and gutter cleaning, seasonal work, curb appeal, and the small repairs that never make it onto anyone's list.</p>
+          <div class="projChips">
+            <span>monthly care</span><span>gutters &amp; roof</span><span>small repairs</span><span>turnover-ready</span>
+          </div>
+          <div class="scriptA projNote">the little jobs matter, too</div>
+        </div>
+      </article>
     </div>
-  </div>
-</div>
-<section class="sec" style="padding-top:56px">
-  <div class="wrap">
-    <div class="factsWrap">
-      <div class="facts">
-        <div class="fact rev"><div class="v">1880</div><div class="k">Year built · fieldstone foundation</div></div>
-        <div class="fact rev d1"><div class="v">2 <span>+ 1</span></div><div class="k">Stories above · level below grade</div></div>
-        <div class="fact rev d2"><div class="v">3 <span>BD</span> / 1→2 <span>BA</span></div><div class="k">Concept reconfiguration</div></div>
-        <div class="fact rev"><div class="v">0.46 <span>AC</span></div><div class="k">Nearly half an acre in the city</div></div>
-        <div class="fact rev d1"><div class="v">NOV '25</div><div class="k">Acquired &amp; secured</div></div>
-        <div class="fact rev d2"><div class="v">FULL GUT</div><div class="k">A studs-out second draft*</div></div>
-      </div>
-      <div class="srcline rev">*Concept scope is a Modra study; property data from public records. The 3D model is drawn from our own site photos — an honest concept, not construction drawings.</div>
-    </div>
-    <div class="miniProjects">
-      <div class="mini valley rev d1">
-      <div class="top"><h3>The Valley House</h3><span class="badge live">PROPERTY SERVICES</span></div>
-      <p>Not every project is a gut rehab — some houses just need a crew that keeps showing up. On the west side, the Valley House is where our care side quietly does its thing, visit after visit.</p>
-      <div class="scriptA" style="font-size:21px;color:var(--modra);margin-top:6px;transform:rotate(-.8deg)">the little jobs matter, too</div>
-      <div class="vChips">
-        <span class="chip">ROOF + GUTTER CLEANING</span><span class="chip">CURB APPEAL + SEASONAL</span>
-        <span class="chip">SMALL REPAIRS — DOORS, FIXTURES, PATCHING</span><span class="chip">HANDYMAN VISITS</span>
-        <span class="chip">TURNOVER-READY, ALWAYS</span>
-      </div>
-      <div class="meta">GRAND RAPIDS · WEST SIDE · ONGOING CARE</div>
-    </div>
+
+    <div class="projFoot rev d2">Drawings are our own concept sketches, not construction documents. Want to see a project in person? Just ask — we'll show you the good and the ugly.</div>
+
     <div class="ctaRow">
       <a class="btn blue rev" href="#contact">Let's talk about your project ↓</a>
     </div>
@@ -1201,325 +1158,8 @@ function craftFrame(p){
   }
 }
 
-/* ---------------- Bristol rotating cutaway ---------------- *//* ---------------- Bristol rotating cutaway ---------------- */
-var bWrap = document.getElementById("bWrap");
-var world = document.getElementById("bWorld");
-function add(parent, cls, w, h, transform, html){
-  var d = document.createElement("div");
-  d.className = "pl " + (cls||"");
-  if (w != null){ d.style.width=w+"px"; d.style.height=h+"px"; d.style.marginLeft=(-w/2)+"px"; d.style.marginTop=(-h/2)+"px"; }
-  d.style.transform = transform;
-  if (html) d.innerHTML = html;
-  (parent||world).appendChild(d);
-  return d;
-}
-function group(parent, transform){
-  var d = document.createElement("div"); d.className="pl"; d.style.transform = transform||"";
-  (parent||world).appendChild(d); return d;
-}
-function T(x,y,z){ return "translate3d("+x+"px,"+y+"px,"+z+"px)"; }
-function lbl(parent, text, x,y,z, cls, size, flat){
-  var d = add(parent, "lbl3"+(cls?" "+cls:""), null, null,
-    T(x,y,z)+(flat?" rotateX(90deg)":"")+" translate(-50%,-50%)");
-  d.style.position="absolute"; d.textContent=text;
-  if (size) d.style.fontSize = size+"px";
-  return d;
-}
-function box(parent, w,h,d2, x,y,z, cls){
-  var g = group(parent, T(x,y,z));
-  add(g, cls, w,h, T(0,0, d2/2));
-  add(g, cls, w,h, T(0,0,-d2/2));
-  add(g, cls, d2,h, "rotateY(90deg) "+T(0,0,-w/2));
-  add(g, cls, d2,h, "rotateY(90deg) "+T(0,0, w/2));
-  add(g, cls, w,d2, "rotateX(90deg) "+T(0,0, h/2));
-  return g;
-}
-/* ===================== BRISTOL HOUSE — clean build =====================
-   Coordinate convention (verified):
-     x → right, y → DOWN (negative = up), z → toward viewer.
-     Vertical plane facing ±z:  T(cx, cy, cz)
-     Vertical plane facing ±x:  "rotateY(90deg) " + T(-cz, cy, cx)
-     Horizontal plane:          "rotateX(90deg) " + T(cx, cz, -cy)
-   ====================================================================== */
-function vplaneZ(parent, cls, w, ht, cx, cy, cz){ return add(parent, cls, w, ht, T(cx, cy, cz)); }
-function vplaneX(parent, cls, d, ht, cx, cy, cz){ return add(parent, cls, d, ht, "rotateY(90deg) "+T(-cz, cy, cx)); }
-function hplane(parent, cls, w, d, cx, cy, cz){ return add(parent, cls, w, d, "rotateX(90deg) "+T(cx, cz, -cy)); }
-
-/* a closed rectangular volume: footprint w×d centred at (cx,cz), from yBase up by ht */
-function volume(parent, cls, w, d, ht, cx, cz, yBase, opts){
-  opts = opts || {};
-  var g = group(parent, "");
-  var cy = yBase - ht/2;
-  var front = vplaneZ(g, cls + " fLit", w, ht, cx, cy, cz + d/2);
-  var back  = vplaneZ(g, cls + " fDim", w, ht, cx, cy, cz - d/2);
-  var right = vplaneX(g, cls + " fMid", d, ht, cx + w/2, cy, cz);
-  var left  = vplaneX(g, cls + " fDim", d, ht, cx - w/2, cy, cz);
-  if (opts.cap !== false) hplane(g, opts.capCls || "floorp", w, d, cx, yBase - ht, cz);
-  g.faces = {front:front, back:back, right:right, left:left};
-  return g;
-}
-function siding(el){
-  var s = document.createElement("div");
-  s.style.cssText = "position:absolute;inset:0;background-image:"+
-    "repeating-linear-gradient(0deg, rgba(18,54,80,.13) 0 1px, transparent 1px 9px)";
-  el.appendChild(s);
-}
-function windowOn(el, offX, offY, w, ht){
-  var f = document.createElement("div");
-  f.style.cssText = "position:absolute;left:50%;top:50%;width:"+w+"px;height:"+ht+"px;"+
-    "margin-left:"+(offX-w/2)+"px;margin-top:"+(offY-ht/2)+"px;"+
-    "background:linear-gradient(150deg,#CFE2EF,#EAF3F9);border:2px solid #FBFCFD;"+
-    "box-shadow:0 0 0 1px rgba(18,54,80,.35)";
-  f.innerHTML = '<div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(18,54,80,.3)"></div>';
-  el.appendChild(f);
-  return f;
-}
-
-/* ---------- dimensions (from site photos: 2 stories + fieldstone basement) ---------- */
-var HW = 470, HD = 320;      /* main body footprint */
-var BD = 110;                /* basement depth below grade */
-var F1 = 165, F2 = 330;      /* top of main floor, top of upper floor */
-var RG = 460;                /* ridge height */
-var WGW = 190, WGD = 120;    /* front cross-gable wing */
-var WGX = -95;               /* wing centre x */
-var WGZ = HD/2 + WGD/2;      /* wing centre z */
-
-var gSite  = group(world, "");
-var gBase  = group(world, "");
-var gMain  = group(world, "");
-var gUpper = group(world, "");
-var gRoof  = group(world, "");
-gBase.style.opacity = "0";
-
-/* ---------------- SITE ---------------- */
-hplane(gSite, "bGrid", 3400, 3400, 0, 0, 0);
-var shadow = hplane(gSite, "", 900, 700, 20, -1, 30);
-shadow.style.background = "radial-gradient(closest-side, rgba(18,54,80,.20), rgba(18,54,80,.07) 55%, transparent 78%)";
-hplane(gSite, "lotline", 1620, 1300, 0, -2, 20);
-hplane(gSite, "wire2", 100, 340, -95, -3, HD/2 + WGD + 200);      /* front walk */
-hplane(gSite, "wire2", 230, 520, 330, -3, 300);                    /* drive */
-lbl(gSite, "LOT · 0.46 AC", -520, -6, 600, "hi", 21, true);
-lbl(gSite, "WEST SIDE · GRAND RAPIDS", 0, -6, 730, "dim", 16, true);
-lbl(gSite, "REGRADE + SEED", -430, -6, -380, "dim", 14, true);
-lbl(gSite, "DRIVE REDONE", 330, -6, 540, "dim", 14, true);
-function tree(x, z, s){
-  var g = group(gSite, T(x, 0, z));
-  var svg = '<svg class="pl" width="'+(80*s)+'" height="'+(130*s)+'" viewBox="0 0 80 130">'+
-    '<g fill="rgba(38,97,142,.09)" stroke="rgba(18,54,80,.42)" stroke-width="2">'+
-    '<path d="M40 6 L60 42 L20 42 Z"/><path d="M40 27 L67 70 L13 70 Z"/><path d="M40 52 L74 100 L6 100 Z"/>'+
-    '<path d="M36 100 L44 100 L44 126 L36 126 Z"/></g></svg>';
-  add(g, "", 80*s, 130*s, T(0, -65*s, 0), svg);
-  add(g, "", 80*s, 130*s, "rotateY(90deg) "+T(0, -65*s, 0), svg);
-}
-tree(-1020, 560, 1.2); tree(-1000, -430, 1.5); tree(960, -560, 1.1); tree(1100, 420, 0.9);
-
-/* ---------------- BASEMENT (fieldstone, below grade) ---------------- */
-var vBase = volume(gBase, "stone", HW + 24, HD + 24, BD, 0, 0, BD, {cap:false});
-hplane(gBase, "floorp", HW + 24, HD + 24, 0, BD, 0);
-var eg = vplaneZ(gBase, "hot", 66, 48, 120, BD/2 + 6, (HD+24)/2 + 2);
-box(gBase, 58, 76, 58, -150, BD - 38, -60, "hot");     /* heat pump / HVAC */
-box(gBase, 38, 64, 38, -75, BD - 32, -70, "wire2");    /* water heater */
-box(gBase, 84, 42, 46, 55, BD - 21, -85, "wire2");     /* panel run */
-var riser = add(gBase, "", 0, BD, T(HW/2 - 20, BD/2, -HD/2 + 20));
-riser.style.borderLeft = "2px solid rgba(87,159,203,.9)";
-
-/* ---------------- MAIN FLOOR ---------------- */
-var vMain = volume(gMain, "wire", HW, HD, F1, 0, 0, 0, {cap:false});
-hplane(gMain, "floorp", HW, HD, 0, -2, 0);            /* main floor deck */
-siding(vMain.faces.front); siding(vMain.faces.back); siding(vMain.faces.right); siding(vMain.faces.left);
-windowOn(vMain.faces.front, -168, -6, 58, 52);
-windowOn(vMain.faces.front,  150, -6, 58, 52);
-windowOn(vMain.faces.right,  -70, -6, 54, 50);
-windowOn(vMain.faces.back,    90, -6, 58, 52);
-/* front cross-gable wing */
-var vWing = volume(gMain, "wire", WGW, WGD, F1, WGX, WGZ, 0, {cap:false});
-hplane(gMain, "floorp", WGW, WGD, WGX, -2, WGZ);
-siding(vWing.faces.front); siding(vWing.faces.right); siding(vWing.faces.left);
-var door = vplaneZ(gMain, "hot", 56, 112, WGX, -56, WGZ + WGD/2 + 2);
-windowOn(vWing.faces.front, 62, -14, 46, 44);
-hplane(gMain, "wire2", 150, 70, WGX, -8, WGZ + WGD/2 + 38);        /* stoop */
-/* rear deck */
-var vDeck = volume(gMain, "wire2", 280, 170, 18, 150, -HD/2 - 85, 0, {capCls:"floorp"});
-/* interior (revealed when upper lifts) */
-box(gMain, 170, 46, 40, -125, -23, -110, "wire");                  /* counters */
-box(gMain, 112, 50, 58, -85, -25, -40, "hot");                     /* island */
-box(gMain, 130, 38, 52, 120, -19, 60, "wire2");                    /* living */
-vplaneX(gMain, "wire2", 150, F1, -20, -F1/2, -70);                 /* interior partition */
-vplaneZ(gMain, "wire2", 180, F1, 110, -F1/2, -40);                 /* interior partition */
-box(gMain, 70, 30, 70, 150, -15, -105, "wire2");                   /* dining table */
-
-/* ---------------- UPPER FLOOR ---------------- */
-var vUp = volume(gUpper, "wire", HW, HD, F2 - F1, 0, 0, -F1, {cap:false});
-hplane(gUpper, "floorp", HW, HD, 0, -F1 - 2, 0);       /* upper floor deck */
-siding(vUp.faces.front); siding(vUp.faces.back); siding(vUp.faces.right); siding(vUp.faces.left);
-windowOn(vUp.faces.front, -160, 0, 56, 56);
-windowOn(vUp.faces.front,    0, 0, 56, 56);
-windowOn(vUp.faces.front,  152, 0, 56, 56);
-windowOn(vUp.faces.back,   -90, 0, 56, 56);
-windowOn(vUp.faces.back,    90, 0, 56, 56);
-windowOn(vUp.faces.left,   -40, 0, 50, 52);
-box(gUpper, 88, 28, 44, -155, -(F1 + 14), -70, "hot");             /* new bath */
-box(gUpper, 116, 26, 78, 118, -(F1 + 13), 45, "wire2");            /* primary bed */
-box(gUpper, 96, 24, 66, -140, -(F1 + 12), 80, "wire2");            /* bedroom 2 bed */
-vplaneX(gUpper, "wire2", 200, F2 - F1, 10, -(F1 + (F2-F1)/2), -20);  /* hall wall */
-vplaneZ(gUpper, "wire2", 150, F2 - F1, -80, -(F1 + (F2-F1)/2), 20);  /* hall wall */
-
-/* ---------------- ROOF ---------------- */
-var rise  = RG - F2;
-var slope = Math.sqrt((HD/2)*(HD/2) + rise*rise);
-var rAng  = Math.atan2(rise, HD/2) * 180 / Math.PI;
-var OV    = 30;                                   /* eave overhang, measured along the slope */
-var rLen  = slope + OV;
-var eaveY = -F2 + OV * rise / slope;              /* eave hangs just below the wall top */
-var eaveZ = HD/2 + OV * (HD/2) / slope;
-var rcY   = (-RG + eaveY) / 2;                    /* plane centre: ridge → overhung eave */
-var rcZ   = eaveZ / 2;
-var RAKE  = 44;                                   /* gable-end (rake) overhang */
-/* gable ends first — the roof planes paint over them, so they read as recessed
-   under the rake overhang instead of floating alongside it */
-function gableEnd(shade){
-  return '<svg class="pl" width="'+HD+'" height="'+rise+'" viewBox="0 0 '+HD+' '+rise+'" preserveAspectRatio="none">'+
-    '<path d="M0 '+rise+' L'+(HD/2)+' 0 L'+HD+' '+rise+' Z" fill="'+shade+'" stroke="rgba(18,54,80,.45)" stroke-width="2"/>'+
-    '<path d="M'+(HD/2)+' '+(rise*0.36)+' l'+(HD*0.10)+' '+(rise*0.46)+' l-'+(HD*0.20)+' 0 Z" fill="none" stroke="rgba(18,54,80,.25)" stroke-width="1.5"/></svg>';
-}
-add(gRoof, "cull", HD, rise, "rotateY(90deg) "+T(0, -(F2 + rise/2), HW/2 - 3), gableEnd("#EFF2EF"));
-add(gRoof, "cull", HD, rise, "rotateY(-90deg) "+T(0, -(F2 + rise/2), HW/2 - 3), gableEnd("#E2E7E6"));
-/* roof planes */
-add(gRoof, "roofp shingle rLit", HW + RAKE, rLen, T(0, rcY,  rcZ) + " rotateX(" + ((90 - rAng)) + "deg)");
-add(gRoof, "roofp shingle rDim", HW + RAKE, rLen, T(0, rcY, -rcZ) + " rotateX(" + (-(90 - rAng)) + "deg)");
-/* fascia along both eaves */
-vplaneZ(gRoof, "fascia", HW + RAKE, 16, 0, eaveY + 8,  eaveZ);
-vplaneZ(gRoof, "fascia", HW + RAKE, 16, 0, eaveY + 8, -eaveZ);
-/* ridge cap */
-volume(gRoof, "ridgecap", HW + RAKE + 6, 22, 14, 0, 0, -RG, {capCls:"ridgecap"});
-
-/* ---- front cross-gable wing ---- */
-var wRise  = 74;
-var wSlope = Math.sqrt((WGW/2)*(WGW/2) + wRise*wRise);
-var wAng   = Math.atan2(wRise, WGW/2) * 180 / Math.PI;
-var wOV    = 18;
-var wLen   = wSlope + wOV;
-var wEaveY = -F1 + wOV * wRise / wSlope;
-var wEaveX = WGW/2 + wOV * (WGW/2) / wSlope;
-var wcY    = (-(F1 + wRise) + wEaveY) / 2;
-var wcX    = wEaveX / 2;
-var wGableSvg = '<svg class="pl" width="'+WGW+'" height="'+wRise+'" viewBox="0 0 '+WGW+' '+wRise+'" preserveAspectRatio="none">'+
-  '<path d="M0 '+wRise+' L'+(WGW/2)+' 0 L'+WGW+' '+wRise+' Z" fill="#F4F7F5" stroke="rgba(18,54,80,.45)" stroke-width="2"/></svg>';
-add(gRoof, "cull", WGW, wRise, T(WGX, -(F1 + wRise/2), WGZ + WGD/2 - 3), wGableSvg);
-add(gRoof, "roofp shingle rDim", WGD + 30, wLen, "rotateY(90deg) "+T(-WGZ, wcY, WGX - wcX) + " rotateX(" + (-(90 - wAng)) + "deg)");
-add(gRoof, "roofp shingle rLit", WGD + 30, wLen, "rotateY(90deg) "+T(-WGZ, wcY, WGX + wcX) + " rotateX(" + ((90 - wAng)) + "deg)");
-vplaneX(gRoof, "fascia", WGD + 30, 12, WGX - wEaveX, wEaveY + 6, WGZ);
-vplaneX(gRoof, "fascia", WGD + 30, 12, WGX + wEaveX, wEaveY + 6, WGZ);
-
-/* brick chimney */
-var chim = volume(gRoof, "wire", 40, 40, 96, 110, -40, -(RG - 26), {});
-Array.prototype.forEach.call(chim.querySelectorAll(".wire"), function(f){
-  f.style.borderColor = "rgba(146,74,58,.7)"; f.style.background = "#E9DCD6";
-});
-
-/* ---------------- CALLOUTS (per phase, only current shown) ---------------- */
-function coGroup(){ var g = group(world, ""); g.style.transition = "opacity .5s"; g.style.opacity = "0"; return g; }
-function co(g, text, x, y, z, rise, hi){
-  var s = add(g, "", 2, rise, T(x, y - rise/2, z));
-  s.style.background = "linear-gradient(180deg, rgba(87,159,203,.15), rgba(87,159,203,.9))";
-  var dot = add(g, "", 7, 7, T(x, y, z));
-  dot.style.cssText += "background:#579FCB;border-radius:50%;box-shadow:0 0 0 3px rgba(87,159,203,.22)";
-  bbLabel(g, text, x, y - rise - 14, z, hi);
-}
-function bbLabel(parent, text, x, y, z, hi){
-  var d = document.createElement("div");
-  d.className = "bb";
-  d.style.transform = T(x, y, z) + " translate(-50%,-50%)";
-  d.innerHTML = '<span class="bbi"><span class="co' + (hi ? " hi" : "") + '">' + text + '</span></span>';
-  parent.appendChild(d);
-  return d;
-}
-var CO = [coGroup(), coGroup(), coGroup(), coGroup(), coGroup()];
-/* 01 site */
-co(CO[0], "0.46 ACRE LOT", -230, -4, 150, 92, true);
-co(CO[0], "REAR DECK REBUILT", 150, -18, -HD/2 - 85, 150, false);
-co(CO[0], "DRIVE + WALK REDONE", 190, -4, 190, 108, false);
-co(CO[0], "REGRADE + LANDSCAPE", -140, -4, -180, 92, false);
-/* 02 envelope */
-co(CO[1], "NEW ROOF + GUTTERS", -60, -RG - 6, 0, 104, true);
-co(CO[1], "SIDING + TRIM REFRESH", -HW/2 - 4, -F1 - 40, 40, 120, false);
-co(CO[1], "NEW WINDOWS · EVERY FLOOR", 120, -(F2 - 60), HD/2 + 6, 150, true);
-co(CO[1], "ENTRY + PORCH REBUILT", WGX, -F1 - 14, WGZ + WGD/2, 92, false);
-/* 03 upstairs */
-co(CO[2], "SECOND FULL BATH — ADDED", -155, -(F1 + 44), -70, 130, true);
-co(CO[2], "PRIMARY SUITE", 118, -(F1 + 42), 45, 100, false);
-co(CO[2], "BEDROOMS REBUILT", -40, -(F1 + 34), 110, 130, false);
-/* 04 main floor */
-co(CO[3], "KITCHEN — TO THE STUDS", -85, -78, -40, 130, true);
-co(CO[3], "OPEN LIVING", 120, -60, 60, 108, false);
-co(CO[3], "FLOORS · TRIM · PAINT", -20, -34, HD/2 - 30, 150, false);
-/* 05 below grade */
-co(CO[4], "FIELDSTONE REPOINTED", -(HW/2) - 10, BD - 40, HD/2 - 50, 120, false);
-co(CO[4], "EGRESS WINDOW — NEW", 120, BD/2, (HD+24)/2 + 4, 155, true);
-co(CO[4], "HEAT PUMP HVAC", -150, BD - 80, -60, 120, true);
-co(CO[4], "200A · PEX · INSULATION", 75, BD - 50, -85, 140, false);
-
-/* ---------------- PHASES ---------------- */
-var PHASES = [
-  {ck:"PHASE 01 · THE SITE", t:"Nearly half an acre, in the city.",
-   b:"Rare room to breathe on the west side. The lot gets regraded and seeded, the drive and walk redone, and the tired rear deck rebuilt for summers that deserve it."},
-  {ck:"PHASE 02 · THE ENVELOPE", t:"Buttoned up against the lake-effect sky.",
-   b:"New architectural shingles and gutters, refreshed siding and trim, the brick chimney repointed, a rebuilt front porch, and new windows on every floor."},
-  {ck:"PHASE 03 · UPSTAIRS", t:"A true second story, re-drafted.",
-   b:"Both bedrooms rebuilt, a real primary suite, and the house's second full bath added — the floor that makes a family stay."},
-  {ck:"PHASE 04 · MAIN FLOOR", t:"Taken to the studs. Rebuilt with intention.",
-   b:"The kitchen opens up with an island at its heart, living spaces reconnect, and new floors, trim and paint carry through the whole level."},
-  {ck:"PHASE 05 · BELOW GRADE", t:"An 1880 fieldstone base, made bulletproof.",
-   b:"The original stone foundation is repointed, an egress window brings light and safety down, and all-new systems — heat pump HVAC, 200A service, PEX, insulation — go in behind it all."}
-];
-var bCk = document.getElementById("bCk"), bTitle = document.getElementById("bTitle"), bBody = document.getElementById("bBody");
-var bDots = Array.prototype.slice.call(document.querySelectorAll("#bDots i"));
-var curPhase = -1;
-function setPhase(i){
-  if (i === curPhase) return;
-  curPhase = i;
-  bCk.textContent = PHASES[i].ck; bTitle.textContent = PHASES[i].t; bBody.textContent = PHASES[i].b;
-  bDots.forEach(function(d, k){ d.classList.toggle("on", k === i); });
-  CO.forEach(function(g, k){ g.style.opacity = (k === i) ? "1" : "0"; });
-}
-
-function bFrame(p){
-  var ry = 26 + p * 186;
-  var rx = lerp(-16, -21, ease(clamp01(p / 0.35)));      /* eye-level side view, slight elevation */
-  rx = lerp(rx, -36, ease(clamp01((p - 0.40) / 0.30)));   /* tip down into the opened floors */
-  var stepIn = ease(clamp01((p - 0.63) / 0.10)) * (1 - ease(clamp01((p - 0.755) / 0.06)));
-  rx = lerp(rx, -20, stepIn);
-  var tz = lerp(-1120, -990, ease(clamp01(p / 0.5)));
-  tz = lerp(tz, -730, stepIn);
-  var cy = lerp(-165, -215, ease(clamp01((p - 0.16) / 0.42)));
-  cy = lerp(cy, -120, stepIn);
-  rx = lerp(rx, -32, ease(clamp01((p - 0.76) / 0.20)));
-  tz = lerp(tz, -880, ease(clamp01((p - 0.76) / 0.22)));
-  cy = lerp(cy, -40, ease(clamp01((p - 0.76) / 0.22)));
-  world.style.transform = "translate3d(0,0," + tz + "px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translate3d(0," + (-cy) + "px,0)";
-  world.style.setProperty("--bby", (-ry) + "deg");
-  world.style.setProperty("--bbx", (-rx) + "deg");
-
-  /* each layer lifts away as the NEXT phase begins, revealing what it covered */
-  var cutRoof  = ease(clamp01((p - 0.385) / 0.09));
-  var cutUpper = ease(clamp01((p - 0.585) / 0.09));
-  var cutMain  = ease(clamp01((p - 0.75) / 0.07));
-  var baseIn   = ease(clamp01((p - 0.73) / 0.08));
-
-  gRoof.style.opacity   = String(1 - cutRoof);
-  gRoof.style.transform = "translate3d(0," + (-cutRoof * 230) + "px,0)";
-  gUpper.style.opacity   = String(1 - cutUpper);
-  gUpper.style.transform = "translate3d(0," + (-cutUpper * 190) + "px,0)";
-  gMain.style.opacity   = String(1 - cutMain * 0.9);
-  gMain.style.transform = "translate3d(0," + (-cutMain * 150) + "px,0)";
-  gBase.style.opacity  = String(baseIn);
-  gSite.style.opacity  = String(1 - baseIn * 0.5);
-
-  setPhase(p < 0.21 ? 0 : p < 0.43 ? 1 : p < 0.63 ? 2 : p < 0.76 ? 3 : 4);
-}
-
 /* ---------------- master RAF ---------------- */
-var sB = 0, sC = 0, first = true;
+var sC = 0, first = true;
 function nearView(el, pad){
   var r = el.getBoundingClientRect();
   return r.bottom > -pad && r.top < window.innerHeight + pad;
@@ -1527,16 +1167,12 @@ function nearView(el, pad){
 function onFrame(){
   requestAnimationFrame(onFrame);
   if (nearView(heroWrap, 300)) heroFrame(prog(heroWrap));
-  var tb = prog(bWrap), tc = prog(craftWrap);
-  if (first){ sB = tb; sC = tc; first = false; }
+  var tc = prog(craftWrap);
+  if (first){ sC = tc; first = false; }
   if (nearView(craftWrap, 400)){
     sC += (tc - sC) * 0.16;
     craftFrame(sC);
   } else { sC = tc; }
-  if (nearView(bWrap, 400)){
-    sB += (tb - sB) * 0.085;
-    bFrame(sB);
-  } else { sB = tb; }
 }
 requestAnimationFrame(onFrame);
 
